@@ -23,6 +23,8 @@ print.data.frame(iris[1:6,], row.names = FALSE) # to suppress printing row numbe
 
 In school we usually use the word "graph", but statisticians usually use the word "plot".
 
+The following plots use the well-known Iris dataset that is frequently used for demonstration purposes. The dataset contains measurements of flower parts for three species of Iris.
+
 ### Boxplot
 
 Boxplots are used to 
@@ -32,6 +34,7 @@ Boxplots are used to
 * compare groups
 
 ![The structure of a boxplot.](./resources/boxplot_diagram.png){width=50%}
+
 
 The following boxplots show the distribution of Sepal Length grouped by species.
 
@@ -82,6 +85,8 @@ iris %>%
 ### Line Plot
 
 Line plots are often used for time series data e.g. daily temperatures in March.
+
+The following plot shows the concentration of atmospheric CO2 at Mauna Loa Hawaii. 
 
 ```{r}
 plot(co2, main = "Atmospheric CO2 Concentrations at Mauna Loa Hawaii")
