@@ -99,13 +99,41 @@ Once the study has been designed and executed, it's time to begin analysing the 
 
 ## Activity
 
-Use the Iris dataset and a spreadsheet to
+Use the PlantGrowth dataset and a spreadsheet to
 
-1. Create a summary of each quantitative variable including min, max, quantiles, mean, standard deviation
-2. Create boxplots for the four quantitative variables in the dataset. 
-3. Create histograms for the four quantitative variables in the dataset.
+1. Create a summary of the quantitative variable for each group including min, max, quantiles, mean, standard deviation 
+2. Create boxplots of the quantitative variable for each group in the dataset. 
+3. Create histograms of the quantitative variable for each group in the dataset.
+4. Write a summary of your observations. Can you suggest any hypotheses?
 
-### Challenge
+Hint: You will need to reorganise the data so there is on group per column.
 
-1. Using the Iris dataset, create boxplots of Sepal Length grouped by Species using Excel. Hint: Watch https://youtu.be/Sj3czWwAsjM?si=GyDPaJM4yNjmoOZ2 
+### Solutions
 
+```{r}
+glimpse(PlantGrowth)
+
+PlantGrowth %>% 
+  group_by(group) %>% 
+  summarise(Min = min(weight), 
+            Q1 = quantile(weight, 0.25), 
+            Median_Q2 = quantile(weight, 0.5), 
+            Q3 = quantile(weight, 0.75), 
+            Max = max(weight), 
+            Mean = mean(weight), 
+            SD = sd(weight))
+
+PlantGrowth %>% 
+  ggplot() +
+  geom_boxplot(aes(y = weight, x = "")) +
+  facet_wrap(.~group) +
+  labs(title = "Boxplot of Weight For Each Group", x = "")
+
+PlantGrowth %>% 
+  ggplot() +
+  geom_histogram(aes(x = weight), bins = 7) +
+  facet_wrap(.~group) +
+  labs(title = "Histogram of Weight For Each Group", y = "Frequency")
+  
+```
+The ctrl group is slightly negatively skewed (Mean = 5.032 versus Median = 5.155). The greatest variation occurs on the trt1 group (SD = 0.79), and the least in the trt2 group (SD = 0.44). The boxplots show that the trt1 group has potential outliers at the upper values. 
