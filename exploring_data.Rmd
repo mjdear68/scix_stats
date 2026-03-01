@@ -63,16 +63,21 @@ The histograms confirm that the distribution of Sepal.Length is approximately sy
 
 ### Scatter Plot
 
-Scatter plots identify relationships between quantitative variables. 
+Scatter plots identify relationships between quantitative variables. If the relationship is linear, it is usually described in terms of the strength of the correlation and the direction of the relationship e.g. "strong positive" or "moderate negative".
+
 
 ```{r}
 iris %>% 
-  ggplot() +
-  geom_point(aes(x = Sepal.Length, y = Sepal.Width)) +
+  ggplot(aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point() +
+  # geom_smooth(method = "lm", formula = y ~ x) +
   facet_wrap(.~Species) +
-  labs(title = "Scatterplot of Sepal Length Vs Sepal Width")
+  labs(title = "Scatterplot of Sepal Length Vs Sepal Width", x = "Sepal Length", y = "Sepal Width")
 ```
 
+#### Questions
+1. Describe the relationship between Sepal Length and Sepal Width for each species. 
+2. Draw a line of fit onto each plot. Use this line to estimate the Sepal Width for a Sepal Length of 6.5 for each species.
 
 ### Line Plot
 

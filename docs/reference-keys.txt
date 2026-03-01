@@ -16,6 +16,7 @@ questions
 histogram
 scatter-plot
 line-plot
+questions-1
 exploratory-data-analysis-eda
 activity
-challenge
+solutions

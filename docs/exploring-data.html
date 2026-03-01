@@ -23,7 +23,7 @@
 <meta name="author" content="Michael Dear" />
 
 
-<meta name="date" content="2026-02-28" />
+<meta name="date" content="2026-03-01" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -101,7 +101,7 @@
 <li class="chapter" data-level="2.4" data-path="exploring-data.html"><a href="exploring-data.html#exploratory-data-analysis-eda"><i class="fa fa-check"></i><b>2.4</b> Exploratory Data Analysis (EDA)</a></li>
 <li class="chapter" data-level="2.5" data-path="exploring-data.html"><a href="exploring-data.html#activity"><i class="fa fa-check"></i><b>2.5</b> Activity</a>
 <ul>
-<li class="chapter" data-level="2.5.1" data-path="exploring-data.html"><a href="exploring-data.html#challenge"><i class="fa fa-check"></i><b>2.5.1</b> Challenge</a></li>
+<li class="chapter" data-level="2.5.1" data-path="exploring-data.html"><a href="exploring-data.html#solutions"><i class="fa fa-check"></i><b>2.5.1</b> Solutions</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -142,13 +142,13 @@
 <li>the first row contains the names of the variables without any spaces</li>
 </ul>
 <p>In the following table, the first four columns are quantitative continuous variables. The last column is a qualitative variable used to <strong>group</strong> the measurements for each of the species.</p>
-<pre><code>  Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-1          5.1         3.5          1.4         0.2  setosa
-2          4.9         3.0          1.4         0.2  setosa
-3          4.7         3.2          1.3         0.2  setosa
-4          4.6         3.1          1.5         0.2  setosa
-5          5.0         3.6          1.4         0.2  setosa
-6          5.4         3.9          1.7         0.4  setosa</code></pre>
+<pre><code> Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+          5.1         3.5          1.4         0.2  setosa
+          4.9         3.0          1.4         0.2  setosa
+          4.7         3.2          1.3         0.2  setosa
+          4.6         3.1          1.5         0.2  setosa
+          5.0         3.6          1.4         0.2  setosa
+          5.4         3.9          1.7         0.4  setosa</code></pre>
 </div>
 <div id="common-statistical-plots" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Common Statistical Plots<a href="exploring-data.html#common-statistical-plots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -188,11 +188,20 @@
 </div>
 <div id="line-plot" class="section level3 hasAnchor" number="2.3.4">
 <h3><span class="header-section-number">2.3.4</span> Line Plot<a href="exploring-data.html#line-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Line plots are often used for time series data e.g. daily temperatures in March.</p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-6-1.png" alt="" width="672" /></p>
+<div id="questions-1" class="section level4 hasAnchor" number="2.3.4.1">
+<h4><span class="header-section-number">2.3.4.1</span> Questions<a href="exploring-data.html#questions-1" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<ol style="list-style-type: decimal">
+<li>Describe the trend in the CO2 concentration.</li>
+<li>Why does the plot zig-zag up and down?</li>
+</ol>
+</div>
 </div>
 </div>
 <div id="exploratory-data-analysis-eda" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Exploratory Data Analysis (EDA)<a href="exploring-data.html#exploratory-data-analysis-eda" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The first step in analysis is getting to know the dataset. The steps of exploratory data analysis include</p>
+<p>Once the study has been designed and executed, it’s time to begin analysing the results. The first step in analysis is getting to know the dataset. The steps of exploratory data analysis (EDA) include</p>
 <ul>
 <li>summarising quantitative variables - min, max, quantiles, mean, standard deviation</li>
 <li>using boxplots and histograms to investigate spread and skewness</li>
@@ -202,17 +211,28 @@
 </div>
 <div id="activity" class="section level2 hasAnchor" number="2.5">
 <h2><span class="header-section-number">2.5</span> Activity<a href="exploring-data.html#activity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Use the Iris dataset and a spreadsheet to</p>
+<p>Use the PlantGrowth dataset and a spreadsheet to</p>
 <ol style="list-style-type: decimal">
-<li>Create a summary of each quantitative variable including min, max, quantiles, mean, standard deviation</li>
-<li>Create boxplots for the three quantitative variables in the dataset.</li>
-<li>Create histograms for the three quantitative variables in the dataset.</li>
+<li>Create a summary of the quantitative variable for each group including min, max, quantiles, mean, standard deviation</li>
+<li>Create boxplots of the quantitative variable for each group in the dataset.</li>
+<li>Create histograms of the quantitative variable for each group in the dataset.</li>
+<li>Write a summary of your observations. Can you suggest any hypotheses?</li>
 </ol>
-<div id="challenge" class="section level3 hasAnchor" number="2.5.1">
-<h3><span class="header-section-number">2.5.1</span> Challenge<a href="exploring-data.html#challenge" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li>Using the Iris dataset, create boxplots of Sepal Length grouped by Species using Excel. Hint: Watch <a href="https://youtu.be/Sj3czWwAsjM?si=GyDPaJM4yNjmoOZ2" class="uri">https://youtu.be/Sj3czWwAsjM?si=GyDPaJM4yNjmoOZ2</a></li>
-</ol>
+<p>Hint: You will need to reorganise the data so there is on group per column.</p>
+<div id="solutions" class="section level3 hasAnchor" number="2.5.1">
+<h3><span class="header-section-number">2.5.1</span> Solutions<a href="exploring-data.html#solutions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>Rows: 30
+Columns: 2
+$ weight &lt;dbl&gt; 4.17, 5.58, 5.18, 6.11, 4.50, 4.61, 5.17, 4.53, 5.33, 5.14, 4.8…
+$ group  &lt;fct&gt; ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, trt…</code></pre>
+<pre><code># A tibble: 3 × 8
+  group   Min    Q1 Median_Q2    Q3   Max  Mean    SD
+  &lt;fct&gt; &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1 ctrl   4.17  4.55      5.15  5.29  6.11  5.03 0.583
+2 trt1   3.59  4.21      4.55  4.87  6.03  4.66 0.794
+3 trt2   4.92  5.27      5.44  5.74  6.31  5.53 0.443</code></pre>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-7-1.png" alt="" width="672" /><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-7-2.png" alt="" width="672" />
+The ctrl group is slightly negatively skewed (Mean = 5.032 versus Median = 5.155). The greatest variation occurs on the trt1 group (SD = 0.79), and the least in the trt2 group (SD = 0.44). The boxplots show that the trt1 group has potential outliers at the upper values.</p>
 
 </div>
 </div>
