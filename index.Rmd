@@ -35,6 +35,8 @@ There is no one simple definition for what statistics is and what it does.
 
 "Statistics is a set of techniques for collecting and analysing data"
 
+"Statistics tells the story of the population being studied"
+
 However, it can be said that statistics is fundamental to all stages of scientific research.
 
 
@@ -71,8 +73,8 @@ There are two basic types of scientific study:
 
 Observational studies can show **associations** between variables, but experimental studies can show **causal** relationships.
 
-Observational study $\rightarrow$ association -  “A varies as B varies”
-Experimental study $\rightarrow$ causation - “A causes B”
+> Observational study $\rightarrow$ association -  “A varies as B varies”  
+> Experimental study $\rightarrow$ causation - “A causes B”
 
 
 ## Population and Sample
@@ -89,7 +91,8 @@ Value|Population Parameter|Sample Statistic
 |Proportion|$p$|$\hat{p}$|
 
 
-## Summary
+## Activity
+
 Write definitions for each term:
 
 * Population
