@@ -1,0 +1,10 @@
+book_filename: "statistics_for_science_extension"
+# repo: https://github.com/brad-cannell/r4epi
+output_dir: docs
+delete_merged_file: true
+language:
+  ui:
+    chapter_name: "Lesson "
+new_session: no
+# rmd_subdir: ["chapters"]
+rmd_files: ["index.Rmd", "exploring_data.Rmd"]

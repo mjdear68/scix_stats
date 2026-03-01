@@ -1,0 +1,103 @@
+--- 
+title: "Statistics For Science Extension"
+author: "Michael Dear"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  These are the notes for the statistics section of the NSW Extension Science (SCIX) course.
+link-citations: yes
+github-repo: rstudio/bookdown-demo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, comment="") # remove code and ## from output
+```
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(GGally)
+```
+
+# Introduction
+
+These notes are a practical introduction to statistics for students of the NSW Science Extension course. The emphasis is on learning through examples and problem-solving.
+
+## What Is Statistics and What Does It Do?
+
+There is no one simple definition for what statistics is and what it does.
+
+"Statistics uses samples to explain and predict"
+
+"Statistics is a set of techniques for collecting and analysing data"
+
+However, it can be said that statistics is fundamental to all stages of scientific research.
+
+
+## Examples of Statistical Problems
+
+Most scientific research questions will rely heavily on statistical techniques:
+
+* What is the average girth (circumference) of trees in  a forest?
+* What is the rate of decline in seabird populations in Australian coastal waters? 
+* Does a new vaccine reduce the number of deaths from influenza? 
+* Predict the rise in temperature by 2050 in different regions of Australia.
+
+## A More Detailed Example
+
+Forestry scientists would like to know the average girth (circumference) of trees in a forest. There are too many trees to measure them all, so they plan to take a random sample of 200 trees. They need to use statistics to determine the size and structure of the sample. After collecting the data, they complete a statistical analysis to estimate that, to a high level of confidence, the average tree girth is between 175cm and 225cm. They then write a report using statistical tables and plots to communicate their results.
+
+## Scientific Studies
+
+A scientific study has the following steps:
+
+* Research question(s)
+* Study design - experimental or observational?
+* Data collection
+* Data analysis
+* Report
+
+## Study Design
+
+There are two basic types of scientific study:
+
+* Observational study - variables are not controlled e.g. the health records of 1000 people who had taken Drug X were reviewed to determine the side effects. 
+
+* Experimental study - variables are controlled e.g. Plots A and B are next to each other. Plot A receives fertiliser and Plot B receives none.
+
+Observational studies can show **associations** between variables, but experimental studies can show **causal** relationships.
+
+Observational study $\rightarrow$ association -  “A varies as B varies”
+Experimental study $\rightarrow$ causation - “A causes B”
+
+
+## Population and Sample
+
+* Population - all members of the group being studied e.g. all the Magpies in NSW. Population values are called **parameters**.
+* Sample - a subset of the population being studied e.g. 1000 magpies chosen at random locations across NSW. Sample values are called **statistics**.
+
+## Symbols For Common Values
+
+Value|Population Parameter|Sample Statistic
+-----|--------------------|---------------- 
+|Mean|$\mu$|$\bar{x}$
+|Standard Deviation|$\sigma$|$s$
+|Proportion|$p$|$\hat{p}$|
+
+
+## Summary
+Write definitions for each term:
+
+* Population
+* Parameter 
+* Sample
+* Statistic 
+* Experimental study
+* Causation
+* Observational study
+* Association
+
