@@ -146,4 +146,5 @@ PlantGrowth %>%
   labs(title = "Histogram of Weight For Each Group", y = "Frequency")
   
 ```
+
 The ctrl group is slightly negatively skewed (Mean = 5.032 versus Median = 5.155). The greatest variation occurs on the trt1 group (SD = 0.79), and the least in the trt2 group (SD = 0.44). The boxplots show that the trt1 group has potential outliers at the upper values. 

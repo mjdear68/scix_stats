@@ -67,20 +67,19 @@ A scientific study has the following steps:
 
 There are two basic types of scientific study:
 
-* Observational study - variables are not controlled e.g. the health records of 1000 people who had taken Drug X were reviewed to determine the side effects. 
-
-* Experimental study - variables are controlled e.g. Plots A and B are next to each other. Plot A receives fertiliser and Plot B receives none.
+>*Observational study* - variables are not controlled e.g. the health records of 1000 people who had taken Drug X were reviewed to determine the side effects. 
+>*Experimental study* - variables are controlled e.g. Plots A and B are next to each other. Plot A receives fertiliser and Plot B receives none.
 
 Observational studies can show **associations** between variables, but experimental studies can show **causal** relationships.
 
-> Observational study $\rightarrow$ association -  “A varies as B varies”  
-> Experimental study $\rightarrow$ causation - “A causes B”
+>Observational study $\rightarrow$ association -  “A varies as B varies”  
+>Experimental study $\rightarrow$ causation - “A causes B”
 
 
 ## Population and Sample
 
-* Population - all members of the group being studied e.g. all the Magpies in NSW. Population values are called **parameters**.
-* Sample - a subset of the population being studied e.g. 1000 magpies chosen at random locations across NSW. Sample values are called **statistics**.
+>*Population* - all members of the group being studied e.g. all the Magpies in NSW. Population values are called **parameters**.
+>*Sample* - a subset of the population being studied e.g. 1000 magpies chosen at random locations across NSW. Sample values are called **statistics**.
 
 ## Symbols For Common Values
 
@@ -89,6 +88,13 @@ Value|Population Parameter|Sample Statistic
 |Mean|$\mu$|$\bar{x}$
 |Standard Deviation|$\sigma$|$s$
 |Proportion|$p$|$\hat{p}$|
+
+
+## Descriptive and Inferential Statistics
+
+>*Descriptive statistics* describe data e.g. mean, median, standard deviation of a data set.
+>*Inferential statistics* estimate population parameters from a sample.
+
 
 
 ## Activity
