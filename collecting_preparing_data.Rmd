@@ -1,0 +1,21 @@
+# Collecting and Preparing Data {#collect-prepare-data}
+
+## Types of Data
+
+![The basic types of data.](./resources/types_of_data.png)
+
+
+## The Structure of Data
+
+Data should be structured using tables in which 
+
+* each column represents a variable
+* the values in each column are the same type and the same unit
+* the first row contains the names of the variables without any spaces
+
+In the following table, the first four columns are quantitative continuous variables. The last column is a qualitative variable used to **group** the measurements for each of the species.
+
+```{r}
+print.data.frame(iris[1:6,], row.names = FALSE) # to suppress printing row numbers
+```
+

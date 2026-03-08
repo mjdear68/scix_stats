@@ -1,23 +1,5 @@
 # Exploring Data {#exploring-data}
 
-## Types of Data
-
-![The basic types of data.](./resources/types_of_data.png)
-
-## The Structure of Data
-
-Data should be structured using tables in which 
-
-* each column represents a variable
-* the values in each column are the same type and the same unit
-* the first row contains the names of the variables without any spaces
-
-In the following table, the first four columns are quantitative continuous variables. The last column is a qualitative variable used to **group** the measurements for each of the species.
-
-```{r}
-print.data.frame(iris[1:6,], row.names = FALSE) # to suppress printing row numbers
-```
-
 
 ## Common Statistical Plots
 
@@ -42,7 +24,8 @@ The following boxplots show the distribution of Sepal Length grouped by species.
 iris %>% 
   ggplot(aes(group = Species)) +
   geom_boxplot(aes(x = Species, y = Sepal.Length)) +
-  labs(title = "Boxplot of Sepal Length For Each Species", y = "Sepal Length (mm)")
+  labs(title = "Boxplot of Sepal Length For Each Species", y = "Sepal Length (mm)") +
+  theme_bw()
 ```
 
 #### Questions
@@ -59,7 +42,8 @@ iris %>%
   ggplot(aes(group = Species)) +
   geom_histogram(aes(x = Sepal.Length), bins = 11) +
   facet_wrap(.~Species) +
-  labs(title = "Histogram of Sepal Length For Each Species", x = "Sepal Length", y = "Frequency")
+  labs(title = "Histogram of Sepal Length For Each Species", x = "Sepal Length", y = "Frequency") +
+  theme_bw()
 ```
 
 The histograms confirm that the distribution of Sepal.Length is approximately symmetrical for each species. This suggests that a normal distribution might be an appropriate model in each case. Also notice that there is an outlier in the virginica species, as was identified by the boxplot.
@@ -75,7 +59,8 @@ iris %>%
   geom_point() +
   # geom_smooth(method = "lm", formula = y ~ x) +
   facet_wrap(.~Species) +
-  labs(title = "Scatterplot of Sepal Length Vs Sepal Width", x = "Sepal Length", y = "Sepal Width")
+  labs(title = "Scatterplot of Sepal Length Vs Sepal Width", x = "Sepal Length", y = "Sepal Width") +
+  theme_bw()
 ```
 
 
@@ -85,12 +70,14 @@ Scatter plots can also include a grouping (qualitative) variable using colour or
 p1 <- iris %>% 
   ggplot(aes(x = Sepal.Length, y = Sepal.Width)) +
   geom_point() +
-  labs(title = "Ungrouped", x = "Sepal Length", y = "Sepal Width")
+  labs(title = "Ungrouped", x = "Sepal Length", y = "Sepal Width") +
+  theme_bw()
 
 p2 <- iris %>% 
   ggplot(aes(x = Sepal.Length, y = Sepal.Width, colour = Species)) +
   geom_point() +
-  labs(title = "Grouped By Species", x = "Sepal Length", y = "Sepal Width")
+  labs(title = "Grouped By Species", x = "Sepal Length", y = "Sepal Width") +
+  theme_bw()
 
 p1 + p2 + plot_annotation(title = "Scatterplot of Sepal Length Vs Sepal Width")
 ```
