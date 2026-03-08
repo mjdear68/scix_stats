@@ -1,4 +1,4 @@
-# Collecting and Preparing Data {#collect-prepare-data}
+# Data Concepts {#data_concepts}
 
 ## Types of Data
 
@@ -13,9 +13,11 @@ Data should be structured using tables in which
 * the values in each column are the same type and the same unit
 * the first row contains the names of the variables without any spaces
 
-In the following table, the first four columns are quantitative continuous variables. The last column is a qualitative variable used to **group** the measurements for each of the species.
+## Activity
+
+Describe the type of data for each variable in the following data set.
 
 ```{r}
-print.data.frame(iris[1:6,], row.names = FALSE) # to suppress printing row numbers
+set.seed(98)
+print.data.frame(iris[sample(nrow(iris), 6),], row.names = FALSE) # to suppress printing row numbers
 ```
-

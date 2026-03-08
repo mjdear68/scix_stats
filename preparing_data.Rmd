@@ -1,0 +1,12 @@
+# Preparing Data {#preparing_data}
+
+## Preparing Data For Analysis
+
+* Often called data "cleaning"
+* Checklist of common issues - missing data, incorrect formats, dates and times
+* Imputing missing values
+
+
+## Activity
+
+Open the ... data set in a spreadsheet. Identify any issues with the data and decide what should be done.
