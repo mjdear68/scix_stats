@@ -1,5 +1,9 @@
 # Data Concepts {#data_concepts}
 
+>**Learning Objectives**  
+To uderstand the basic types of data  
+To understand how data is structured for statistical analysis
+
 ## Types of Data
 
 ![The basic types of data.](./resources/types_of_data.png)

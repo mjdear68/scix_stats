@@ -22,15 +22,19 @@ library(tidyverse)
 library(ggplot2)
 library(patchwork)
 library(GGally)
+
+# Set the default ggplot theme to theme_bw() for better printing
+theme_set(theme_bw())
+
 ```
 
 # Introduction
 
 >**Learning Objectives**  
-* To define statistics and its purpose  
-* To review the process and design of scientific studies  
-* To understand the difference between populations and samples
-* To understand the difference between descriptive and inferential statistics
+To define statistics and its purpose  
+To review the process and design of scientific studies  
+To understand the difference between populations and samples  
+To understand the difference between descriptive and inferential statistics
 
 These notes are a practical introduction to statistics for students of the NSW Science Extension course. The emphasis is on learning through examples and problem-solving.
 

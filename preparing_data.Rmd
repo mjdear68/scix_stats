@@ -1,5 +1,8 @@
 # Preparing Data {#preparing_data}
 
+>**Learning Objectives**  
+To learn the steps in preparing data for statistical analysis
+
 ## Preparing Data For Analysis
 
 * Often called data "cleaning"

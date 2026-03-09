@@ -1,5 +1,10 @@
 # Collecting Data {#collecting_data}
 
+>**Learning Objectives**  
+To determine the amount of data required for a scientific study  
+To investigate methods of data collection  
+To distinguish between primary and secondary sources  
+To review some secondary sources of scientific data
 
 ## How much data is enough?
 

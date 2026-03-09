@@ -1,9 +1,9 @@
 # Exploratory Data Analysis {#eda}
 
 >**Learning Objectives**  
-* To review common descriptive statistics
-* To review common statistical plots 
-* To perform exploratory data analysis using a spreadsheet
+To review common descriptive statistics  
+To review common statistical plots  
+To perform exploratory data analysis using a spreadsheet
 
 Once the study has been designed and data collected, it's time to begin analysing the results. The first step in analysis is getting to know the data set. The steps of exploratory data analysis (EDA) include
 
@@ -11,6 +11,8 @@ Once the study has been designed and data collected, it's time to begin analysin
 * using boxplots and histograms to investigate spread and skewness
 * using scatter plots to investigate associations between quantitative variables
 * using grouping variables to investigate the similarities and differences between groups
+
+The following descriptive statistics and plots use the well-known Iris data set. The data set contains measurements of flower parts for three species of Iris.
 
 ## Common Descriptive Statistics
 
@@ -25,13 +27,25 @@ Once the study has been designed and data collected, it's time to begin analysin
 * Mean - the average; sum of scores divided by number of scores
 * Standard Deviation (sd) - average distance of scores from the mean
 
+When approaching a new data set, a good first step is to determine the data type of each variable (column).
+
+```{r}
+glimpse(iris)
+```
+The output above shows that the Iris data set has five variables, four that are continuous *(<dbl>)* and one that is qualitative *(<fct>)*. There are 150 records (rows) in the data set.
+
+The following is a summary of descriptive statistics for each variable in the Iris data set.
+```{r}
+summary(iris)
+```
+
+>**Question**   
+What are some conclusions that you can draw about the data set from the above summary? 
 
 
 ## Common Statistical Plots
 
 In school we usually use the word "graph", but statisticians usually use the word "plot".
-
-The following plots use the well-known Iris data set that is frequently used for demonstration purposes. The data set contains measurements of flower parts for three species of Iris.
 
 ### Boxplot
 
@@ -50,8 +64,7 @@ The following boxplots show the distribution of Sepal Length grouped by species.
 iris %>% 
   ggplot(aes(group = Species)) +
   geom_boxplot(aes(x = Species, y = Sepal.Length)) +
-  labs(title = "Boxplot of Sepal Length For Each Species", y = "Sepal Length (mm)") +
-  theme_bw()
+  labs(title = "Boxplot of Sepal Length For Each Species", y = "Sepal Length (mm)")
 ```
 
 >Questions   
@@ -67,8 +80,7 @@ iris %>%
   ggplot(aes(group = Species)) +
   geom_histogram(aes(x = Sepal.Length), bins = 11) +
   facet_wrap(.~Species) +
-  labs(title = "Histogram of Sepal Length For Each Species", x = "Sepal Length", y = "Frequency") +
-  theme_bw()
+  labs(title = "Histogram of Sepal Length For Each Species", x = "Sepal Length", y = "Frequency")
 ```
 
 The histograms confirm that the distribution of Sepal.Length is approximately symmetrical for each species. This suggests that a normal distribution might be an appropriate model in each case. Also notice that there is an outlier in the virginica species, as was identified by the boxplot.
@@ -84,8 +96,7 @@ iris %>%
   geom_point() +
   # geom_smooth(method = "lm", formula = y ~ x) +
   facet_wrap(.~Species) +
-  labs(title = "Scatterplot of Sepal Length Vs Sepal Width", x = "Sepal Length", y = "Sepal Width") +
-  theme_bw()
+  labs(title = "Scatterplot of Sepal Length Vs Sepal Width", x = "Sepal Length", y = "Sepal Width")
 ```
 
 
