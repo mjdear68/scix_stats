@@ -2,7 +2,12 @@
 
 >**Learning Objectives**  
 To uderstand the basic types of data  
-To understand how data is structured for statistical analysis
+To understand how data is structured for statistical analysis  
+To determine the amount of data required for a scientific study  
+To investigate methods of data collection  
+To distinguish between primary and secondary sources  
+To review some secondary sources of scientific data  
+To learn the steps in preparing data for statistical analysis
 
 ## Types of Data
 
@@ -17,7 +22,7 @@ Data should be structured using tables in which
 * the values in each column are the same type and the same unit
 * the first row contains the names of the variables without any spaces
 
-## Activity
+### Activity
 
 Describe the type of data for each variable in the following data set.
 
@@ -25,3 +30,25 @@ Describe the type of data for each variable in the following data set.
 set.seed(98)
 print.data.frame(iris[sample(nrow(iris), 6),], row.names = FALSE) # to suppress printing row numbers
 ```
+
+## Collecting Data
+
+
+* How much data is enough?
+* Methods for collection - survey methods, remote sensing,
+* Primary and secondary sources
+* Review of some secondary sources for scientific research
+
+### Activity
+
+
+## Preparing Data For Analysis
+
+* Often called data "cleaning"
+* Checklist of common issues - missing data, incorrect formats, dates and times
+* Imputing missing values
+
+
+### Activity
+
+Open the ... data set in a spreadsheet. Identify any issues with the data and decide what should be done.

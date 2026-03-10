@@ -9,6 +9,7 @@ new_session: no
 # rmd_subdir: ["chapters"]
 rmd_files: ["index.Rmd",
             "data_concepts.Rmd",
-            "collecting_data.Rmd",
-            "preparing_data.Rmd",
-            "eda.Rmd"]
+            # "collecting_data.Rmd",
+            # "preparing_data.Rmd",
+            "eda.Rmd"
+            ]
