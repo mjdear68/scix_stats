@@ -33,13 +33,28 @@ print.data.frame(iris[sample(nrow(iris), 6),], row.names = FALSE) # to suppress 
 
 ## Collecting Data
 
+Data sources can be classified as either *primary* or *secondary*.
 
-* How much data is enough?
-* Methods for collection - survey methods, remote sensing,
-* Primary and secondary sources
-* Review of some secondary sources for scientific research
+>**Primary Data** is collected by the researcher through first-hand surveys of the population of interest.
+> **Secondary Data** is collected from existing data repositories.
+
+### How Much Data Is Enough?
+
+* depends on the aim of the research
+* rare cases and noise
+* data overload and the increasing importance of cloud processing for large data sets
 
 ### Activity
+
+Explore the following data repositories and complete the table.
+
+Repository|Main Uses|Formats|Cloud Processing (y/n)
+----------|---------|-------|----------------------
+|data.gov.au| | 
+|SEED NSW| | 
+|Digital Earth Australia| | 
+|Atlas of Living Australia| |
+
 
 
 ## Preparing Data For Analysis
