@@ -125,7 +125,7 @@ Spreadsheets are handy for recording and exploring small data sets. However, the
 
 The disadvantage of coding is the time taken to learn a language, although there are numerous training resources and forums available for free on the internet.
 
-These notes, including plots, tables, and most diagrams, were created using the R statistical computing language [@Rcore].
+These notes, including plots, tables, and most diagrams, were created using the R statistical computing language.
 
 ------
 
@@ -145,7 +145,4 @@ Write definitions for each term:
 * Inferential statistics
 
 
-## Further Reading
-
-* [Australian Bureau of Statistics "Statistical Terms and Concepts"](https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts)
 
