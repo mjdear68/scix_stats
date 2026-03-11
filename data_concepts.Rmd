@@ -22,9 +22,16 @@ Data should be structured using tables in which
 * the values in each column are the same type and the same unit
 * the first row contains the names of the variables without any spaces
 
+The data in each row represents a single *observation* of the variables. Observations are often called *records* or *cases*, depending on the context of the study. Similarly, columns are often called *attributes* or *features*.
+
+>**Extension**
+
+
+
 ### Activity
 
-Describe the type of data for each variable in the following data set.
+1. List the variables and the type of data they represent for the following data set.
+2. Write down one observation from the table.
 
 ```{r}
 set.seed(98)
@@ -35,8 +42,8 @@ print.data.frame(iris[sample(nrow(iris), 6),], row.names = FALSE) # to suppress 
 
 Data sources can be classified as either *primary* or *secondary*.
 
->**Primary Data** is collected by the researcher through first-hand surveys of the population of interest.
-> **Secondary Data** is collected from existing data repositories.
+>**Primary Source Data** is collected by the researcher through first-hand surveys.
+> **Secondary Source Data** is collected from existing data repositories.
 
 ### How Much Data Is Enough?
 

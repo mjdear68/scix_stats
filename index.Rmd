@@ -111,16 +111,21 @@ Value|Population Parameter|Sample Statistic
 
 Statistical analysis usually begins with descriptive statistics, then moves on to inferential statistics.
 
-------
+-----
 
-## Extension - Spreadsheets and Statistical Programming Languages
+## Extension - Spreadsheets and Statistical Computing Languages
 
-Spreadsheets are handy for recording and exploring small data sets. However, the capabilities of spreadsheets for statistical analysis are limited. Larger projects are best completed using a statistical programming language such as R. Analyses completed using computer coding have many advantages, such as the ability to handle very large data sets, a greater variety of plots, greater control over plot output, and the availability of sophisticated modelling techniques. Also, a coding script becomes a reproducible record of the steps completed during the project. The disadvantage of coding is the time taken to learn a language, although there are numerous training resources and forums available for free on the internet.
+Spreadsheets are handy for recording and exploring small data sets. However, the capabilities of spreadsheets for statistical analysis are limited. Larger projects are best completed using a statistical computing language such as R. Analyses completed using computer coding have many advantages, such as 
 
-These notes, including plots, tables, and most diagrams, were created using the R programming language.
+* the ability to handle very large data sets
+* a greater variety of plots
+* greater control over plot and data output
+* the availability of sophisticated modelling techniques 
+* a coding script becomes a reproducible record of the steps completed during the project
 
-R Core Team (2025). _R: A Language and Environment for Statistical Computing_. R Foundation for
-  Statistical Computing, Vienna, Austria. [https://www.R-project.org/](https://www.R-project.org/).
+The disadvantage of coding is the time taken to learn a language, although there are numerous training resources and forums available for free on the internet.
+
+These notes, including plots, tables, and most diagrams, were created using the R statistical computing language [@Rcore].
 
 ------
 
@@ -138,4 +143,9 @@ Write definitions for each term:
 * Association
 * Descriptive statistics
 * Inferential statistics
+
+
+## Further Reading
+
+* [Australian Bureau of Statistics "Statistical Terms and Concepts"](https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts)
 
