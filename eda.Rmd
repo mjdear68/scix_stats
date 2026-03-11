@@ -55,7 +55,7 @@ Boxplots are used to
 * identify outliers
 * compare groups
 
-![The structure of a boxplot.](./resources/boxplot_diagram.png){width=50%}
+![The structure of a boxplot.](./resources/img/boxplot_diagram.png){width=50%}
 
 
 The following boxplots show the distribution of Sepal Length grouped by species.
