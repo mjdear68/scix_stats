@@ -23,14 +23,20 @@ Data should be structured using tables in which
 * the values in each column are the same type and the same unit
 * the first row contains the names of the variables without any spaces
 
-The data in each row represents a single *observation* of the variables. Observations are often called *records* or *cases*, depending on the context of the study. Similarly, columns are often called *attributes* or *features*.
+The data in each row represents a single *observation* of the variables. Observations are often called *records* or *cases*, depending on the context of the study. Similarly, columns are often called *attributes*, *features* or *fields*.
 
------
+### File Formats For Data Storage and Exchange
 
-### Extension
+The most common format for storing and exchanging data for statistical analysis is *comma separated format* (CSV). CSV is a plain text file with fields separated by commas. Numeric data is unquoted and text data is surrounded by quotation marks. CSV files usually have the extension ".csv". 
 
------
+The following is an example of CSV file contents. The first row is the column headers, and the remaining rows are observations.
 
+```
+"Sepal.Length","Sepal.Width","Petal.Length","Petal.Width","Species"
+5.1,3.5,1.4,0.2,"setosa"
+4.9,3,1.4,0.2,"setosa"
+4.7,3.2,1.3,0.2,"setosa"
+```
 
 
 ### Activity
@@ -121,6 +127,8 @@ Some of the issues that need to be checked and remedied are
 * duplicate records
 * removing irrelevant variables; finding the relevant ones amongst hundreds
 * variables that have only one value or are empty
+* column names that contain characters not permitted in some computing languages e.g. %, #, $
+* columns that have no name
 * metadata added at the beginning or end of data tables exported from secondary sources - always check the end of the data for unwanted additions!
 * empty rows, cells, merged cells in spreadsheets :(
 
@@ -131,4 +139,4 @@ For a small project where you are working alone or in a small team, avoid most o
 
 ### Activity
 
-Open the [introduced_plants.csv](resources/datasets/introduced_plants.csv) data set in a spreadsheet. The objective of this study is to identify the top 10 most frequently recorded introduced plant species in the study area (Blackheath, NSW), and to plot a map of these observations. Find any issues with the data and decide what should be done to prepare the data for the intended analysis.
+Open the [messy_data.csv](resources/datasets/messy_data.csv) data set in a spreadsheet. This data represents observations from a national wildlife database for a study area. Find any issues with the data and decide what should be done to prepare the data for analysis.
