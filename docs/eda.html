@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Exploratory Data Analysis | Statistics For Science Extension</title>
+  <meta name="description" content="These are the notes for the statistics section of the NSW Extension Science (SCIX) course." />
+  <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Exploratory Data Analysis | Statistics For Science Extension" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="These are the notes for the statistics section of the NSW Extension Science (SCIX) course." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Exploratory Data Analysis | Statistics For Science Extension" />
+  
+  <meta name="twitter:description" content="These are the notes for the statistics section of the NSW Extension Science (SCIX) course." />
+  
+
+<meta name="author" content="Michael Dear" />
+
+
+<meta name="date" content="2026-03-12" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="data_concepts.html"/>
+<link rel="next" href="further_reading.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Statistics For Science Extension</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#what-is-statistics-and-what-does-it-do"><i class="fa fa-check"></i><b>1.1</b> What Is Statistics and What Does It Do?</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#examples-of-statistical-problems"><i class="fa fa-check"></i><b>1.2</b> Examples of Statistical Problems</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#a-more-detailed-example"><i class="fa fa-check"></i><b>1.3</b> A More Detailed Example</a></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#scientific-studies"><i class="fa fa-check"></i><b>1.4</b> Scientific Studies</a></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#study-design"><i class="fa fa-check"></i><b>1.5</b> Study Design</a></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#population-and-sample"><i class="fa fa-check"></i><b>1.6</b> Population and Sample</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#symbols-for-common-values"><i class="fa fa-check"></i><b>1.7</b> Symbols For Common Values</a></li>
+<li class="chapter" data-level="1.8" data-path="index.html"><a href="index.html#descriptive-and-inferential-statistics"><i class="fa fa-check"></i><b>1.8</b> Descriptive and Inferential Statistics</a></li>
+<li class="chapter" data-level="1.9" data-path="index.html"><a href="index.html#extension---spreadsheets-and-statistical-computing-languages"><i class="fa fa-check"></i><b>1.9</b> Extension - Spreadsheets and Statistical Computing Languages</a></li>
+<li class="chapter" data-level="1.10" data-path="index.html"><a href="index.html#activity"><i class="fa fa-check"></i><b>1.10</b> Activity</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="data_concepts.html"><a href="data_concepts.html"><i class="fa fa-check"></i><b>2</b> Data Concepts</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="data_concepts.html"><a href="data_concepts.html#types-of-data"><i class="fa fa-check"></i><b>2.1</b> Types of Data</a></li>
+<li class="chapter" data-level="2.2" data-path="data_concepts.html"><a href="data_concepts.html#the-structure-of-data"><i class="fa fa-check"></i><b>2.2</b> The Structure of Data</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="data_concepts.html"><a href="data_concepts.html#extension"><i class="fa fa-check"></i><b>2.2.1</b> Extension</a></li>
+<li class="chapter" data-level="2.2.2" data-path="data_concepts.html"><a href="data_concepts.html#activity-1"><i class="fa fa-check"></i><b>2.2.2</b> Activity</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="data_concepts.html"><a href="data_concepts.html#collecting-data"><i class="fa fa-check"></i><b>2.3</b> Collecting Data</a>
+<ul>
+<li class="chapter" data-level="2.3.1" data-path="data_concepts.html"><a href="data_concepts.html#sample-size---how-much-data-is-enough"><i class="fa fa-check"></i><b>2.3.1</b> Sample Size - How Much Data Is Enough?</a></li>
+<li class="chapter" data-level="2.3.2" data-path="data_concepts.html"><a href="data_concepts.html#large-data-sets"><i class="fa fa-check"></i><b>2.3.2</b> Large Data Sets</a></li>
+<li class="chapter" data-level="2.3.3" data-path="data_concepts.html"><a href="data_concepts.html#activity---online-data-repositories"><i class="fa fa-check"></i><b>2.3.3</b> Activity - Online Data Repositories</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="data_concepts.html"><a href="data_concepts.html#data-cleaning"><i class="fa fa-check"></i><b>2.4</b> Data Cleaning</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="data_concepts.html"><a href="data_concepts.html#activity-2"><i class="fa fa-check"></i><b>2.4.1</b> Activity</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="eda.html"><a href="eda.html"><i class="fa fa-check"></i><b>3</b> Exploratory Data Analysis</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="eda.html"><a href="eda.html#common-descriptive-statistics"><i class="fa fa-check"></i><b>3.1</b> Common Descriptive Statistics</a></li>
+<li class="chapter" data-level="3.2" data-path="eda.html"><a href="eda.html#common-statistical-plots"><i class="fa fa-check"></i><b>3.2</b> Common Statistical Plots</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="eda.html"><a href="eda.html#boxplot"><i class="fa fa-check"></i><b>3.2.1</b> Boxplot</a></li>
+<li class="chapter" data-level="3.2.2" data-path="eda.html"><a href="eda.html#histogram"><i class="fa fa-check"></i><b>3.2.2</b> Histogram</a></li>
+<li class="chapter" data-level="3.2.3" data-path="eda.html"><a href="eda.html#scatter-plot"><i class="fa fa-check"></i><b>3.2.3</b> Scatter Plot</a></li>
+<li class="chapter" data-level="3.2.4" data-path="eda.html"><a href="eda.html#line-plot"><i class="fa fa-check"></i><b>3.2.4</b> Line Plot</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="eda.html"><a href="eda.html#activity-3"><i class="fa fa-check"></i><b>3.3</b> Activity</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="eda.html"><a href="eda.html#solutions"><i class="fa fa-check"></i><b>3.3.1</b> Solutions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="further_reading.html"><a href="further_reading.html"><i class="fa fa-check"></i><b>4</b> Further Reading</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Statistics For Science Extension</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="eda" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Exploratory Data Analysis<a href="eda.html#eda" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<blockquote>
+<p><strong>Learning Objectives</strong><br />
+To review common descriptive statistics<br />
+To review common statistical plots<br />
+To perform exploratory data analysis using a spreadsheet</p>
+</blockquote>
+<p>Once the study has been designed and data collected, it’s time to begin analysing the results. The first step in analysis is getting to know the data set. The steps of exploratory data analysis (EDA) include</p>
+<ul>
+<li>summarising quantitative variables - n, min, max, quartiles, mean, standard deviation</li>
+<li>using boxplots and histograms to investigate spread and skewness</li>
+<li>using scatter plots to investigate associations between quantitative variables</li>
+<li>using grouping variables to investigate the similarities and differences between groups</li>
+</ul>
+<p>The following descriptive statistics and plots use the well-known Iris data set. The data set contains measurements of flower parts for three species of Iris.</p>
+<div id="common-descriptive-statistics" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Common Descriptive Statistics<a href="eda.html#common-descriptive-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<blockquote>
+<p><strong>Definitions</strong><br />
+* n - the number of scores
+* Minimum (min) - lowest score
+* Maximum (max) - highest score
+* Quartiles - the scores that break the data into quarters
+- Q1 25%
+- Q2 50% (Median)
+- Q3 75%
+* Mean - the average; sum of scores divided by number of scores
+* Standard Deviation (sd) - average distance of scores from the mean</p>
+</blockquote>
+<p>When approaching a new data set, a good first step is to determine the data type of each variable (column).</p>
+<pre><code>Rows: 150
+Columns: 5
+$ Sepal.Length &lt;dbl&gt; 5.1, 4.9, 4.7, 4.6, 5.0, 5.4, 4.6, 5.0, 4.4, 4.9, 5.4, 4.…
+$ Sepal.Width  &lt;dbl&gt; 3.5, 3.0, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4, 2.9, 3.1, 3.7, 3.…
+$ Petal.Length &lt;dbl&gt; 1.4, 1.4, 1.3, 1.5, 1.4, 1.7, 1.4, 1.5, 1.4, 1.5, 1.5, 1.…
+$ Petal.Width  &lt;dbl&gt; 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.…
+$ Species      &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, setosa, s…</code></pre>
+<p>The output above shows that the Iris data set has five variables, four that are continuous <em>(<dbl>)</em> and one that is qualitative <em>(<fct>)</em>. There are 150 records (rows) in the data set.</p>
+<p>The following is a summary of descriptive statistics for each variable in the Iris data set.</p>
+<pre><code>  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
+ Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
+ 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
+ Median :5.800   Median :3.000   Median :4.350   Median :1.300  
+ Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
+ 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
+ Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
+       Species  
+ setosa    :50  
+ versicolor:50  
+ virginica :50  
+                
+                
+                </code></pre>
+<blockquote>
+<p><strong>Question</strong><br />
+What are some conclusions that you can draw about the data set from the above summary?</p>
+</blockquote>
+</div>
+<div id="common-statistical-plots" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Common Statistical Plots<a href="eda.html#common-statistical-plots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In school we usually use the word “graph”, but statisticians usually use the word “plot”.</p>
+<div id="boxplot" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Boxplot<a href="eda.html#boxplot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Boxplots are used to</p>
+<ul>
+<li>show the distribution of data for each quartile of a quantitative variable.</li>
+<li>identify outliers</li>
+<li>compare groups</li>
+</ul>
+<div class="float">
+<img src="resources/img/boxplot_diagram.png" style="width:50.0%" alt="The structure of a boxplot." />
+<div class="figcaption">The structure of a boxplot.</div>
+</div>
+<p>The following boxplots show the distribution of Sepal Length grouped by species.</p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-5-1.png" alt="" width="672" /></p>
+<blockquote>
+<p>Questions<br />
+1. What do the thicker black lines inside the boxes represent?<br />
+2. What is similar and what is different about the three boxplots? Think in terms of spread and skewness.</p>
+</blockquote>
+</div>
+<div id="histogram" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Histogram<a href="eda.html#histogram" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Histograms are used to help identify the type of distribution from which the data was drawn.</p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-6-1.png" alt="" width="672" /></p>
+<p>The histograms confirm that the distribution of Sepal.Length is approximately symmetrical for each species. This suggests that a normal distribution might be an appropriate model in each case. Also notice that there is an outlier in the virginica species, as was identified by the boxplot.</p>
+</div>
+<div id="scatter-plot" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Scatter Plot<a href="eda.html#scatter-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Scatter plots identify relationships between quantitative variables. If the relationship is linear, it is usually described in terms of the strength of the correlation and the direction of the relationship e.g. “strong positive” or “moderate negative”.</p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-7-1.png" alt="" width="672" /></p>
+<p>Scatter plots can also include a grouping (qualitative) variable using colour or different marker types. This can be useful for exploring relationships between different groups in the data set.</p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-8-1.png" alt="" width="672" /></p>
+<p>What extra insights are gained from the grouped plot when compared with the ungrouped plot?</p>
+<blockquote>
+<p>Questions<br />
+1. Describe the relationship between Sepal Length and Sepal Width for each species.<br />
+2. Draw a line of fit onto each plot. Use this line to estimate the Sepal Width for a Sepal Length of 6.5 for each species.</p>
+</blockquote>
+</div>
+<div id="line-plot" class="section level3 hasAnchor" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Line Plot<a href="eda.html#line-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Line plots are often used for time series data e.g. daily temperatures in March.</p>
+<p>The following plot shows the concentration of atmospheric CO2 at Mauna Loa Hawaii.</p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-9-1.png" alt="" width="672" /></p>
+<blockquote>
+<p>Questions<br />
+1. Describe the trend in the CO2 concentration.<br />
+2. Why does the plot zig-zag up and down?</p>
+</blockquote>
+</div>
+</div>
+<div id="activity-3" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Activity<a href="eda.html#activity-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Use the PlantGrowth data set and a spreadsheet to</p>
+<ol style="list-style-type: decimal">
+<li>Create a summary of the quantitative variable for each group including min, max, quantiles, mean, standard deviation</li>
+<li>Create boxplots of the quantitative variable for each group in the data set.</li>
+<li>Create histograms of the quantitative variable for each group in the data set.</li>
+<li>Write a summary of your observations. Can you suggest any hypotheses?</li>
+</ol>
+<p>Hint: You will need to reorganise the data so there is on group per column.</p>
+<div id="solutions" class="section level3 hasAnchor" number="3.3.1">
+<h3><span class="header-section-number">3.3.1</span> Solutions<a href="eda.html#solutions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<pre><code>Rows: 30
+Columns: 2
+$ weight &lt;dbl&gt; 4.17, 5.58, 5.18, 6.11, 4.50, 4.61, 5.17, 4.53, 5.33, 5.14, 4.8…
+$ group  &lt;fct&gt; ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, trt…</code></pre>
+<pre><code># A tibble: 3 × 8
+  group   Min    Q1 Median_Q2    Q3   Max  Mean    SD
+  &lt;fct&gt; &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1 ctrl   4.17  4.55      5.15  5.29  6.11  5.03 0.583
+2 trt1   3.59  4.21      4.55  4.87  6.03  4.66 0.794
+3 trt2   4.92  5.27      5.44  5.74  6.31  5.53 0.443</code></pre>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-10-1.png" alt="" width="672" /><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-10-2.png" alt="" width="672" /></p>
+<p>The ctrl group is slightly negatively skewed (Mean = 5.032 versus Median = 5.155). The greatest variation occurs on the trt1 group (SD = 0.79), and the least in the trt2 group (SD = 0.44). The boxplots show that the trt1 group has potential outliers at the upper values.</p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="data_concepts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="further_reading.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/eda.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["statistics_for_science_extension.pdf", "statistics_for_science_extension.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

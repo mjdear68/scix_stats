@@ -1,0 +1,389 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{book}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage[]{natbib}
+\bibliographystyle{plainnat}
+\usepackage{booktabs}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Statistics For Science Extension},
+  pdfauthor={Michael Dear},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Statistics For Science Extension}
+\author{Michael Dear}
+\date{2026-03-01}
+
+\begin{document}
+\maketitle
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter{Introduction}\label{introduction}
+
+These notes are a practical introduction to statistics for students of the NSW Science Extension course. The emphasis is on learning through examples and problem-solving.
+
+\section{What Is Statistics and What Does It Do?}\label{what-is-statistics-and-what-does-it-do}
+
+There is no one simple definition for what statistics is and what it does.
+
+``Statistics uses samples to explain and predict''
+
+``Statistics is a set of techniques for collecting and analysing data''
+
+``Statistics tells the story of the population being studied''
+
+However, it can be said that statistics is fundamental to all stages of scientific research.
+
+\section{Examples of Statistical Problems}\label{examples-of-statistical-problems}
+
+Most scientific research questions will rely heavily on statistical techniques:
+
+\begin{itemize}
+\tightlist
+\item
+  What is the average girth (circumference) of trees in a forest?
+\item
+  What is the rate of decline in seabird populations in Australian coastal waters?
+\item
+  Does a new vaccine reduce the number of deaths from influenza?
+\item
+  Predict the rise in temperature by 2050 in different regions of Australia.
+\end{itemize}
+
+\section{A More Detailed Example}\label{a-more-detailed-example}
+
+Forestry scientists would like to know the average girth (circumference) of trees in a forest. There are too many trees to measure them all, so they plan to take a random sample of 200 trees. They need to use statistics to determine the size and structure of the sample. After collecting the data, they complete a statistical analysis to estimate that, to a high level of confidence, the average tree girth is between 175cm and 225cm. They then write a report using statistical tables and plots to communicate their results.
+
+\section{Scientific Studies}\label{scientific-studies}
+
+A scientific study has the following steps:
+
+\begin{itemize}
+\tightlist
+\item
+  Research question(s)
+\item
+  Study design - experimental or observational?
+\item
+  Data collection
+\item
+  Data analysis
+\item
+  Report
+\end{itemize}
+
+\section{Study Design}\label{study-design}
+
+There are two basic types of scientific study:
+
+\begin{itemize}
+\item
+  Observational study - variables are not controlled e.g.~the health records of 1000 people who had taken Drug X were reviewed to determine the side effects.
+\item
+  Experimental study - variables are controlled e.g.~Plots A and B are next to each other. Plot A receives fertiliser and Plot B receives none.
+\end{itemize}
+
+Observational studies can show \textbf{associations} between variables, but experimental studies can show \textbf{causal} relationships.
+
+\begin{quote}
+Observational study \(\rightarrow\) association - ``A varies as B varies''\\
+Experimental study \(\rightarrow\) causation - ``A causes B''
+\end{quote}
+
+\section{Population and Sample}\label{population-and-sample}
+
+\begin{itemize}
+\tightlist
+\item
+  Population - all members of the group being studied e.g.~all the Magpies in NSW. Population values are called \textbf{parameters}.
+\item
+  Sample - a subset of the population being studied e.g.~1000 magpies chosen at random locations across NSW. Sample values are called \textbf{statistics}.
+\end{itemize}
+
+\section{Symbols For Common Values}\label{symbols-for-common-values}
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule\noalign{}
+Value & Population Parameter & Sample Statistic \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Mean & \(\mu\) & \(\bar{x}\) \\
+Standard Deviation & \(\sigma\) & \(s\) \\
+Proportion & \(p\) & \(\hat{p}\) \\
+\end{longtable}
+
+\section{Activity}\label{activity}
+
+Write definitions for each term:
+
+\begin{itemize}
+\tightlist
+\item
+  Population
+\item
+  Parameter
+\item
+  Sample
+\item
+  Statistic
+\item
+  Experimental study
+\item
+  Causation
+\item
+  Observational study
+\item
+  Association
+\end{itemize}
+
+\chapter{Exploring Data}\label{exploring-data}
+
+\section{Types of Data}\label{types-of-data}
+
+\begin{figure}
+\centering
+\pandocbounded{\includegraphics[keepaspectratio]{./resources/types_of_data.png}}
+\caption{The basic types of data.}
+\end{figure}
+
+\section{The Structure of Data}\label{the-structure-of-data}
+
+Data should be structured using tables in which
+
+\begin{itemize}
+\tightlist
+\item
+  each column represents a variable
+\item
+  the values in each column are the same type and the same unit
+\item
+  the first row contains the names of the variables without any spaces
+\end{itemize}
+
+In the following table, the first four columns are quantitative continuous variables. The last column is a qualitative variable used to \textbf{group} the measurements for each of the species.
+
+\begin{verbatim}
+ Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+          5.1         3.5          1.4         0.2  setosa
+          4.9         3.0          1.4         0.2  setosa
+          4.7         3.2          1.3         0.2  setosa
+          4.6         3.1          1.5         0.2  setosa
+          5.0         3.6          1.4         0.2  setosa
+          5.4         3.9          1.7         0.4  setosa
+\end{verbatim}
+
+\section{Common Statistical Plots}\label{common-statistical-plots}
+
+In school we usually use the word ``graph'', but statisticians usually use the word ``plot''.
+
+The following plots use the well-known Iris dataset that is frequently used for demonstration purposes. The dataset contains measurements of flower parts for three species of Iris.
+
+\subsection{Boxplot}\label{boxplot}
+
+Boxplots are used to
+
+\begin{itemize}
+\tightlist
+\item
+  show the distribution of data for each quartile of a quantitative variable.
+\item
+  identify outliers
+\item
+  compare groups
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio]{./resources/boxplot_diagram.png}
+\caption{The structure of a boxplot.}
+\end{figure}
+
+The following boxplots show the distribution of Sepal Length grouped by species.
+
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-3-1.pdf}}
+
+\subsubsection{Questions}\label{questions}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  What do the thicker black lines inside the boxes represent?
+\item
+  What is similar and what is different about the three boxplots? Think in terms of spread and skewness.
+\end{enumerate}
+
+\subsection{Histogram}\label{histogram}
+
+Histograms are used to help identify the type of distribution from which the data was drawn.
+
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-4-1.pdf}}
+
+The histograms confirm that the distribution of Sepal.Length is approximately symmetrical for each species. This suggests that a normal distribution might be an appropriate model in each case. Also notice that there is an outlier in the virginica species, as was identified by the boxplot.
+
+\subsection{Scatter Plot}\label{scatter-plot}
+
+Scatter plots identify relationships between quantitative variables. If the relationship is linear, it is usually described in terms of the strength of the correlation and the direction of the relationship e.g.~``strong positive'' or ``moderate negative''.
+
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-5-1.pdf}}
+
+\subsubsection{Questions}\label{questions-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Describe the relationship between Sepal Length and Sepal Width for each species.
+\item
+  Draw a line of fit onto each plot. Use this line to estimate the Sepal Width for a Sepal Length of 6.5 for each species.
+\end{enumerate}
+
+\subsection{Line Plot}\label{line-plot}
+
+Line plots are often used for time series data e.g.~daily temperatures in March.
+
+The following plot shows the concentration of atmospheric CO2 at Mauna Loa Hawaii.
+
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-6-1.pdf}}
+
+\subsubsection{Questions}\label{questions-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Describe the trend in the CO2 concentration.
+\item
+  Why does the plot zig-zag up and down?
+\end{enumerate}
+
+\section{Exploratory Data Analysis (EDA)}\label{exploratory-data-analysis-eda}
+
+Once the study has been designed and executed, it's time to begin analysing the results. The first step in analysis is getting to know the dataset. The steps of exploratory data analysis (EDA) include
+
+\begin{itemize}
+\tightlist
+\item
+  summarising quantitative variables - min, max, quantiles, mean, standard deviation
+\item
+  using boxplots and histograms to investigate spread and skewness
+\item
+  using scatter plots to investigate associations between quantitative variables
+\item
+  using grouping variables to investigate the similarities and differences between groups
+\end{itemize}
+
+\section{Activity}\label{activity-1}
+
+Use the PlantGrowth dataset and a spreadsheet to
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a summary of the quantitative variable for each group including min, max, quantiles, mean, standard deviation
+\item
+  Create boxplots of the quantitative variable for each group in the dataset.
+\item
+  Create histograms of the quantitative variable for each group in the dataset.
+\item
+  Write a summary of your observations. Can you suggest any hypotheses?
+\end{enumerate}
+
+Hint: You will need to reorganise the data so there is on group per column.
+
+\subsection{Solutions}\label{solutions}
+
+\begin{verbatim}
+Rows: 30
+Columns: 2
+$ weight <dbl> 4.17, 5.58, 5.18, 6.11, 4.50, 4.61, 5.17, 4.53, 5.33, 5.14, 4.8~
+$ group  <fct> ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, trt~
+\end{verbatim}
+
+\begin{verbatim}
+# A tibble: 3 x 8
+  group   Min    Q1 Median_Q2    Q3   Max  Mean    SD
+  <fct> <dbl> <dbl>     <dbl> <dbl> <dbl> <dbl> <dbl>
+1 ctrl   4.17  4.55      5.15  5.29  6.11  5.03 0.583
+2 trt1   3.59  4.21      4.55  4.87  6.03  4.66 0.794
+3 trt2   4.92  5.27      5.44  5.74  6.31  5.53 0.443
+\end{verbatim}
+
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-7-1.pdf}} \pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-7-2.pdf}}
+The ctrl group is slightly negatively skewed (Mean = 5.032 versus Median = 5.155). The greatest variation occurs on the trt1 group (SD = 0.79), and the least in the trt2 group (SD = 0.44). The boxplots show that the trt1 group has potential outliers at the upper values.
+
+\bibliography{book.bib,packages.bib}
+
+\end{document}
