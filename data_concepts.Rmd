@@ -51,12 +51,35 @@ Data sources can be classified as either *primary* or *secondary*.
 >**Primary Source Data** is collected by the researcher through first-hand surveys.
 > **Secondary Source Data** is collected from existing data repositories.
 
-### How Much Data Is Enough?
+### Sample Size - How Much Data Is Enough?
 
-* depends on the aim of the research
-* experimental versus observational studies
-* rare cases and noise
-* data overload and the increasing importance of cloud processing for large data sets
+Estimating the sample size for a research project is important because 
+
+* sample size needs to be large enough to detect the expected effect if it's present
+* a sample that is too large is wasteful of resources or could be unethical
+* the study might not be feasible if a large sample size is required.
+
+Estimating sample size depends on
+
+* the objective(s) of the research
+* the type of statistical tests or modelling that will be applied
+* the type of study design e.g. experimental versus observational studies
+* if the target outcome is a rare case
+
+Sample size can be estimated using software tools or, for situations where less scientific rigor is required, by *rules of thumb*. 
+
+The following definitions are beyond the scope of the Science Extension course, but you might come across them in your research when estimating the sample size required for your project. 
+
+>**Definitions** 
+Type I Error - rejecting a true null hypothesis (false positive - accepting there is a significant effect when there isn't one)  
+Type II Error - not rejecting a false null hypothesis (false negative - missing a significant effect when there is one)  
+Power - the ability of a statistical test to detect an effect given that the effect exists. Formal definition: $\text{Power} = 1 - \text{P(Type II Error)}$
+
+
+### Large Data Sets
+Large data sets have become commonplace since the advent of the internet and increasingly powerful computers. While these data sets provide the ability to work with very large samples, they introduce the problem of "information overload". Too much data can be as big a problem as too little data!
+
+To overcome some of the problems associated with large data sets, they are increasingly available online along with the ability to process the data using cloud computing. This makes the task of working with large data sets more achievable for individuals and smaller institutions.
 
 ### Activity - Online Data Repositories
 
@@ -91,6 +114,7 @@ Some of the issues that need to be checked and remedied are
 * duplicate records
 * removing irrelevant variables; finding the relevant ones amongst hundreds
 * variables that have only one value or are empty
+* metadata added at the beginning or end of data tables exported from secondary sources - always check the end of the data for unwanted additions!
 * empty rows, cells, merged cells in spreadsheets :(
 
 ... and the list goes on. 
