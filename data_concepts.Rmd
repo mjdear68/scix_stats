@@ -66,15 +66,22 @@ Estimating sample size depends on
 * the type of study design e.g. experimental versus observational studies
 * if the target outcome is a rare case
 
-Sample size can be estimated using software tools or, for situations where less scientific rigor is required, by *rules of thumb*. 
+Sample size can be estimated using software tools or, for situations where less scientific rigor is required, by "rules of thumb".  
 
-The following definitions are beyond the scope of the Science Extension course, but you might come across them in your research when estimating the sample size required for your project. 
+-----
+
+### Extension
+
+You might come across them in your research when estimating the sample size required for your project. 
 
 >**Definitions** 
-Type I Error - rejecting a true null hypothesis (false positive - accepting there is a significant effect when there isn't one)  
-Type II Error - not rejecting a false null hypothesis (false negative - missing a significant effect when there is one)  
-Power - the ability of a statistical test to detect an effect given that the effect exists. Formal definition: $\text{Power} = 1 - \text{P(Type II Error)}$
+**Type I Error** - rejecting a true null hypothesis (false positive - accepting there is a significant effect when there isn't one)  
+**Type II Error** - not rejecting a false null hypothesis (false negative - missing a significant effect when there is one)  
+**Power** - the ability of a statistical test to detect an effect given that the effect exists. Formal definition: $\text{Power} = 1 - \text{P(Type II Error)}$
 
+We will come back to hypothesis testing in a later lesson.
+
+-----
 
 ### Large Data Sets
 Large data sets have become commonplace since the advent of the internet and increasingly powerful computers. While these data sets provide the ability to work with very large samples, they introduce the problem of "information overload". Too much data can be as big a problem as too little data!
