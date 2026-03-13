@@ -1,4 +1,12 @@
 # Further Reading {#further_reading}
 
-* [Australian Bureau of Statistics "Statistical Terms and Concepts"](https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts)
+## Books
+
+[**Advanced High School Statistics 3rd Ed, Diez et al**](): A detailed and rigorous introduction to statistics that would suit advanced high school and undergraduate university students. The theory and applications of statistics are covered from collecting data through to inference and statistical tests. The book contains numerous exercise and examples to help students develop their knowledge and skills.
+
+[**Introductory Statistics, Shafer and Zhang**](): Hosted on [LibreTexts](), this is another thorough but accessible introduction to the theory and practice of statistics. The book begins with a detailed explanation of descriptive statistics and probability, and random variables. Later chapters cover sampling distributions, hypotheses, and hypothesis testing.
+
+## Websites
+
+[**Australian Bureau of Statistics "Statistical Terms and Concepts"**](https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts): A comprehensive glossary of statistical terms. Click the terms for detailed explanations.
 

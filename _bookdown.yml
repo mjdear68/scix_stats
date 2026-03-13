@@ -12,5 +12,5 @@ rmd_files: ["index.Rmd",
             # "collecting_data.Rmd",
             # "preparing_data.Rmd",
             # "eda.Rmd",
-            # "further_reading.Rmd"
+            "further_reading.Rmd"
             ]

@@ -21,3 +21,6 @@ large-data-sets
 activity---online-data-repositories
 data-cleaning
 activity-2
+further_reading
+books
+websites

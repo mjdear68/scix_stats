@@ -13,6 +13,7 @@ To learn the steps in preparing data for statistical analysis
 
 ![The basic types of data.](./resources/img/types_of_data.png)
 
+
 > *Count data* is quantitative discrete data in which the number of occurrences of something are recorded e.g. the number of birds in migratory flocks.
 
 ## The Structure of Data
@@ -54,7 +55,7 @@ print.data.frame(iris[sample(nrow(iris), 6),], row.names = FALSE) # to suppress 
 
 Data sources can be classified as either *primary* or *secondary*.
 
->**Primary Source Data** is collected by the researcher through first-hand surveys.
+>**Primary Source Data** is collected by the researcher through first-hand surveys.  
 > **Secondary Source Data** is collected from existing data repositories.
 
 ### Sample Size - How Much Data Is Enough?
@@ -123,7 +124,6 @@ Some of the issues that need to be checked and remedied are
 * duplicate categories in qualitative variables e.g. dog, cat, cat, dogs, cats
 * dates and times are not recognised correctly by the software
 * outliers
-* zero inflated count data e.g. the number of daily observations of a rare species will often be 0
 * duplicate records
 * removing irrelevant variables; finding the relevant ones amongst hundreds
 * variables that have only one value or are empty
