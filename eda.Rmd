@@ -224,3 +224,8 @@ PlantGrowth %>%
 ```
 
 The ctrl group is slightly negatively skewed (Mean = 5.032 versus Median = 5.155). The greatest variation occurs on the trt1 group (SD = 0.79), and the least in the trt2 group (SD = 0.44). The boxplots show that the trt1 group has potential outliers at the upper values. 
+
+
+## Your Project : EDA On Dummy Data Set
+
+Complete exploratory data analysis on your dummy data set. The objective is to see if your experiment can produce the expected results, and to produce examples of plots and tables that you plan to include in your report.
