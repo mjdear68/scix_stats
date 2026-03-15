@@ -67,7 +67,7 @@ iris %>%
   labs(title = "Boxplot of Sepal Length For Each Species", y = "Sepal Length (mm)")
 ```
 
->Questions   
+>**Questions**   
 1. What do the thicker black lines inside the boxes represent?  
 2. What is similar and what is different about the three boxplots? Think in terms of spread and skewness.  
 
@@ -119,7 +119,7 @@ p1 + p2 + plot_annotation(title = "Scatterplot of Sepal Length Vs Sepal Width")
 What extra insights are gained from the grouped plot when compared with the ungrouped plot?
 
 
->Questions  
+>**Questions**  
 1. Describe the relationship between Sepal Length and Sepal Width for each species.  
 2. Draw a line of fit onto each plot. Use this line to estimate the Sepal Width for a Sepal Length of 6.5 for each species.
 
@@ -148,7 +148,7 @@ iris %>%
 
 
 
->Questions  
+>**Questions**  
 1. Estimate the mean for each species using the points plot.  
 2. Do you think there is a constant variance (standard deviation) for the three species?  
 3. Is there enough evidence in this sample to suggest that the population mean for Sepal Width is different for the three species? Why or why not?
@@ -163,7 +163,7 @@ The following plot shows the concentration of atmospheric CO2 at Mauna Loa Hawai
 plot(co2, main = "Atmospheric CO2 Concentrations at Mauna Loa Hawaii")
 ```
 
->Questions  
+>**Questions**  
 1. Describe the trend in the CO2 concentration.  
 2. Why does the plot zig-zag up and down?
 
@@ -176,7 +176,7 @@ ggpairs(iris, aes(colour = Species)) +
   labs(title = "Pairs Plot By Species")
 ```
 
->Questions  
+>**Question**  
 1. Which variables show the greatest difference between the three species? 
 
 -----
