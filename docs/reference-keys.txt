@@ -22,6 +22,17 @@ activity---online-data-repositories
 data-cleaning
 activity-2
 your-project-data-simulation
+eda
+common-descriptive-statistics
+common-statistical-plots
+boxplot
+histogram
+scatter-plot
+points-plot
+line-plot
+activity-3
+solutions
+your-project-eda-on-dummy-data-set
 further_reading
 books
 websites

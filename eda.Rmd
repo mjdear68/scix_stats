@@ -185,7 +185,7 @@ ggpairs(iris, aes(colour = Species)) +
 
 ## Activity
 
-Use the PlantGrowth data set and a spreadsheet to
+Use the [PlantGrowth](resources/datasets/PlantGrowth.csv) data set and a spreadsheet to
 
 1. Create a summary of the quantitative variable for each group including min, max, quantiles, mean, standard deviation 
 2. Create boxplots of the quantitative variable for each group in the data set. 
