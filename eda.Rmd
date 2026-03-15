@@ -106,12 +106,12 @@ Scatter plots can also include a grouping (qualitative) variable using colour or
 p1 <- iris %>% 
   ggplot(aes(x = Sepal.Length, y = Sepal.Width)) +
   geom_point() +
-  labs(title = "Ungrouped", x = "Sepal Length", y = "Sepal Width") 
+  labs(title = "Ungrouped", x = "Sepal Length (mm)", y = "Sepal Width (mm)") 
 
 p2 <- iris %>% 
   ggplot(aes(x = Sepal.Length, y = Sepal.Width, colour = Species)) +
   geom_point() +
-  labs(title = "Grouped By Species", x = "Sepal Length", y = "Sepal Width") 
+  labs(title = "Grouped By Species", x = "Sepal Length (mm)", y = "Sepal Width (mm)") 
 
 p1 + p2 + plot_annotation(title = "Scatterplot of Sepal Length Vs Sepal Width")
 ```
@@ -131,8 +131,22 @@ This plot is similar to a scatter plot, except that the x-variable is qualitativ
 iris %>% 
   ggplot(aes(x = Species, y = Sepal.Width, group = Species)) +
   geom_point() +
-  labs(title = "Points Plot of Sepal Length For Each Species", x = "Species", y = "Sepal Length") 
+  labs(title = "Points Plot of Sepal Length For Each Species", x = "Species", y = "Sepal Length (mm)") 
 ```
+
+
+Overlaying the data points onto boxplots can provide useful additoinal information about the distribution of the data.
+
+```{r}
+iris %>% 
+  ggplot(aes(x = Species, y = Sepal.Length, group = Species)) +
+  geom_boxplot() +
+  geom_point(aes(alpha = 0.25), colour = "blue") +
+  scale_alpha(guide = NULL) +
+  labs(title = "Boxplot With Points of Sepal Length For Each Species", y = "Sepal Length (mm)")
+```
+
+
 
 >Questions  
 1. Estimate the mean for each species using the points plot.  
@@ -149,6 +163,10 @@ The following plot shows the concentration of atmospheric CO2 at Mauna Loa Hawai
 plot(co2, main = "Atmospheric CO2 Concentrations at Mauna Loa Hawaii")
 ```
 
+>Questions  
+1. Describe the trend in the CO2 concentration.  
+2. Why does the plot zig-zag up and down?
+
 -----
 ### Extension: Paris Plot
 A pairs plot shows the relationships between all pairs of variables in a data set. This gives an overall picture of patterns within the data and is a useful tool for guiding research. The following plot includes scatter plots and correlation coefficients for quantitative pairs, boxplots for qualitative-quantitative pairs, and distribution curves for quantitative variables. Each plot has been coloured on the basis of species. To produce this type of plot requires statistical computing software such as R.
@@ -158,12 +176,11 @@ ggpairs(iris, aes(colour = Species)) +
   labs(title = "Pairs Plot By Species")
 ```
 
+>Questions  
+1. Which variables show the greatest difference between the three species? 
+
 -----
 
-
->Questions  
-1. Describe the trend in the CO2 concentration.  
-2. Why does the plot zig-zag up and down?
 
 
 ## Activity
@@ -175,7 +192,7 @@ Use the PlantGrowth data set and a spreadsheet to
 3. Create histograms of the quantitative variable for each group in the data set.
 4. Write a summary of your observations. Can you suggest any hypotheses?
 
-Hint: You will need to reorganise the data so there is on group per column.
+Hint: To make these plots and summaries in a spreadsheet, you will need to reorganise the data so there is one group per column.
 
 ### Solutions
 
