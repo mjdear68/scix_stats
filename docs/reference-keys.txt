@@ -36,3 +36,4 @@ your-project-eda-on-dummy-data-set
 further_reading
 books
 websites
+planning-your-project-with-statistics-in-mind

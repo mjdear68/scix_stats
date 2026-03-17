@@ -28,6 +28,8 @@ theme_set(theme_bw())
 
 ```
 
+# (PART\*) Part 1: Background Knowledge {-} 
+
 # Introduction
 
 >**Learning Objectives**  

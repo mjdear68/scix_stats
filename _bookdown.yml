@@ -10,5 +10,6 @@ new_session: no
 rmd_files: ["index.Rmd",
             "data_concepts.Rmd",
             "eda.Rmd",
-            "further_reading.Rmd"
+            "further_reading.Rmd",
+            "your_project.Rmd"
             ]

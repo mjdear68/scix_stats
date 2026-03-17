@@ -1,0 +1,15 @@
+# (PART\*) Part 2: Your Project {-}
+
+# Planning Your Project With Statistics In Mind
+
+## Starting At the End
+
+Imagine you are writing your final report. What will it contain in order to support you hypothesis? Think about what results, tables, and plots you will need. This does not need to be a definitive list. It is just an exercise to help your planning. Now use a pencil and paper to create a dummy report including hand sketches of tables and plots. Show the variables and measurements you will need. Use section headings such as "Introduction" and "Method", but don't attempt to write any detail.
+
+
+
+  - What is your hypothesis?
+  - What results, tables, and plots will you need to support your hypothesis?
+  - What variables will you need to measure?
+  - How much data will you need to collect (sample size)?
+  - Which statistical test(s) will you use?
