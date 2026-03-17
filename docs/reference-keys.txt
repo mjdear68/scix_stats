@@ -21,7 +21,6 @@ large-data-sets
 activity---online-data-repositories
 data-cleaning
 activity-2
-your-project-data-simulation
 eda
 common-descriptive-statistics
 common-statistical-plots
@@ -32,8 +31,12 @@ points-plot
 line-plot
 activity-3
 solutions
-your-project-eda-on-dummy-data-set
 further_reading
 books
 websites
 planning-your-project-with-statistics-in-mind
+starting-at-the-end
+make-a-list-of-variables
+create-a-spreadsheet-with-simulated-data
+create-summary-tables-and-plots-for-your-simulated-data
+apply-relevant-statistical-tests-to-your-simulated-data

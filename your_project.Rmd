@@ -4,12 +4,46 @@
 
 ## Starting At the End
 
-Imagine you are writing your final report. What will it contain in order to support you hypothesis? Think about what results, tables, and plots you will need. This does not need to be a definitive list. It is just an exercise to help your planning. Now use a pencil and paper to create a dummy report including hand sketches of tables and plots. Show the variables and measurements you will need. Use section headings such as "Introduction" and "Method", but don't attempt to write any detail.
+Imagine you are writing your final report. What will it contain in order to support you hypothesis? Think about what results, tables, and plots you will need. This does not need to be a definitive list. Rather, it is an exercise to help guide your planning. Now use a pencil and paper to create a dummy report including hand sketches of tables and plots. Show the variables and measurements you will need. Use section headings such as "Introduction" and "Method", but don't attempt to write any detail.
+
+## Make a List of Variables
+
+Complete a table describing your variables using the following tables as examples. For quantitative variables, include units and the expected level of precision based on your equipment. For qualitative variables, include a description of the levels in your variable.
+
+The first table represents an observational study. For example, measurements were taken of all mammals caught (then released) at a number of study sites within the region.
+
+Var Name|Data Type|Var Type|Description
+--------|---------|--------|-----------
+weight|continuous|dependent|Animal weight in grams rounded to milligrams (3 decimal places)
+length|continuous|independent|Animal length in mm rounded to nearest mm.
+scientific_name|nominal|independent|Scientific name of the species
+site|nominal|independent|Site name - S1, S2, S3 ....
+
+The second table represents an experimental study. Plants were grown at a number of plots within a field. Each plot was divided into three equal sections. Each section was given a different fertiliser treatment. The total weight of produce from each section was recorded. 
+
+Var Name|Data Type|Var Type|Description
+--------|---------|--------|-----------
+weight|continuous|dependent|Total produce for a section in kg rounded to the nearest gram (3 decimal places)
+trt|nominal|independent|Treatment ID. trt1: control (no fertiliser); trt2: 50g/m^2 at 14 day intervals; trt3: 100g/m^2 at 14 day intervals
+plot|nominal|independent|Plot ID - pl1 to pl10
+
+## Create a Spreadsheet With Simulated Data
+
+The first row of your spreadsheet will contain the names of the variables from your variables summary table. Now add observations to your simulated data set that reflect what you expect to find during your research. Try to make them as realistic as possible. For example, measurements should have random errors and be recorded to the precision described in your data summary table. If you are completing an experiment, include the planned number of observations for each of your treatment groups e.g. 3 treatments with 10 repetitions each will give a total of 30 observations.
+
+You can simulate normally distributed random errors in a spreadsheet by using the following formula. Replace "your_mean" and "your_sd" with the mean and standard deviation you expect to find for a given variable. Copy the formula to the relevant number of cells in each column.
+
+```
+=NORMINV(RAND(),your_mean,your_sd)
+
+```
 
 
+## Create Summary Tables and Plots For Your Simulated Data
 
-  - What is your hypothesis?
-  - What results, tables, and plots will you need to support your hypothesis?
-  - What variables will you need to measure?
-  - How much data will you need to collect (sample size)?
-  - Which statistical test(s) will you use?
+The objective of this step is to see if your experiment can produce the expected results in theory. This is also an opportunity to produce examples of the plots and tables that you plan to include in your report.
+
+Refer to the [Exploratory Data Analysis](#eda) section as a guide.
+
+## Apply Relevant Statistical Tests To Your Simulated Data
+

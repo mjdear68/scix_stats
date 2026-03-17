@@ -28,7 +28,7 @@ theme_set(theme_bw())
 
 ```
 
-# (PART\*) Part 1: Background Knowledge {-} 
+# (PART\*) Part 1: Statistical Concepts {-} 
 
 # Introduction
 
