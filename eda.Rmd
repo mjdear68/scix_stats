@@ -29,10 +29,10 @@ When approaching a new data set, a good first step is to determine the data type
 ```{r}
 glimpse(iris)
 ```
-The output above shows that the Iris data set has five variables, four that are continuous *(dbl)* and one that is qualitative *(fct)*. There are 150 records (rows) in the data set.
+The output above shows that the Iris data set has five variables, four that are continuous (*\<dbl\>*) and one that is qualitative (*\<fct\>*). There are 150 records (rows) in the data set.
 
 The following is a summary of descriptive statistics for each variable in the Iris data set.
-```{r}
+```{r warning=FALSE}
 vtable::st(iris, 
            summ = list(c('notNA(x)', 'countNA(x)', 'mean(x)',   'sd(x)', 'min(x)', 'pctile(x)[25]', 'median(x)', 'pctile(x)[75]', 'max(x)')),
            summ.names = list(c("notNA", "NA", "Mean", "SD", "Min", "Q1", "Median", "Q2", "Max"))
@@ -42,6 +42,9 @@ vtable::st(iris,
 
 >**Question**   
 What are some conclusions that you can draw about the data set from the above summary? 
+
+>**Table Formatting For Reports**  
+The previous table is an example of an appropriate way to format tables for scientific reports. See the [APA tables webpage](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables) for further details and examples.
 
 
 ## Common Statistical Plots

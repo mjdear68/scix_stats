@@ -36,7 +36,7 @@ pairs
 activity-3
 solutions
 stat_tests
-independent-and-dependent
+sampling
 common-statistical-tests
 table
 examples
