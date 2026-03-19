@@ -1,0 +1,25 @@
+# Statistical Tests {#stat_tests}
+
+>**Learning Objectives**  
+To understand the process of sampling  
+To select, apply, and interpret common statistical tests  
+To understand p-values and statistical signifiance  
+To create and interpret confidence intervals
+
+## Sampling
+* Sampling should be done with replacement
+* Often not with replacement in practice - OK for large enough population
+* Sources of dependency - time, space
+* Common sampling mistakes
+
+## Common Statistical Tests
+### Table
+### Examples
+
+## p-values and Statistical Significance
+* What and why?
+* Correct interpretation
+* Effect size
+* How to report
+
+## Confidence Intervals

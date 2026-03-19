@@ -29,7 +29,7 @@ When approaching a new data set, a good first step is to determine the data type
 ```{r}
 glimpse(iris)
 ```
-The output above shows that the Iris data set has five variables, four that are continuous *(<dbl>)* and one that is qualitative *(<fct>)*. There are 150 records (rows) in the data set.
+The output above shows that the Iris data set has five variables, four that are continuous *(dbl)* and one that is qualitative *(fct)*. There are 150 records (rows) in the data set.
 
 The following is a summary of descriptive statistics for each variable in the Iris data set.
 ```{r}

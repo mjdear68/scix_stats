@@ -1,3 +1,4 @@
+tab:unnamed-chunk-4
 introduction
 what-is-statistics-and-what-does-it-do
 examples-of-statistical-problems
@@ -34,6 +35,13 @@ points-plot
 pairs
 activity-3
 solutions
+stat_tests
+independent-and-dependent
+common-statistical-tests
+table
+examples
+p-values-and-statistical-significance
+confidence-intervals
 further_reading
 books
 websites

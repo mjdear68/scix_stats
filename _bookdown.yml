@@ -6,10 +6,11 @@ language:
   ui:
     chapter_name: "Lesson "
 new_session: no
-# rmd_subdir: ["chapters"]
+rmd_subdir: "chapters"
 rmd_files: ["index.Rmd",
             "data_concepts.Rmd",
             "eda.Rmd",
+            "stat_tests.Rmd",
             "further_reading.Rmd",
             "your_project.Rmd"
             ]
