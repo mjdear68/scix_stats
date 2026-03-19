@@ -4,7 +4,7 @@
 .Ruserdata
 
 # docs/
-statistics_for_science_extension_files/
+./statistics_for_science_extension_files/
 resources/statistics_textbooks/
 resources/links/
 resources/documents/

@@ -1,0 +1,664 @@
+--- 
+title: "Statistics For Science Extension"
+author: "Michael Dear"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+documentclass: book
+bibliography: [book.bib, packages.bib]
+# url: your book url like https://bookdown.org/yihui/bookdown
+# cover-image: path to the social sharing image like images/cover.jpg
+description: |
+  These are the notes for the statistics section of the NSW Extension Science (SCIX) course.
+link-citations: yes
+# github-repo: rstudio/bookdown-demo
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message=FALSE, comment="") # remove code and ## from output
+```
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(patchwork)
+library(GGally)
+
+# Set the default ggplot theme to theme_bw() for better printing
+theme_set(theme_bw())
+
+```
+
+# (PART\*) Part 1: Statistical Concepts {-} 
+
+# Introduction
+
+>**Learning Objectives**  
+To define statistics and its purpose  
+To review the process and design of scientific studies  
+To understand the difference between populations and samples  
+To understand the difference between descriptive and inferential statistics
+
+These notes are a practical introduction to statistics for students of the NSW Science Extension course. The emphasis is on learning through examples and problem-solving.
+
+## What Is Statistics and What Does It Do?
+
+There is no one simple definition for what statistics is and what it does.
+
+"Statistics uses samples to explain and predict"
+
+"Statistics is a set of techniques for collecting and analysing data"
+
+"Statistics tells the story of the population being studied"
+
+However, it can be said that statistics is fundamental to all stages of scientific research.
+
+
+## Examples of Statistical Problems
+
+Most scientific research questions will rely heavily on statistical techniques:
+
+* What is the average girth (circumference) of trees in  a forest?
+* What is the rate of decline in seabird populations in Australian coastal waters? 
+* Does a new vaccine reduce the number of deaths from influenza? 
+* Predict the rise in temperature by 2050 in different regions of Australia.
+
+## A More Detailed Example
+
+Forestry scientists would like to know the average girth (circumference) of trees in a forest. There are too many trees to measure them all, so they plan to take a random sample of 200 trees. They need to use statistics to determine the size and structure of the sample. After collecting the data, they complete a statistical analysis to estimate that, to a high level of confidence, the average tree girth is between 175cm and 225cm. They then write a report using statistical tables and plots to communicate their results.
+
+## Scientific Studies
+
+A scientific study has the following steps:
+
+* Research question(s)
+* Study design - experimental or observational?
+* Data collection
+* Data analysis
+* Report
+
+## Study Design
+
+There are two basic types of scientific study:
+
+>**Observational study** - variables are not controlled e.g. the health records of 1000 people who had taken Drug X were reviewed to determine the side effects.
+
+>**Experimental study** - variables are controlled e.g. Plots A and B are next to each other. Plot A receives fertiliser and Plot B receives none.
+
+Observational studies can show *associations* between variables, but experimental studies can show *causal* relationships.
+
+>Observational study $\rightarrow$ association -  “A varies as B varies”  
+>Experimental study $\rightarrow$ causation - “A causes B”
+
+
+## Population and Sample
+
+>**Population** - all members of the group being studied e.g. all the Magpies in NSW. Population values are called **parameters**.
+
+>**Sample** - a subset of the population being studied e.g. 1000 magpies chosen at random locations across NSW. Sample values are called **statistics**.
+
+## Symbols For Common Values
+
+Value|Population Parameter|Sample Statistic
+-----|--------------------|---------------- 
+|Mean|$\mu$|$\bar{x}$
+|Standard Deviation|$\sigma$|$s$
+|Proportion|$p$|$\hat{p}$|
+
+
+## Descriptive and Inferential Statistics
+
+>**Descriptive statistics** describe data e.g. mean, median, standard deviation of a data set.
+
+>**Inferential statistics** estimate population parameters from a sample.
+
+Statistical analysis usually begins with descriptive statistics, then moves on to inferential statistics.
+
+-----
+
+## Extension - Spreadsheets and Statistical Computing Languages
+
+Spreadsheets are handy for recording and exploring small data sets. However, the capabilities of spreadsheets for statistical analysis are limited. Larger projects are best completed using a statistical computing language such as R. Analyses completed using computer coding have many advantages, such as 
+
+* the ability to handle very large data sets
+* a greater variety of plots
+* greater control over plot and data output
+* the availability of sophisticated modelling techniques 
+* a coding script becomes a reproducible record of the steps completed during the project
+
+The disadvantage of coding is the time taken to learn a language, although there are numerous training resources and forums available for free on the internet.
+
+These notes, including plots, tables, and most diagrams, were created using the R statistical computing language.
+
+------
+
+## Activity
+
+Write definitions for each term:
+
+* Population
+* Parameter 
+* Sample
+* Statistic 
+* Experimental study
+* Causation
+* Observational study
+* Association
+* Descriptive statistics
+* Inferential statistics
+
+
+
+
+<!--chapter:end:index.Rmd-->
+
+# Data Concepts {#data_concepts}
+
+>**Learning Objectives**  
+To uderstand the basic types of data  
+To understand how data is structured for statistical analysis  
+To determine the amount of data required for a scientific study  
+To investigate methods of data collection  
+To distinguish between primary and secondary sources  
+To review some secondary sources of scientific data  
+To learn the steps in preparing data for statistical analysis
+
+## Types of Data
+
+![The basic types of data.](./resources/img/types_of_data.png)
+
+
+> *Count data* is quantitative discrete data in which the number of occurrences of something are recorded e.g. the number of birds in migratory flocks.
+
+> *Qualitative* data is often described as a *grouping variable* e.g. the participants in a medical trial are grouped by the treatment they are given.
+
+## The Structure of Data
+
+Data should be structured using tables in which 
+
+* each column represents a variable
+* the values in each column are the same type and the same unit
+* the first row contains the names of the variables without any spaces
+
+The data in each row represents a single *observation* of the variables. Observations are often called *records* or *cases*, depending on the context of the study. Similarly, columns are often called *attributes*, *features* or *fields*.
+
+### File Formats For Data Storage and Exchange
+
+The most common format for storing and exchanging data for statistical analysis is *comma separated format* (CSV). CSV is a plain text file with fields separated by commas. Numeric data is unquoted and text data is surrounded by quotation marks. CSV files usually have the extension ".csv". 
+
+The following is an example of CSV file contents. The first row is the column headers, and the remaining rows are observations.
+
+```
+"Sepal.Length","Sepal.Width","Petal.Length","Petal.Width","Species"
+5.1,3.5,1.4,0.2,"setosa"
+4.9,3,1.4,0.2,"setosa"
+4.7,3.2,1.3,0.2,"setosa"
+```
+
+
+### Activity
+
+1. List the variables and the type of data they represent for the following data set.
+2. Write down one observation from the table.
+
+```{r}
+set.seed(98)
+print.data.frame(iris[sample(nrow(iris), 6),], row.names = FALSE) # to suppress printing row numbers
+```
+
+
+## Collecting Data
+
+Data sources can be classified as either *primary* or *secondary*.
+
+>**Primary Source Data** is collected by the researcher through first-hand surveys.  
+> **Secondary Source Data** is collected from existing data repositories.
+
+### Sample Size - How Much Data Is Enough?
+
+Estimating the sample size for a research project is important because 
+
+* sample size needs to be large enough to detect the expected effect if it's present
+* a sample that is too large is wasteful of resources or could be unethical
+* the study might not be feasible if a large sample size is required.
+
+Estimating sample size depends on
+
+* the objective(s) of the research
+* the type of statistical tests or modelling that will be applied
+* the type of study design e.g. experimental versus observational studies
+* if the target outcome is a rare case
+
+Sample size can be estimated using software tools or, for situations where less scientific rigor is required, by "rules of thumb".  
+
+-----
+
+### Extension
+
+You might come across them in your research when estimating the sample size required for your project. 
+
+>**Definitions** 
+**Type I Error** - rejecting a true null hypothesis (false positive - accepting there is a significant effect when there isn't one)  
+**Type II Error** - not rejecting a false null hypothesis (false negative - missing a significant effect when there is one)  
+**Power** - the ability of a statistical test to detect an effect given that the effect exists. Formal definition: $\text{Power} = 1 - \text{P(Type II Error)}$
+
+We will come back to hypothesis testing in a later lesson.
+
+-----
+
+### Large Data Sets
+Large data sets have become commonplace since the advent of the internet and increasingly powerful computers. While these data sets provide the ability to work with very large samples, they introduce the problem of "information overload". Too much data can be as big a problem as too little data!
+
+To overcome some of the problems associated with large data sets, they are increasingly available online along with the ability to process the data using cloud computing. This makes the task of working with large data sets more achievable for individuals and smaller institutions.
+
+### Activity - Online Data Repositories
+
+Explore the following data repositories and complete the table.
+
+Repository|Main Uses|Formats|Cloud Processing (y/n)
+----------|---------|-------|----------------------
+|[ABS](https://www.abs.gov.au/)| |
+|[data.gov.au](https://data.gov.au/)| | 
+|[SEED NSW](https://www.seed.nsw.gov.au/)| | 
+|[Digital Earth Australia](https://www.ga.gov.au/scientific-topics/dea)| | 
+|[Atlas of Living Australia](https://www.ala.org.au/)| |
+
+
+
+## Data Cleaning
+
+Most data needs preparation or "cleaning" before statistical analysis can begin.
+
+There is an expression that says "10 percent inspiration, 90 percent perspiration". In the case of statistics, preparing data for analysis is often the "90 percent perspiration"! Most real-world data sets will need a lot of cleaning before they are suitable for use in a research project. 
+
+Some of the issues that need to be checked and remedied are
+
+* missing values, often labelled as **NA**, but might just be blank - impute, drop, or ignore?
+* incorrect number formats e.g. differing numbers of decimal places, missing decimal points: 1.02, 1.15, 103, 1.96
+* units included in quantitative columns e.g. 9.1, 3.2, 5.8mm, 6.7 
+* Not the correct number of rows e.g. your data set should have 1000 rows, but it only has 100 when you open it
+* duplicate categories in qualitative variables e.g. dog, cat, cat, dogs, cats
+* dates and times are not recognised correctly by the software
+* outliers
+* duplicate records
+* removing irrelevant variables; finding the relevant ones amongst hundreds
+* variables that have only one value or are empty
+* column names that contain characters not permitted in some computing languages e.g. %, #, $
+* columns that have no name
+* metadata added at the beginning or end of data tables exported from secondary sources - always check the end of the data for unwanted additions!
+* empty rows, cells, merged cells in spreadsheets :(
+
+... and the list goes on. 
+
+>**Tip**  
+For a small project where you are working alone or in a small team, avoid most of these problems by developing a thorough plan and keeping accurate records. Do not change your methods once you have started recording data.
+
+### Activity
+
+Open the [messy_data.csv](resources/datasets/messy_data.csv) data set in a spreadsheet. This data represents observations from a national wildlife database for a study area. Find any issues with the data and decide what should be done to prepare the data for analysis.
+
+
+<!--chapter:end:data_concepts.Rmd-->
+
+# Exploratory Data Analysis {#eda}
+
+>**Learning Objectives**  
+To review common descriptive statistics  
+To review common statistical plots  
+To perform exploratory data analysis using a spreadsheet
+
+Once the study has been designed and data collected, it's time to begin analysing the results. The first step in analysis is getting to know the data set. The steps of exploratory data analysis (EDA) include
+
+* summarising quantitative variables - n, min, max, quartiles, mean, standard deviation
+* using boxplots and histograms to investigate spread and skewness
+* using scatter plots to investigate associations between quantitative variables
+* using grouping variables to investigate the similarities and differences between groups
+
+The following descriptive statistics and plots use the well-known Iris data set. The data set contains measurements of flower parts for three species of Iris.
+
+## Common Descriptive Statistics
+
+>**Definitions**  
+**n** - the number of scores  
+**Minimum (min)** - lowest score  
+**Maximum (max)** - highest score  
+**Quartiles** - the scores that break the data into quarters - Q1 25%; Q2 50% (Median); Q3 75%  
+**Mean** - the average; sum of scores divided by number of scores  
+**Standard Deviation (sd)** - average distance of scores from the mean
+
+When approaching a new data set, a good first step is to determine the data type of each variable (column).
+
+```{r}
+glimpse(iris)
+```
+The output above shows that the Iris data set has five variables, four that are continuous (*\<dbl\>*) and one that is qualitative (*\<fct\>*). There are 150 records (rows) in the data set.
+
+The following is a summary of descriptive statistics for each quantitative variable in the Iris data set.
+```{r warning=FALSE}
+vtable::st(iris[,1:4],
+           summ = list(c('notNA(x)', 'countNA(x)', 'mean(x)',   'sd(x)', 'min(x)', 'pctile(x)[25]', 'median(x)', 'pctile(x)[75]', 'max(x)')),
+           summ.names = list(c("notNA", "NA", "Mean", "SD", "Min", "Q1", "Q2 (Median)", "Q3", "Max")),
+           )
+
+```
+
+
+It is also worthwhile creating a summary for each group in data sets with grouping variables. 
+```{r warning=FALSE}
+vtable::st(iris,
+           summ = list(c('notNA(x)', 'countNA(x)', 'mean(x)',   'sd(x)', 'min(x)', 'pctile(x)[25]', 'median(x)', 'pctile(x)[75]', 'max(x)')),
+           summ.names = list(c("notNA", "NA", "Mean", "SD", "Min", "Q1", "Q2 (Median)", "Q3", "Max")),
+           group = 'Species', 
+           group.long = TRUE
+           )
+
+# gtsummary::tbl_summary(iris, by = Species)
+
+```
+
+>**Question**   
+What are some conclusions that you can draw about the data set from the above summary? 
+
+>**Table Formatting For Reports**  
+The previous two tables are examples of tables formatted appropriately for scientific reports. See the [APA tables webpage](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables) for further details and examples.
+
+
+## Common Statistical Plots
+
+In school we usually use the word "graph", but statisticians usually use the word "plot". Spreadsheets call them "charts".
+
+### Statistical Plot Summary {#stat_plot_summary}
+Plot|Variables|Uses
+----|---------|----
+Boxplot|One quantitative variable; one grouping variable|Compares spread within groups; identifies outliers
+Histogram|One continuous variable|Identifying the population distribution
+Scatter Plot|Two continuous variables|Identifying relationships between variables e.g. linear, non-linear; identifies outliers
+Line Plot|One continuous variable; time with regular intervals|Observing change over time
+
+
+### Boxplot
+
+Boxplots are used to 
+
+* show the distribution of data for each quartile of a quantitative variable.
+* identify outliers
+* compare groups
+
+![The structure of a boxplot.](./resources/img/boxplot_diagram.png){width=50%}
+
+
+The following boxplots show the distribution of Sepal Length grouped by species.
+
+```{r}
+iris %>% 
+  ggplot(aes(group = Species)) +
+  geom_boxplot(aes(x = Species, y = Sepal.Length)) +
+  labs(title = "Boxplot of Sepal Length For Each Species", y = "Sepal Length (mm)")
+```
+
+>**Questions**   
+1. What do the thicker black lines inside the boxes represent?  
+2. What is similar and what is different about the three boxplots? Think in terms of spread and skewness.  
+
+### Histogram
+
+Histograms are used to help identify the type of distribution from which the data was drawn. 
+
+```{r}
+iris %>% 
+  ggplot(aes(group = Species)) +
+  geom_histogram(aes(x = Sepal.Length), bins = 11) +
+  facet_wrap(.~Species) +
+  labs(title = "Histogram of Sepal Length For Each Species", x = "Sepal Length", y = "Frequency")
+```
+
+The histograms confirm that the distribution of Sepal.Length is approximately symmetrical for each species. This suggests that a normal distribution might be an appropriate model in each case. Also notice that there is an outlier in the virginica species, as was identified by the boxplot.
+
+### Scatter Plot
+
+Scatter plots identify relationships between quantitative variables. If the relationship is linear, it is usually described in terms of the strength of the correlation and the direction of the relationship e.g. "strong positive" or "moderate negative".
+
+
+```{r}
+iris %>% 
+  ggplot(aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point() +
+  # geom_smooth(method = "lm", formula = y ~ x) +
+  facet_wrap(.~Species) +
+  labs(title = "Scatterplot of Sepal Length Vs Sepal Width", x = "Sepal Length", y = "Sepal Width")
+```
+
+
+Scatter plots can also include a grouping (qualitative) variable using colour or different marker types. This can be useful for exploring relationships between different groups in the data set.
+
+```{r}
+p1 <- iris %>% 
+  ggplot(aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point() +
+  labs(title = "Ungrouped", x = "Sepal Length (mm)", y = "Sepal Width (mm)") 
+
+p2 <- iris %>% 
+  ggplot(aes(x = Sepal.Length, y = Sepal.Width, colour = Species)) +
+  geom_point() +
+  labs(title = "Grouped By Species", x = "Sepal Length (mm)", y = "Sepal Width (mm)") 
+
+p1 + p2 + plot_annotation(title = "Scatterplot of Sepal Length Vs Sepal Width")
+```
+
+What extra insights are gained from the grouped plot when compared with the ungrouped plot?
+
+
+>**Questions**  
+1. Describe the relationship between Sepal Length and Sepal Width for each species.  
+2. Draw a line of fit onto each plot. Use this line to estimate the Sepal Width for a Sepal Length of 6.5 for each species.
+
+
+### Line Plot
+
+Line plots are often used for time series data e.g. daily temperatures in March.
+
+The following plot shows the concentration of atmospheric CO2 at Mauna Loa Hawaii. 
+
+```{r}
+plot(co2, main = "Atmospheric CO2 Concentrations at Mauna Loa Hawaii")
+```
+
+>**Questions**  
+1. Describe the trend in the CO2 concentration.  
+2. Why does the plot zig-zag up and down?
+
+-----
+
+### Extension: Further Plots
+
+#### Points Plot
+
+This plot is similar to a scatter plot, except that the x-variable is qualitative. This plot shows the spread of each variable within each group of the qualitative variable.
+
+```{r}
+iris %>% 
+  ggplot(aes(x = Species, y = Sepal.Width, group = Species)) +
+  geom_point() +
+  labs(title = "Points Plot of Sepal Length For Each Species", x = "Species", y = "Sepal Length (mm)") 
+```
+
+
+Overlaying the data points onto boxplots can provide useful additional information about the spread of the data.
+
+```{r}
+iris %>% 
+  ggplot(aes(x = Species, y = Sepal.Length, group = Species)) +
+  geom_boxplot() +
+  geom_point(aes(alpha = 0.25), colour = "blue") +
+  scale_alpha(guide = NULL) +
+  labs(title = "Boxplot With Points of Sepal Length For Each Species", y = "Sepal Length (mm)")
+```
+
+
+
+>**Questions**  
+1. Estimate the mean for each species using the points plot.  
+2. Do you think there is a constant variance (standard deviation) for the three species?  
+3. Is there enough evidence in this sample to suggest that the population mean for Sepal Width is different for the three species? Why or why not?
+
+
+#### Pairs
+A pairs plot shows the relationships between all pairs of variables in a data set. This gives an overall picture of patterns within the data and is a useful tool for guiding research. The following plot includes scatter plots and correlation coefficients for quantitative pairs, boxplots for qualitative-quantitative pairs, and distribution curves for quantitative variables. Each plot has been coloured on the basis of species. To produce this type of plot requires statistical computing software such as R.
+
+```{r message=FALSE}
+ggpairs(iris, aes(colour = Species)) +
+  labs(title = "Pairs Plot By Species")
+```
+
+>**Question**  
+1. Which variables show the greatest difference between the three species? 
+
+-----
+
+
+
+## Activity
+
+Use the [PlantGrowth](resources/datasets/PlantGrowth.csv) data set and a spreadsheet to
+
+1. Create a summary of the quantitative variable for each group including min, max, quantiles, mean, standard deviation 
+2. Create boxplots of the quantitative variable for each group in the data set. 
+3. Create histograms of the quantitative variable for each group in the data set.
+4. Write a summary of your observations. Can you suggest any hypotheses?
+
+Hint: To make these plots and summaries in a spreadsheet, you will need to reorganise the data so there is one group per column.
+
+### Solutions
+
+```{r}
+glimpse(PlantGrowth)
+
+PlantGrowth %>% 
+  group_by(group) %>% 
+  summarise(Min = min(weight), 
+            Q1 = quantile(weight, 0.25), 
+            Median_Q2 = quantile(weight, 0.5), 
+            Q3 = quantile(weight, 0.75), 
+            Max = max(weight), 
+            Mean = mean(weight), 
+            SD = sd(weight))
+
+PlantGrowth %>% 
+  ggplot() +
+  geom_boxplot(aes(y = weight, x = "")) +
+  facet_wrap(.~group) +
+  labs(title = "Boxplot of Weight For Each Group", x = "")
+
+PlantGrowth %>% 
+  ggplot() +
+  geom_histogram(aes(x = weight), bins = 7) +
+  facet_wrap(.~group) +
+  labs(title = "Histogram of Weight For Each Group", y = "Frequency")
+  
+```
+
+The ctrl group is slightly negatively skewed (Mean = 5.032 versus Median = 5.155). The greatest variation occurs on the trt1 group (SD = 0.79), and the least in the trt2 group (SD = 0.44). The boxplots show that the trt1 group has potential outliers at the upper values. 
+
+
+
+<!--chapter:end:eda.Rmd-->
+
+# Statistical Tests {#stat_tests}
+
+>**Learning Objectives**  
+To understand the process of sampling  
+To select, apply, and interpret common statistical tests  
+To understand p-values and statistical signifiance  
+To create and interpret confidence intervals
+
+## Sampling
+* Sampling should be done with replacement
+* Often not with replacement in practice - OK for large enough population
+* Sources of dependency - time, space
+* Common sampling mistakes
+
+## Common Statistical Tests
+### Table
+### Examples
+
+## p-values and Statistical Significance
+* What and why?
+* Correct interpretation
+* Effect size
+* How to report
+
+## Confidence Intervals
+
+<!--chapter:end:stat_tests.Rmd-->
+
+# Further Reading {#further_reading}
+
+## Books
+
+[**Advanced High School Statistics 3rd Ed, Diez et al**](https://www.openintro.org/book/ahss/): A detailed and rigorous introduction to statistics that would suit advanced high school and undergraduate university students. The theory and applications of statistics are covered from collecting data through to inference and statistical tests. The book contains numerous exercise and examples to help students develop their knowledge and skills.
+
+[**Introductory Statistics, Shafer and Zhang**](https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_(Shafer_and_Zhang)): Hosted on [LibreTexts](https://libretexts.org/), this is another thorough but accessible introduction to the theory and practice of statistics. The book begins with a detailed explanation of descriptive statistics and probability, and random variables. Later chapters cover sampling distributions, hypotheses, and hypothesis testing.
+
+## Websites
+
+[**Australian Bureau of Statistics "Statistical Terms and Concepts"**](https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts): A comprehensive glossary of statistical terms. Click the terms for detailed explanations.
+
+
+[**Statistics Kingdom**](https://www.statskingdom.com/index.html): Complete statistical tests online. The front page includes an extensive summary of statistical tests and there assumptions.
+
+<!--chapter:end:further_reading.Rmd-->
+
+# (PART\*) Part 2: Your Project {-}
+
+# Planning Your Project With Statistics In Mind
+
+## Starting At the End
+
+Imagine you are writing your final report. What will it contain in order to answers your research question and support you hypothesis? Think about the results, tables, and plots you will need. This does not need to be a definitive list. Rather, it is an exercise to help guide your planning. 
+
+Now use a pencil and paper to create a simulated report including hand sketches of tables and plots. Show the variables and measurements you will need. Decide which statistical test(s) you will use. Include section headings such as "Introduction" and "Method", but don't attempt to write any detail.
+
+## Make a Variables Summary Table
+
+Describe your variables using the following tables as examples. For quantitative variables, include units and the expected level of precision based on your equipment. For qualitative variables, include a description of the levels in your variable.
+
+The first table represents an observational study. For example, measurements were taken of all mammals caught (then released) at a number of study sites within a region.
+
+Var Name|Data Type|Var Type|Description
+--------|---------|--------|-----------
+weight|continuous|dependent|Animal weight in grams rounded to milligrams (3 decimal places)
+length|continuous|independent|Animal length in mm rounded to nearest mm.
+scientific_name|nominal|independent|Scientific name of the species
+site|nominal|independent|Site name - S1, S2, S3 ....
+
+The second table represents an experimental study. Plants were grown in plots within a field. Each plot was divided into three equal sections. Each section was given one of three fertiliser treatments. The total weight of produce from each section was recorded. 
+
+Var Name|Data Type|Var Type|Description
+--------|---------|--------|-----------
+weight|continuous|dependent|Total produce for a section in kg rounded to the nearest gram (3 decimal places)
+trt|nominal|independent|Treatment ID. trt1: control (no fertiliser); trt2: 50g/m^2 at 14 day intervals; trt3: 100g/m^2 at 14 day intervals
+plot|nominal|independent|Plot ID - pl1 to pl10
+
+## Create a Spreadsheet With Simulated Data
+
+The first row of your spreadsheet will contain the names of the variables from your variables summary table. Add observations to your simulated data set that reflect what you expect to find during your research. Try to make them as realistic as possible. For example, measurements should have random errors and be recorded to the precision described in your data summary table. If you are completing an experiment, include the planned number of observations for each of your treatment groups e.g. 3 treatments with 10 repetitions each will give a total of 30 observations.
+
+You can simulate normally distributed random errors in a spreadsheet by using the following formula. Replace "your_mean" and "your_sd" with the mean and standard deviation you expect to find for a given variable. Copy the formula to the relevant number of cells in each column.
+
+```
+=NORMINV(RAND(), your_mean, your_sd)
+
+```
+
+
+## Create Summary Tables and Plots For Your Simulated Data
+
+The objective of this step is to see if your experiment can produce the expected results in theory. This is also an opportunity to produce examples of the plots and tables that you plan to include in your report.
+
+Refer to the [Exploratory Data Analysis](#eda) section as a guide.
+
+## Apply Relevant Statistical Tests To Your Simulated Data
+
+Apply your chosen statistical test(s) to your simulated data. This is an opportunity to see if the tests will work as planned for your study. 
+
+<!--chapter:end:your_project.Rmd-->
+

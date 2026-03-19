@@ -92,7 +92,7 @@
 
 \title{Statistics For Science Extension}
 \author{Michael Dear}
-\date{2026-03-19}
+\date{2026-03-20}
 
 \begin{document}
 \maketitle
@@ -548,7 +548,7 @@ $ Species      <fct> setosa, setosa, setosa, setosa, setosa, setosa, setosa, s~
 
 The output above shows that the Iris data set has five variables, four that are continuous (\emph{\textless dbl\textgreater{}}) and one that is qualitative (\emph{\textless fct\textgreater{}}). There are 150 records (rows) in the data set.
 
-The following is a summary of descriptive statistics for each variable in the Iris data set.
+The following is a summary of descriptive statistics for each quantitative variable in the Iris data set.
 
 \begin{table}
 
@@ -556,12 +556,43 @@ The following is a summary of descriptive statistics for each variable in the Ir
 \centering
 \begin{tabular}[t]{llllllllll}
 \toprule
-Variable & notNA & NA & Mean & SD & Min & Q1 & Median & Q2 & Max\\
+Variable & notNA & NA & Mean & SD & Min & Q1 & Q2 (Median) & Q3 & Max\\
 \midrule
 Sepal.Length & 150 & 0 & 5.8 & 0.83 & 4.3 & 5.1 & 5.8 & 6.4 & 7.9\\
 Sepal.Width & 150 & 0 & 3.1 & 0.44 & 2 & 2.8 & 3 & 3.3 & 4.4\\
 Petal.Length & 150 & 0 & 3.8 & 1.8 & 1 & 1.6 & 4.3 & 5.1 & 6.9\\
 Petal.Width & 150 & 0 & 1.2 & 0.76 & 0.1 & 0.3 & 1.3 & 1.8 & 2.5\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+It is also worthwhile creating a summary for each group in data sets with grouping variables.
+
+\begin{table}
+
+\caption{\label{tab:unnamed-chunk-5}Summary Statistics}
+\centering
+\begin{tabular}[t]{llllllllll}
+\toprule
+Variable & notNA & NA & Mean & SD & Min & Q1 & Q2 (Median) & Q3 & Max\\
+\midrule
+Species: setosa &  &  &  &  &  &  &  &  & \\
+Sepal.Length & 50 & 0 & 5 & 0.35 & 4.3 & 4.8 & 5 & 5.2 & 5.8\\
+Sepal.Width & 50 & 0 & 3.4 & 0.38 & 2.3 & 3.2 & 3.4 & 3.7 & 4.4\\
+Petal.Length & 50 & 0 & 1.5 & 0.17 & 1 & 1.4 & 1.5 & 1.6 & 1.9\\
+Petal.Width & 50 & 0 & 0.25 & 0.11 & 0.1 & 0.2 & 0.2 & 0.3 & 0.6\\
+\addlinespace
+Species: versicolor &  &  &  &  &  &  &  &  & \\
+Sepal.Length & 50 & 0 & 5.9 & 0.52 & 4.9 & 5.6 & 5.9 & 6.3 & 7\\
+Sepal.Width & 50 & 0 & 2.8 & 0.31 & 2 & 2.5 & 2.8 & 3 & 3.4\\
+Petal.Length & 50 & 0 & 4.3 & 0.47 & 3 & 4 & 4.3 & 4.6 & 5.1\\
+Petal.Width & 50 & 0 & 1.3 & 0.2 & 1 & 1.2 & 1.3 & 1.5 & 1.8\\
+\addlinespace
+Species: virginica &  &  &  &  &  &  &  &  & \\
+Sepal.Length & 50 & 0 & 6.6 & 0.64 & 4.9 & 6.2 & 6.5 & 6.9 & 7.9\\
+Sepal.Width & 50 & 0 & 3 & 0.32 & 2.2 & 2.8 & 3 & 3.2 & 3.8\\
+Petal.Length & 50 & 0 & 5.6 & 0.55 & 4.5 & 5.1 & 5.5 & 5.9 & 6.9\\
+Petal.Width & 50 & 0 & 2 & 0.27 & 1.4 & 1.8 & 2 & 2.3 & 2.5\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -573,7 +604,7 @@ What are some conclusions that you can draw about the data set from the above su
 
 \begin{quote}
 \textbf{Table Formatting For Reports}\\
-The previous table is an example of an appropriate way to format tables for scientific reports. See the \href{https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables}{APA tables webpage} for further details and examples.
+The previous two tables are examples of tables formatted appropriately for scientific reports. See the \href{https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables}{APA tables webpage} for further details and examples.
 \end{quote}
 
 \section{Common Statistical Plots}\label{common-statistical-plots}
@@ -626,7 +657,7 @@ Boxplots are used to
 
 The following boxplots show the distribution of Sepal Length grouped by species.
 
-\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-5-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-6-1.pdf}}
 
 \begin{quote}
 \textbf{Questions}\\
@@ -638,7 +669,7 @@ The following boxplots show the distribution of Sepal Length grouped by species.
 
 Histograms are used to help identify the type of distribution from which the data was drawn.
 
-\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-6-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-7-1.pdf}}
 
 The histograms confirm that the distribution of Sepal.Length is approximately symmetrical for each species. This suggests that a normal distribution might be an appropriate model in each case. Also notice that there is an outlier in the virginica species, as was identified by the boxplot.
 
@@ -646,11 +677,11 @@ The histograms confirm that the distribution of Sepal.Length is approximately sy
 
 Scatter plots identify relationships between quantitative variables. If the relationship is linear, it is usually described in terms of the strength of the correlation and the direction of the relationship e.g.~``strong positive'' or ``moderate negative''.
 
-\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-7-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-8-1.pdf}}
 
 Scatter plots can also include a grouping (qualitative) variable using colour or different marker types. This can be useful for exploring relationships between different groups in the data set.
 
-\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-8-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-9-1.pdf}}
 
 What extra insights are gained from the grouped plot when compared with the ungrouped plot?
 
@@ -666,7 +697,7 @@ Line plots are often used for time series data e.g.~daily temperatures in March.
 
 The following plot shows the concentration of atmospheric CO2 at Mauna Loa Hawaii.
 
-\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-9-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-10-1.pdf}}
 
 \begin{quote}
 \textbf{Questions}\\
@@ -682,11 +713,11 @@ The following plot shows the concentration of atmospheric CO2 at Mauna Loa Hawai
 
 This plot is similar to a scatter plot, except that the x-variable is qualitative. This plot shows the spread of each variable within each group of the qualitative variable.
 
-\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-10-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-11-1.pdf}}
 
 Overlaying the data points onto boxplots can provide useful additional information about the spread of the data.
 
-\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-11-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-12-1.pdf}}
 
 \begin{quote}
 \textbf{Questions}\\
@@ -699,7 +730,7 @@ Overlaying the data points onto boxplots can provide useful additional informati
 
 A pairs plot shows the relationships between all pairs of variables in a data set. This gives an overall picture of patterns within the data and is a useful tool for guiding research. The following plot includes scatter plots and correlation coefficients for quantitative pairs, boxplots for qualitative-quantitative pairs, and distribution curves for quantitative variables. Each plot has been coloured on the basis of species. To produce this type of plot requires statistical computing software such as R.
 
-\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-12-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-13-1.pdf}}
 
 \begin{quote}
 \textbf{Question}\\
@@ -745,7 +776,7 @@ $ group  <fct> ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, trt~
 3 trt2   4.92  5.27      5.44  5.74  6.31  5.53 0.443
 \end{verbatim}
 
-\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-13-1.pdf}} \pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-13-2.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-14-1.pdf}} \pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-14-2.pdf}}
 
 The ctrl group is slightly negatively skewed (Mean = 5.032 versus Median = 5.155). The greatest variation occurs on the trt1 group (SD = 0.79), and the least in the trt2 group (SD = 0.44). The boxplots show that the trt1 group has potential outliers at the upper values.
 
