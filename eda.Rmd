@@ -33,7 +33,11 @@ The output above shows that the Iris data set has five variables, four that are 
 
 The following is a summary of descriptive statistics for each variable in the Iris data set.
 ```{r}
-summary(iris)
+vtable::st(iris, 
+           summ = list(c('notNA(x)', 'countNA(x)', 'mean(x)',   'sd(x)', 'min(x)', 'pctile(x)[25]', 'median(x)', 'pctile(x)[75]', 'max(x)')),
+           summ.names = list(c("notNA", "NA", "Mean", "SD", "Min", "Q1", "Median", "Q2", "Max"))
+           )
+
 ```
 
 >**Question**   
