@@ -23,7 +23,7 @@
 <meta name="author" content="Michael Dear" />
 
 
-<meta name="date" content="2026-03-18" />
+<meta name="date" content="2026-03-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -76,7 +76,7 @@
 <li><a href="./">Statistics For Science Extension</a></li>
 
 <li class="divider"></li>
-<li class="part"><span><b>Part 1: Background Knowledge</b></span></li>
+<li class="part"><span><b>Part 1: Statistical Concepts</b></span></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#what-is-statistics-and-what-does-it-do"><i class="fa fa-check"></i><b>1.1</b> What Is Statistics and What Does It Do?</a></li>
@@ -115,11 +115,12 @@
 <li class="chapter" data-level="3.1" data-path="eda.html"><a href="eda.html#common-descriptive-statistics"><i class="fa fa-check"></i><b>3.1</b> Common Descriptive Statistics</a></li>
 <li class="chapter" data-level="3.2" data-path="eda.html"><a href="eda.html#common-statistical-plots"><i class="fa fa-check"></i><b>3.2</b> Common Statistical Plots</a>
 <ul>
-<li class="chapter" data-level="3.2.1" data-path="eda.html"><a href="eda.html#boxplot"><i class="fa fa-check"></i><b>3.2.1</b> Boxplot</a></li>
-<li class="chapter" data-level="3.2.2" data-path="eda.html"><a href="eda.html#histogram"><i class="fa fa-check"></i><b>3.2.2</b> Histogram</a></li>
-<li class="chapter" data-level="3.2.3" data-path="eda.html"><a href="eda.html#scatter-plot"><i class="fa fa-check"></i><b>3.2.3</b> Scatter Plot</a></li>
-<li class="chapter" data-level="3.2.4" data-path="eda.html"><a href="eda.html#points-plot"><i class="fa fa-check"></i><b>3.2.4</b> Points Plot</a></li>
+<li class="chapter" data-level="3.2.1" data-path="eda.html"><a href="eda.html#stat_plot_summary"><i class="fa fa-check"></i><b>3.2.1</b> Statistical Plot Summary</a></li>
+<li class="chapter" data-level="3.2.2" data-path="eda.html"><a href="eda.html#boxplot"><i class="fa fa-check"></i><b>3.2.2</b> Boxplot</a></li>
+<li class="chapter" data-level="3.2.3" data-path="eda.html"><a href="eda.html#histogram"><i class="fa fa-check"></i><b>3.2.3</b> Histogram</a></li>
+<li class="chapter" data-level="3.2.4" data-path="eda.html"><a href="eda.html#scatter-plot"><i class="fa fa-check"></i><b>3.2.4</b> Scatter Plot</a></li>
 <li class="chapter" data-level="3.2.5" data-path="eda.html"><a href="eda.html#line-plot"><i class="fa fa-check"></i><b>3.2.5</b> Line Plot</a></li>
+<li class="chapter" data-level="3.2.6" data-path="eda.html"><a href="eda.html#extension-further-plots"><i class="fa fa-check"></i><b>3.2.6</b> Extension: Further Plots</a></li>
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="eda.html"><a href="eda.html#activity-3"><i class="fa fa-check"></i><b>3.3</b> Activity</a>
 <ul>
@@ -135,7 +136,7 @@
 <li class="chapter" data-level="5" data-path="planning-your-project-with-statistics-in-mind.html"><a href="planning-your-project-with-statistics-in-mind.html"><i class="fa fa-check"></i><b>5</b> Planning Your Project With Statistics In Mind</a>
 <ul>
 <li class="chapter" data-level="5.1" data-path="planning-your-project-with-statistics-in-mind.html"><a href="planning-your-project-with-statistics-in-mind.html#starting-at-the-end"><i class="fa fa-check"></i><b>5.1</b> Starting At the End</a></li>
-<li class="chapter" data-level="5.2" data-path="planning-your-project-with-statistics-in-mind.html"><a href="planning-your-project-with-statistics-in-mind.html#make-a-list-of-variables"><i class="fa fa-check"></i><b>5.2</b> Make a List of Variables</a></li>
+<li class="chapter" data-level="5.2" data-path="planning-your-project-with-statistics-in-mind.html"><a href="planning-your-project-with-statistics-in-mind.html#make-a-variables-summary-table"><i class="fa fa-check"></i><b>5.2</b> Make a Variables Summary Table</a></li>
 <li class="chapter" data-level="5.3" data-path="planning-your-project-with-statistics-in-mind.html"><a href="planning-your-project-with-statistics-in-mind.html#create-a-spreadsheet-with-simulated-data"><i class="fa fa-check"></i><b>5.3</b> Create a Spreadsheet With Simulated Data</a></li>
 <li class="chapter" data-level="5.4" data-path="planning-your-project-with-statistics-in-mind.html"><a href="planning-your-project-with-statistics-in-mind.html#create-summary-tables-and-plots-for-your-simulated-data"><i class="fa fa-check"></i><b>5.4</b> Create Summary Tables and Plots For Your Simulated Data</a></li>
 <li class="chapter" data-level="5.5" data-path="planning-your-project-with-statistics-in-mind.html"><a href="planning-your-project-with-statistics-in-mind.html#apply-relevant-statistical-tests-to-your-simulated-data"><i class="fa fa-check"></i><b>5.5</b> Apply Relevant Statistical Tests To Your Simulated Data</a></li>
@@ -180,15 +181,12 @@ To perform exploratory data analysis using a spreadsheet</p>
 <h2><span class="header-section-number">3.1</span> Common Descriptive Statistics<a href="eda.html#common-descriptive-statistics" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <blockquote>
 <p><strong>Definitions</strong><br />
-* n - the number of scores
-* Minimum (min) - lowest score
-* Maximum (max) - highest score
-* Quartiles - the scores that break the data into quarters
-- Q1 25%
-- Q2 50% (Median)
-- Q3 75%
-* Mean - the average; sum of scores divided by number of scores
-* Standard Deviation (sd) - average distance of scores from the mean</p>
+<strong>n</strong> - the number of scores<br />
+<strong>Minimum (min)</strong> - lowest score<br />
+<strong>Maximum (max)</strong> - highest score<br />
+<strong>Quartiles</strong> - the scores that break the data into quarters - Q1 25%; Q2 50% (Median); Q3 75%<br />
+<strong>Mean</strong> - the average; sum of scores divided by number of scores<br />
+<strong>Standard Deviation (sd)</strong> - average distance of scores from the mean</p>
 </blockquote>
 <p>When approaching a new data set, a good first step is to determine the data type of each variable (column).</p>
 <pre><code>Rows: 150
@@ -221,9 +219,48 @@ What are some conclusions that you can draw about the data set from the above su
 </div>
 <div id="common-statistical-plots" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> Common Statistical Plots<a href="eda.html#common-statistical-plots" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In school we usually use the word “graph”, but statisticians usually use the word “plot”.</p>
-<div id="boxplot" class="section level3 hasAnchor" number="3.2.1">
-<h3><span class="header-section-number">3.2.1</span> Boxplot<a href="eda.html#boxplot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In school we usually use the word “graph”, but statisticians usually use the word “plot”. Spreadsheets call them “charts”.</p>
+<div id="stat_plot_summary" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Statistical Plot Summary<a href="eda.html#stat_plot_summary" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<colgroup>
+<col width="23%" />
+<col width="52%" />
+<col width="23%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Plot</th>
+<th>Variables</th>
+<th>Uses</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Boxplot</td>
+<td>One quantitative variable; one grouping variable</td>
+<td>Spread within each group</td>
+</tr>
+<tr class="even">
+<td>Histogram</td>
+<td>One continuous variable</td>
+<td>Identifying the population distribution</td>
+</tr>
+<tr class="odd">
+<td>Scatter Plot</td>
+<td>Two continuous variables</td>
+<td>Identifying relationships between variables e.g. linear, non-linear</td>
+</tr>
+<tr class="even">
+<td>Line Plot</td>
+<td>One continuous variable; time with regular intervals</td>
+<td>Observing change over time</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="boxplot" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Boxplot<a href="eda.html#boxplot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Boxplots are used to</p>
 <ul>
 <li>show the distribution of data for each quartile of a quantitative variable.</li>
@@ -242,14 +279,14 @@ What are some conclusions that you can draw about the data set from the above su
 2. What is similar and what is different about the three boxplots? Think in terms of spread and skewness.</p>
 </blockquote>
 </div>
-<div id="histogram" class="section level3 hasAnchor" number="3.2.2">
-<h3><span class="header-section-number">3.2.2</span> Histogram<a href="eda.html#histogram" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="histogram" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Histogram<a href="eda.html#histogram" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Histograms are used to help identify the type of distribution from which the data was drawn.</p>
 <p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-6-1.png" alt="" width="672" /></p>
 <p>The histograms confirm that the distribution of Sepal.Length is approximately symmetrical for each species. This suggests that a normal distribution might be an appropriate model in each case. Also notice that there is an outlier in the virginica species, as was identified by the boxplot.</p>
 </div>
-<div id="scatter-plot" class="section level3 hasAnchor" number="3.2.3">
-<h3><span class="header-section-number">3.2.3</span> Scatter Plot<a href="eda.html#scatter-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="scatter-plot" class="section level3 hasAnchor" number="3.2.4">
+<h3><span class="header-section-number">3.2.4</span> Scatter Plot<a href="eda.html#scatter-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Scatter plots identify relationships between quantitative variables. If the relationship is linear, it is usually described in terms of the strength of the correlation and the direction of the relationship e.g. “strong positive” or “moderate negative”.</p>
 <p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-7-1.png" alt="" width="672" /></p>
 <p>Scatter plots can also include a grouping (qualitative) variable using colour or different marker types. This can be useful for exploring relationships between different groups in the data set.</p>
@@ -261,12 +298,26 @@ What are some conclusions that you can draw about the data set from the above su
 2. Draw a line of fit onto each plot. Use this line to estimate the Sepal Width for a Sepal Length of 6.5 for each species.</p>
 </blockquote>
 </div>
-<div id="points-plot" class="section level3 hasAnchor" number="3.2.4">
-<h3><span class="header-section-number">3.2.4</span> Points Plot<a href="eda.html#points-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>This plot is similar to a scatter plot, except that the x-variable is qualitative. This plot shows the distribution of each variable within each group of the qualitative variable.</p>
+<div id="line-plot" class="section level3 hasAnchor" number="3.2.5">
+<h3><span class="header-section-number">3.2.5</span> Line Plot<a href="eda.html#line-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Line plots are often used for time series data e.g. daily temperatures in March.</p>
+<p>The following plot shows the concentration of atmospheric CO2 at Mauna Loa Hawaii.</p>
 <p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-9-1.png" alt="" width="672" /></p>
-<p>Overlaying the data points onto boxplots can provide useful additoinal information about the distribution of the data.</p>
+<blockquote>
+<p><strong>Questions</strong><br />
+1. Describe the trend in the CO2 concentration.<br />
+2. Why does the plot zig-zag up and down?</p>
+</blockquote>
+<hr />
+</div>
+<div id="extension-further-plots" class="section level3 hasAnchor" number="3.2.6">
+<h3><span class="header-section-number">3.2.6</span> Extension: Further Plots<a href="eda.html#extension-further-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="points-plot" class="section level4 hasAnchor" number="3.2.6.1">
+<h4><span class="header-section-number">3.2.6.1</span> Points Plot<a href="eda.html#points-plot" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>This plot is similar to a scatter plot, except that the x-variable is qualitative. This plot shows the spread of each variable within each group of the qualitative variable.</p>
 <p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-10-1.png" alt="" width="672" /></p>
+<p>Overlaying the data points onto boxplots can provide useful additional information about the spread of the data.</p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-11-1.png" alt="" width="672" /></p>
 <blockquote>
 <p><strong>Questions</strong><br />
 1. Estimate the mean for each species using the points plot.<br />
@@ -274,34 +325,16 @@ What are some conclusions that you can draw about the data set from the above su
 3. Is there enough evidence in this sample to suggest that the population mean for Sepal Width is different for the three species? Why or why not?</p>
 </blockquote>
 </div>
-<div id="line-plot" class="section level3 hasAnchor" number="3.2.5">
-<h3><span class="header-section-number">3.2.5</span> Line Plot<a href="eda.html#line-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Line plots are often used for time series data e.g. daily temperatures in March.</p>
-<p>The following plot shows the concentration of atmospheric CO2 at Mauna Loa Hawaii.</p>
-<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-11-1.png" alt="" width="672" /></p>
+<div id="pairs" class="section level4 hasAnchor" number="3.2.6.2">
+<h4><span class="header-section-number">3.2.6.2</span> Pairs<a href="eda.html#pairs" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<p>A pairs plot shows the relationships between all pairs of variables in a data set. This gives an overall picture of patterns within the data and is a useful tool for guiding research. The following plot includes scatter plots and correlation coefficients for quantitative pairs, boxplots for qualitative-quantitative pairs, and distribution curves for quantitative variables. Each plot has been coloured on the basis of species. To produce this type of plot requires statistical computing software such as R.</p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-12-1.png" alt="" width="672" /></p>
 <blockquote>
-<p><strong>Questions</strong><br />
-1. Describe the trend in the CO2 concentration.<br />
-2. Why does the plot zig-zag up and down?</p>
+<p><strong>Question</strong><br />
+1. Which variables show the greatest difference between the three species?</p>
 </blockquote>
-<table style="width:8%;">
-<colgroup>
-<col width="8%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td>### Extension: Paris Plot
-A pairs plot shows the relationships between all pairs of variables in a data set. This gives an overall picture of patterns within the data and is a useful tool for guiding research. The following plot includes scatter plots and correlation coefficients for quantitative pairs, boxplots for qualitative-quantitative pairs, and distribution curves for quantitative variables. Each plot has been coloured on the basis of species. To produce this type of plot requires statistical computing software such as R.</td>
-</tr>
-<tr class="even">
-<td><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-12-1.png" alt="" width="672" /></td>
-</tr>
-<tr class="odd">
-<td>&gt;<strong>Question</strong>
-1. Which variables show the greatest difference between the three species?</td>
-</tr>
-</tbody>
-</table>
+<hr />
+</div>
 </div>
 </div>
 <div id="activity-3" class="section level2 hasAnchor" number="3.3">

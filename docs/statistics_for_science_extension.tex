@@ -78,7 +78,7 @@
 
 \title{Statistics For Science Extension}
 \author{Michael Dear}
-\date{2026-03-13}
+\date{2026-03-19}
 
 \begin{document}
 \maketitle
@@ -87,6 +87,9 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
+\part*{Part 1: Statistical Concepts}\label{part-part-1-statistical-concepts}
+\addcontentsline{toc}{part}{Part 1: Statistical Concepts}
+
 \chapter{Introduction}\label{introduction}
 
 \begin{quote}
@@ -283,6 +286,10 @@ To learn the steps in preparing data for statistical analysis
 \emph{Count data} is quantitative discrete data in which the number of occurrences of something are recorded e.g.~the number of birds in migratory flocks.
 \end{quote}
 
+\begin{quote}
+\emph{Qualitative} data is often described as a \emph{grouping variable} e.g.~the participants in a medical trial are grouped by the treatment they are given.
+\end{quote}
+
 \section{The Structure of Data}\label{the-structure-of-data}
 
 Data should be structured using tables in which
@@ -476,13 +483,355 @@ For a small project where you are working alone or in a small team, avoid most o
 
 Open the \href{resources/datasets/messy_data.csv}{messy\_data.csv} data set in a spreadsheet. This data represents observations from a national wildlife database for a study area. Find any issues with the data and decide what should be done to prepare the data for analysis.
 
+\chapter{Exploratory Data Analysis}\label{eda}
+
+\begin{quote}
+\textbf{Learning Objectives}\\
+To review common descriptive statistics\\
+To review common statistical plots\\
+To perform exploratory data analysis using a spreadsheet
+\end{quote}
+
+Once the study has been designed and data collected, it's time to begin analysing the results. The first step in analysis is getting to know the data set. The steps of exploratory data analysis (EDA) include
+
+\begin{itemize}
+\tightlist
+\item
+  summarising quantitative variables - n, min, max, quartiles, mean, standard deviation
+\item
+  using boxplots and histograms to investigate spread and skewness
+\item
+  using scatter plots to investigate associations between quantitative variables
+\item
+  using grouping variables to investigate the similarities and differences between groups
+\end{itemize}
+
+The following descriptive statistics and plots use the well-known Iris data set. The data set contains measurements of flower parts for three species of Iris.
+
+\section{Common Descriptive Statistics}\label{common-descriptive-statistics}
+
+\begin{quote}
+\textbf{Definitions}\\
+\textbf{n} - the number of scores\\
+\textbf{Minimum (min)} - lowest score\\
+\textbf{Maximum (max)} - highest score\\
+\textbf{Quartiles} - the scores that break the data into quarters - Q1 25\%; Q2 50\% (Median); Q3 75\%\\
+\textbf{Mean} - the average; sum of scores divided by number of scores\\
+\textbf{Standard Deviation (sd)} - average distance of scores from the mean
+\end{quote}
+
+When approaching a new data set, a good first step is to determine the data type of each variable (column).
+
+\begin{verbatim}
+Rows: 150
+Columns: 5
+$ Sepal.Length <dbl> 5.1, 4.9, 4.7, 4.6, 5.0, 5.4, 4.6, 5.0, 4.4, 4.9, 5.4, 4.~
+$ Sepal.Width  <dbl> 3.5, 3.0, 3.2, 3.1, 3.6, 3.9, 3.4, 3.4, 2.9, 3.1, 3.7, 3.~
+$ Petal.Length <dbl> 1.4, 1.4, 1.3, 1.5, 1.4, 1.7, 1.4, 1.5, 1.4, 1.5, 1.5, 1.~
+$ Petal.Width  <dbl> 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.~
+$ Species      <fct> setosa, setosa, setosa, setosa, setosa, setosa, setosa, s~
+\end{verbatim}
+
+The output above shows that the Iris data set has five variables, four that are continuous \emph{()} and one that is qualitative \emph{()}. There are 150 records (rows) in the data set.
+
+The following is a summary of descriptive statistics for each variable in the Iris data set.
+
+\begin{verbatim}
+  Sepal.Length    Sepal.Width     Petal.Length    Petal.Width   
+ Min.   :4.300   Min.   :2.000   Min.   :1.000   Min.   :0.100  
+ 1st Qu.:5.100   1st Qu.:2.800   1st Qu.:1.600   1st Qu.:0.300  
+ Median :5.800   Median :3.000   Median :4.350   Median :1.300  
+ Mean   :5.843   Mean   :3.057   Mean   :3.758   Mean   :1.199  
+ 3rd Qu.:6.400   3rd Qu.:3.300   3rd Qu.:5.100   3rd Qu.:1.800  
+ Max.   :7.900   Max.   :4.400   Max.   :6.900   Max.   :2.500  
+       Species  
+ setosa    :50  
+ versicolor:50  
+ virginica :50  
+                
+                
+                
+\end{verbatim}
+
+\begin{quote}
+\textbf{Question}\\
+What are some conclusions that you can draw about the data set from the above summary?
+\end{quote}
+
+\section{Common Statistical Plots}\label{common-statistical-plots}
+
+In school we usually use the word ``graph'', but statisticians usually use the word ``plot''. Spreadsheets call them ``charts''.
+
+\subsection{Statistical Plot Summary}\label{stat_plot_summary}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2353}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.5294}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 4\tabcolsep) * \real{0.2353}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Plot
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Variables
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Uses
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Boxplot & One quantitative variable; one grouping variable & Spread within each group \\
+Histogram & One continuous variable & Identifying the population distribution \\
+Scatter Plot & Two continuous variables & Identifying relationships between variables e.g.~linear, non-linear \\
+Line Plot & One continuous variable; time with regular intervals & Observing change over time \\
+\end{longtable}
+
+\subsection{Boxplot}\label{boxplot}
+
+Boxplots are used to
+
+\begin{itemize}
+\tightlist
+\item
+  show the distribution of data for each quartile of a quantitative variable.
+\item
+  identify outliers
+\item
+  compare groups
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\linewidth,height=\textheight,keepaspectratio]{./resources/img/boxplot_diagram.png}
+\caption{The structure of a boxplot.}
+\end{figure}
+
+The following boxplots show the distribution of Sepal Length grouped by species.
+
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-5-1.pdf}}
+
+\begin{quote}
+\textbf{Questions}\\
+1. What do the thicker black lines inside the boxes represent?\\
+2. What is similar and what is different about the three boxplots? Think in terms of spread and skewness.
+\end{quote}
+
+\subsection{Histogram}\label{histogram}
+
+Histograms are used to help identify the type of distribution from which the data was drawn.
+
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-6-1.pdf}}
+
+The histograms confirm that the distribution of Sepal.Length is approximately symmetrical for each species. This suggests that a normal distribution might be an appropriate model in each case. Also notice that there is an outlier in the virginica species, as was identified by the boxplot.
+
+\subsection{Scatter Plot}\label{scatter-plot}
+
+Scatter plots identify relationships between quantitative variables. If the relationship is linear, it is usually described in terms of the strength of the correlation and the direction of the relationship e.g.~``strong positive'' or ``moderate negative''.
+
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-7-1.pdf}}
+
+Scatter plots can also include a grouping (qualitative) variable using colour or different marker types. This can be useful for exploring relationships between different groups in the data set.
+
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-8-1.pdf}}
+
+What extra insights are gained from the grouped plot when compared with the ungrouped plot?
+
+\begin{quote}
+\textbf{Questions}\\
+1. Describe the relationship between Sepal Length and Sepal Width for each species.\\
+2. Draw a line of fit onto each plot. Use this line to estimate the Sepal Width for a Sepal Length of 6.5 for each species.
+\end{quote}
+
+\subsection{Line Plot}\label{line-plot}
+
+Line plots are often used for time series data e.g.~daily temperatures in March.
+
+The following plot shows the concentration of atmospheric CO2 at Mauna Loa Hawaii.
+
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-9-1.pdf}}
+
+\begin{quote}
+\textbf{Questions}\\
+1. Describe the trend in the CO2 concentration.\\
+2. Why does the plot zig-zag up and down?
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Extension: Further Plots}\label{extension-further-plots}
+
+\subsubsection{Points Plot}\label{points-plot}
+
+This plot is similar to a scatter plot, except that the x-variable is qualitative. This plot shows the spread of each variable within each group of the qualitative variable.
+
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-10-1.pdf}}
+
+Overlaying the data points onto boxplots can provide useful additional information about the spread of the data.
+
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-11-1.pdf}}
+
+\begin{quote}
+\textbf{Questions}\\
+1. Estimate the mean for each species using the points plot.\\
+2. Do you think there is a constant variance (standard deviation) for the three species?\\
+3. Is there enough evidence in this sample to suggest that the population mean for Sepal Width is different for the three species? Why or why not?
+\end{quote}
+
+\subsubsection{Pairs}\label{pairs}
+
+A pairs plot shows the relationships between all pairs of variables in a data set. This gives an overall picture of patterns within the data and is a useful tool for guiding research. The following plot includes scatter plots and correlation coefficients for quantitative pairs, boxplots for qualitative-quantitative pairs, and distribution curves for quantitative variables. Each plot has been coloured on the basis of species. To produce this type of plot requires statistical computing software such as R.
+
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-12-1.pdf}}
+
+\begin{quote}
+\textbf{Question}\\
+1. Which variables show the greatest difference between the three species?
+\end{quote}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\section{Activity}\label{activity-3}
+
+Use the \href{resources/datasets/PlantGrowth.csv}{PlantGrowth} data set and a spreadsheet to
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a summary of the quantitative variable for each group including min, max, quantiles, mean, standard deviation
+\item
+  Create boxplots of the quantitative variable for each group in the data set.
+\item
+  Create histograms of the quantitative variable for each group in the data set.
+\item
+  Write a summary of your observations. Can you suggest any hypotheses?
+\end{enumerate}
+
+Hint: To make these plots and summaries in a spreadsheet, you will need to reorganise the data so there is one group per column.
+
+\subsection{Solutions}\label{solutions}
+
+\begin{verbatim}
+Rows: 30
+Columns: 2
+$ weight <dbl> 4.17, 5.58, 5.18, 6.11, 4.50, 4.61, 5.17, 4.53, 5.33, 5.14, 4.8~
+$ group  <fct> ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, trt~
+\end{verbatim}
+
+\begin{verbatim}
+# A tibble: 3 x 8
+  group   Min    Q1 Median_Q2    Q3   Max  Mean    SD
+  <fct> <dbl> <dbl>     <dbl> <dbl> <dbl> <dbl> <dbl>
+1 ctrl   4.17  4.55      5.15  5.29  6.11  5.03 0.583
+2 trt1   3.59  4.21      4.55  4.87  6.03  4.66 0.794
+3 trt2   4.92  5.27      5.44  5.74  6.31  5.53 0.443
+\end{verbatim}
+
+\pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-13-1.pdf}} \pandocbounded{\includegraphics[keepaspectratio]{statistics_for_science_extension_files/figure-latex/unnamed-chunk-13-2.pdf}}
+
+The ctrl group is slightly negatively skewed (Mean = 5.032 versus Median = 5.155). The greatest variation occurs on the trt1 group (SD = 0.79), and the least in the trt2 group (SD = 0.44). The boxplots show that the trt1 group has potential outliers at the upper values.
+
 \chapter{Further Reading}\label{further_reading}
 
 \section{Books}\label{books}
 
+\href{}{\textbf{Advanced High School Statistics 3rd Ed, Diez et al}}: A detailed and rigorous introduction to statistics that would suit advanced high school and undergraduate university students. The theory and applications of statistics are covered from collecting data through to inference and statistical tests. The book contains numerous exercise and examples to help students develop their knowledge and skills.
+
+\href{}{\textbf{Introductory Statistics, Shafer and Zhang}}: Hosted on \href{}{LibreTexts}, this is another thorough but accessible introduction to the theory and practice of statistics. The book begins with a detailed explanation of descriptive statistics and probability, and random variables. Later chapters cover sampling distributions, hypotheses, and hypothesis testing.
+
 \section{Websites}\label{websites}
 
-\href{https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts}{\textbf{Australian Bureau of Statistics ``Statistical Terms and Concepts''}} : A comprehensive glossary pf statistical terms. Click the terms for detailed explanations.
+\href{https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts}{\textbf{Australian Bureau of Statistics ``Statistical Terms and Concepts''}}: A comprehensive glossary of statistical terms. Click the terms for detailed explanations.
+
+\href{https://www.statskingdom.com/index.html}{\textbf{Statistics Kingdom}}: Complete statistical tests online. The front page includes an extensive summary of statistical tests and there assumptions.
+
+\part*{Part 2: Your Project}\label{part-part-2-your-project}
+\addcontentsline{toc}{part}{Part 2: Your Project}
+
+\chapter{Planning Your Project With Statistics In Mind}\label{planning-your-project-with-statistics-in-mind}
+
+\section{Starting At the End}\label{starting-at-the-end}
+
+Imagine you are writing your final report. What will it contain in order to answers your research question and support you hypothesis? Think about the results, tables, and plots you will need. This does not need to be a definitive list. Rather, it is an exercise to help guide your planning.
+
+Now use a pencil and paper to create a simulated report including hand sketches of tables and plots. Show the variables and measurements you will need. Decide which statistical test(s) you will use. Include section headings such as ``Introduction'' and ``Method'', but don't attempt to write any detail.
+
+\section{Make a Variables Summary Table}\label{make-a-variables-summary-table}
+
+Describe your variables using the following tables as examples. For quantitative variables, include units and the expected level of precision based on your equipment. For qualitative variables, include a description of the levels in your variable.
+
+The first table represents an observational study. For example, measurements were taken of all mammals caught (then released) at a number of study sites within a region.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2222}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2222}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3056}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Var Name
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Data Type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Var Type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+weight & continuous & dependent & Animal weight in grams rounded to milligrams (3 decimal places) \\
+length & continuous & independent & Animal length in mm rounded to nearest mm. \\
+scientific\_name & nominal & independent & Scientific name of the species \\
+site & nominal & independent & Site name - S1, S2, S3 \ldots. \\
+\end{longtable}
+
+The second table represents an experimental study. Plants were grown in plots within a field. Each plot was divided into three equal sections. Each section was given one of three fertiliser treatments. The total weight of produce from each section was recorded.
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2222}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2222}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.3056}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Var Name
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Data Type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Var Type
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+weight & continuous & dependent & Total produce for a section in kg rounded to the nearest gram (3 decimal places) \\
+trt & nominal & independent & Treatment ID. trt1: control (no fertiliser); trt2: 50g/m\^{}2 at 14 day intervals; trt3: 100g/m\^{}2 at 14 day intervals \\
+plot & nominal & independent & Plot ID - pl1 to pl10 \\
+\end{longtable}
+
+\section{Create a Spreadsheet With Simulated Data}\label{create-a-spreadsheet-with-simulated-data}
+
+The first row of your spreadsheet will contain the names of the variables from your variables summary table. Add observations to your simulated data set that reflect what you expect to find during your research. Try to make them as realistic as possible. For example, measurements should have random errors and be recorded to the precision described in your data summary table. If you are completing an experiment, include the planned number of observations for each of your treatment groups e.g.~3 treatments with 10 repetitions each will give a total of 30 observations.
+
+You can simulate normally distributed random errors in a spreadsheet by using the following formula. Replace ``your\_mean'' and ``your\_sd'' with the mean and standard deviation you expect to find for a given variable. Copy the formula to the relevant number of cells in each column.
+
+\begin{verbatim}
+=NORMINV(RAND(), your_mean, your_sd)
+\end{verbatim}
+
+\section{Create Summary Tables and Plots For Your Simulated Data}\label{create-summary-tables-and-plots-for-your-simulated-data}
+
+The objective of this step is to see if your experiment can produce the expected results in theory. This is also an opportunity to produce examples of the plots and tables that you plan to include in your report.
+
+Refer to the \hyperref[eda]{Exploratory Data Analysis} section as a guide.
+
+\section{Apply Relevant Statistical Tests To Your Simulated Data}\label{apply-relevant-statistical-tests-to-your-simulated-data}
+
+Apply your chosen statistical test(s) to your simulated data. This is an opportunity to see if the tests will work as planned for your study.
 
 \bibliography{book.bib,packages.bib}
 

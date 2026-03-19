@@ -16,6 +16,8 @@ To learn the steps in preparing data for statistical analysis
 
 > *Count data* is quantitative discrete data in which the number of occurrences of something are recorded e.g. the number of birds in migratory flocks.
 
+> *Qualitative* data is often described as a *grouping variable* e.g. the participants in a medical trial are grouped by the treatment they are given.
+
 ## The Structure of Data
 
 Data should be structured using tables in which 
