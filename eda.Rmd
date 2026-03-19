@@ -31,12 +31,26 @@ glimpse(iris)
 ```
 The output above shows that the Iris data set has five variables, four that are continuous (*\<dbl\>*) and one that is qualitative (*\<fct\>*). There are 150 records (rows) in the data set.
 
-The following is a summary of descriptive statistics for each variable in the Iris data set.
+The following is a summary of descriptive statistics for each quantitative variable in the Iris data set.
 ```{r warning=FALSE}
-vtable::st(iris, 
+vtable::st(iris[,1:4],
            summ = list(c('notNA(x)', 'countNA(x)', 'mean(x)',   'sd(x)', 'min(x)', 'pctile(x)[25]', 'median(x)', 'pctile(x)[75]', 'max(x)')),
-           summ.names = list(c("notNA", "NA", "Mean", "SD", "Min", "Q1", "Median", "Q2", "Max"))
+           summ.names = list(c("notNA", "NA", "Mean", "SD", "Min", "Q1", "Q2 (Median)", "Q3", "Max")),
            )
+
+```
+
+
+It is also worthwhile creating a summary for each group in data sets with grouping variables. 
+```{r warning=FALSE}
+vtable::st(iris,
+           summ = list(c('notNA(x)', 'countNA(x)', 'mean(x)',   'sd(x)', 'min(x)', 'pctile(x)[25]', 'median(x)', 'pctile(x)[75]', 'max(x)')),
+           summ.names = list(c("notNA", "NA", "Mean", "SD", "Min", "Q1", "Q2 (Median)", "Q3", "Max")),
+           group = 'Species', 
+           group.long = TRUE
+           )
+
+# gtsummary::tbl_summary(iris, by = Species)
 
 ```
 
@@ -44,7 +58,7 @@ vtable::st(iris,
 What are some conclusions that you can draw about the data set from the above summary? 
 
 >**Table Formatting For Reports**  
-The previous table is an example of an appropriate way to format tables for scientific reports. See the [APA tables webpage](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables) for further details and examples.
+The previous two tables are examples of tables formatted appropriately for scientific reports. See the [APA tables webpage](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables) for further details and examples.
 
 
 ## Common Statistical Plots

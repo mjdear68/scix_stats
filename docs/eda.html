@@ -210,9 +210,7 @@ $ Petal.Length &lt;dbl&gt; 1.4, 1.4, 1.3, 1.5, 1.4, 1.7, 1.4, 1.5, 1.4, 1.5, 1.5
 $ Petal.Width  &lt;dbl&gt; 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.…
 $ Species      &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, setosa, s…</code></pre>
 <p>The output above shows that the Iris data set has five variables, four that are continuous (<em>&lt;dbl&gt;</em>) and one that is qualitative (<em>&lt;fct&gt;</em>). There are 150 records (rows) in the data set.</p>
-<p>The following is a summary of descriptive statistics for each variable in the Iris data set.</p>
-<pre><code>Warning in vtable::st(iris, summ = list(c(&quot;notNA(x)&quot;, &quot;countNA(x)&quot;, &quot;mean(x)&quot;, : Factor variables ignore custom summ options. Cols 1 and 2 are count and percentage.
-Beware combining factors with a custom summ unless factor.numeric = TRUE.</code></pre>
+The following is a summary of descriptive statistics for each quantitative variable in the Iris data set.
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <caption>
 <span id="tab:unnamed-chunk-4">Table 3.1: </span>Summary Statistics
@@ -241,10 +239,10 @@ Min
 Q1
 </th>
 <th style="text-align:left;">
-Median
+Q2 (Median)
 </th>
 <th style="text-align:left;">
-Q2
+Q3
 </th>
 <th style="text-align:left;">
 Max
@@ -380,12 +378,53 @@ Petal.Width
 2.5
 </td>
 </tr>
+</tbody>
+</table>
+It is also worthwhile creating a summary for each group in data sets with grouping variables.
+<table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-5">Table 3.2: </span>Summary Statistics
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Variable
+</th>
+<th style="text-align:left;">
+notNA
+</th>
+<th style="text-align:left;">
+NA
+</th>
+<th style="text-align:left;">
+Mean
+</th>
+<th style="text-align:left;">
+SD
+</th>
+<th style="text-align:left;">
+Min
+</th>
+<th style="text-align:left;">
+Q1
+</th>
+<th style="text-align:left;">
+Q2 (Median)
+</th>
+<th style="text-align:left;">
+Q3
+</th>
+<th style="text-align:left;">
+Max
+</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td style="text-align:left;">
-Species
+Species: setosa
 </td>
 <td style="text-align:left;">
-150
 </td>
 <td style="text-align:left;">
 </td>
@@ -406,13 +445,139 @@ Species
 </tr>
 <tr>
 <td style="text-align:left;">
-… setosa
+Sepal.Length
 </td>
 <td style="text-align:left;">
 50
 </td>
 <td style="text-align:left;">
-33%
+0
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+0.35
+</td>
+<td style="text-align:left;">
+4.3
+</td>
+<td style="text-align:left;">
+4.8
+</td>
+<td style="text-align:left;">
+5
+</td>
+<td style="text-align:left;">
+5.2
+</td>
+<td style="text-align:left;">
+5.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sepal.Width
+</td>
+<td style="text-align:left;">
+50
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+3.4
+</td>
+<td style="text-align:left;">
+0.38
+</td>
+<td style="text-align:left;">
+2.3
+</td>
+<td style="text-align:left;">
+3.2
+</td>
+<td style="text-align:left;">
+3.4
+</td>
+<td style="text-align:left;">
+3.7
+</td>
+<td style="text-align:left;">
+4.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Petal.Length
+</td>
+<td style="text-align:left;">
+50
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.5
+</td>
+<td style="text-align:left;">
+0.17
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+1.4
+</td>
+<td style="text-align:left;">
+1.5
+</td>
+<td style="text-align:left;">
+1.6
+</td>
+<td style="text-align:left;">
+1.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Petal.Width
+</td>
+<td style="text-align:left;">
+50
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+0.25
+</td>
+<td style="text-align:left;">
+0.11
+</td>
+<td style="text-align:left;">
+0.1
+</td>
+<td style="text-align:left;">
+0.2
+</td>
+<td style="text-align:left;">
+0.2
+</td>
+<td style="text-align:left;">
+0.3
+</td>
+<td style="text-align:left;">
+0.6
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Species: versicolor
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 </td>
@@ -431,13 +596,139 @@ Species
 </tr>
 <tr>
 <td style="text-align:left;">
-… versicolor
+Sepal.Length
 </td>
 <td style="text-align:left;">
 50
 </td>
 <td style="text-align:left;">
-33%
+0
+</td>
+<td style="text-align:left;">
+5.9
+</td>
+<td style="text-align:left;">
+0.52
+</td>
+<td style="text-align:left;">
+4.9
+</td>
+<td style="text-align:left;">
+5.6
+</td>
+<td style="text-align:left;">
+5.9
+</td>
+<td style="text-align:left;">
+6.3
+</td>
+<td style="text-align:left;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sepal.Width
+</td>
+<td style="text-align:left;">
+50
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+2.8
+</td>
+<td style="text-align:left;">
+0.31
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+2.5
+</td>
+<td style="text-align:left;">
+2.8
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+3.4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Petal.Length
+</td>
+<td style="text-align:left;">
+50
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+4.3
+</td>
+<td style="text-align:left;">
+0.47
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+4
+</td>
+<td style="text-align:left;">
+4.3
+</td>
+<td style="text-align:left;">
+4.6
+</td>
+<td style="text-align:left;">
+5.1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Petal.Width
+</td>
+<td style="text-align:left;">
+50
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+1.3
+</td>
+<td style="text-align:left;">
+0.2
+</td>
+<td style="text-align:left;">
+1
+</td>
+<td style="text-align:left;">
+1.2
+</td>
+<td style="text-align:left;">
+1.3
+</td>
+<td style="text-align:left;">
+1.5
+</td>
+<td style="text-align:left;">
+1.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Species: virginica
+</td>
+<td style="text-align:left;">
+</td>
+<td style="text-align:left;">
 </td>
 <td style="text-align:left;">
 </td>
@@ -456,27 +747,130 @@ Species
 </tr>
 <tr>
 <td style="text-align:left;">
-… virginica
+Sepal.Length
 </td>
 <td style="text-align:left;">
 50
 </td>
 <td style="text-align:left;">
-33%
+0
 </td>
 <td style="text-align:left;">
+6.6
 </td>
 <td style="text-align:left;">
+0.64
 </td>
 <td style="text-align:left;">
+4.9
 </td>
 <td style="text-align:left;">
+6.2
 </td>
 <td style="text-align:left;">
+6.5
 </td>
 <td style="text-align:left;">
+6.9
 </td>
 <td style="text-align:left;">
+7.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sepal.Width
+</td>
+<td style="text-align:left;">
+50
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+0.32
+</td>
+<td style="text-align:left;">
+2.2
+</td>
+<td style="text-align:left;">
+2.8
+</td>
+<td style="text-align:left;">
+3
+</td>
+<td style="text-align:left;">
+3.2
+</td>
+<td style="text-align:left;">
+3.8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Petal.Length
+</td>
+<td style="text-align:left;">
+50
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+5.6
+</td>
+<td style="text-align:left;">
+0.55
+</td>
+<td style="text-align:left;">
+4.5
+</td>
+<td style="text-align:left;">
+5.1
+</td>
+<td style="text-align:left;">
+5.5
+</td>
+<td style="text-align:left;">
+5.9
+</td>
+<td style="text-align:left;">
+6.9
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Petal.Width
+</td>
+<td style="text-align:left;">
+50
+</td>
+<td style="text-align:left;">
+0
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+0.27
+</td>
+<td style="text-align:left;">
+1.4
+</td>
+<td style="text-align:left;">
+1.8
+</td>
+<td style="text-align:left;">
+2
+</td>
+<td style="text-align:left;">
+2.3
+</td>
+<td style="text-align:left;">
+2.5
 </td>
 </tr>
 </tbody>
@@ -487,7 +881,7 @@ What are some conclusions that you can draw about the data set from the above su
 </blockquote>
 <blockquote>
 <p><strong>Table Formatting For Reports</strong><br />
-The previous table is an example of an appropriate way to format tables for scientific reports. See the <a href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables">APA tables webpage</a> for further details and examples.</p>
+The previous two tables are examples of tables formatted appropriately for scientific reports. See the <a href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables">APA tables webpage</a> for further details and examples.</p>
 </blockquote>
 </div>
 <div id="common-statistical-plots" class="section level2 hasAnchor" number="3.2">
@@ -545,7 +939,7 @@ The previous table is an example of an appropriate way to format tables for scie
 <div class="figcaption">The structure of a boxplot.</div>
 </div>
 <p>The following boxplots show the distribution of Sepal Length grouped by species.</p>
-<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-5-1.png" alt="" width="672" /></p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-6-1.png" alt="" width="672" /></p>
 <blockquote>
 <p><strong>Questions</strong><br />
 1. What do the thicker black lines inside the boxes represent?<br />
@@ -555,15 +949,15 @@ The previous table is an example of an appropriate way to format tables for scie
 <div id="histogram" class="section level3 hasAnchor" number="3.2.3">
 <h3><span class="header-section-number">3.2.3</span> Histogram<a href="eda.html#histogram" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Histograms are used to help identify the type of distribution from which the data was drawn.</p>
-<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-6-1.png" alt="" width="672" /></p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-7-1.png" alt="" width="672" /></p>
 <p>The histograms confirm that the distribution of Sepal.Length is approximately symmetrical for each species. This suggests that a normal distribution might be an appropriate model in each case. Also notice that there is an outlier in the virginica species, as was identified by the boxplot.</p>
 </div>
 <div id="scatter-plot" class="section level3 hasAnchor" number="3.2.4">
 <h3><span class="header-section-number">3.2.4</span> Scatter Plot<a href="eda.html#scatter-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Scatter plots identify relationships between quantitative variables. If the relationship is linear, it is usually described in terms of the strength of the correlation and the direction of the relationship e.g. “strong positive” or “moderate negative”.</p>
-<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-7-1.png" alt="" width="672" /></p>
-<p>Scatter plots can also include a grouping (qualitative) variable using colour or different marker types. This can be useful for exploring relationships between different groups in the data set.</p>
 <p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-8-1.png" alt="" width="672" /></p>
+<p>Scatter plots can also include a grouping (qualitative) variable using colour or different marker types. This can be useful for exploring relationships between different groups in the data set.</p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-9-1.png" alt="" width="672" /></p>
 <p>What extra insights are gained from the grouped plot when compared with the ungrouped plot?</p>
 <blockquote>
 <p><strong>Questions</strong><br />
@@ -575,7 +969,7 @@ The previous table is an example of an appropriate way to format tables for scie
 <h3><span class="header-section-number">3.2.5</span> Line Plot<a href="eda.html#line-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Line plots are often used for time series data e.g. daily temperatures in March.</p>
 <p>The following plot shows the concentration of atmospheric CO2 at Mauna Loa Hawaii.</p>
-<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-9-1.png" alt="" width="672" /></p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-10-1.png" alt="" width="672" /></p>
 <blockquote>
 <p><strong>Questions</strong><br />
 1. Describe the trend in the CO2 concentration.<br />
@@ -588,9 +982,9 @@ The previous table is an example of an appropriate way to format tables for scie
 <div id="points-plot" class="section level4 hasAnchor" number="3.2.6.1">
 <h4><span class="header-section-number">3.2.6.1</span> Points Plot<a href="eda.html#points-plot" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>This plot is similar to a scatter plot, except that the x-variable is qualitative. This plot shows the spread of each variable within each group of the qualitative variable.</p>
-<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-10-1.png" alt="" width="672" /></p>
-<p>Overlaying the data points onto boxplots can provide useful additional information about the spread of the data.</p>
 <p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-11-1.png" alt="" width="672" /></p>
+<p>Overlaying the data points onto boxplots can provide useful additional information about the spread of the data.</p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-12-1.png" alt="" width="672" /></p>
 <blockquote>
 <p><strong>Questions</strong><br />
 1. Estimate the mean for each species using the points plot.<br />
@@ -601,7 +995,7 @@ The previous table is an example of an appropriate way to format tables for scie
 <div id="pairs" class="section level4 hasAnchor" number="3.2.6.2">
 <h4><span class="header-section-number">3.2.6.2</span> Pairs<a href="eda.html#pairs" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <p>A pairs plot shows the relationships between all pairs of variables in a data set. This gives an overall picture of patterns within the data and is a useful tool for guiding research. The following plot includes scatter plots and correlation coefficients for quantitative pairs, boxplots for qualitative-quantitative pairs, and distribution curves for quantitative variables. Each plot has been coloured on the basis of species. To produce this type of plot requires statistical computing software such as R.</p>
-<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-12-1.png" alt="" width="672" /></p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-13-1.png" alt="" width="672" /></p>
 <blockquote>
 <p><strong>Question</strong><br />
 1. Which variables show the greatest difference between the three species?</p>
@@ -632,7 +1026,7 @@ $ group  &lt;fct&gt; ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl, ctrl,
 1 ctrl   4.17  4.55      5.15  5.29  6.11  5.03 0.583
 2 trt1   3.59  4.21      4.55  4.87  6.03  4.66 0.794
 3 trt2   4.92  5.27      5.44  5.74  6.31  5.53 0.443</code></pre>
-<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-13-1.png" alt="" width="672" /><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-13-2.png" alt="" width="672" /></p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-14-1.png" alt="" width="672" /><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-14-2.png" alt="" width="672" /></p>
 <p>The ctrl group is slightly negatively skewed (Mean = 5.032 versus Median = 5.155). The greatest variation occurs on the trt1 group (SD = 0.79), and the least in the trt2 group (SD = 0.44). The boxplots show that the trt1 group has potential outliers at the upper values.</p>
 
 </div>

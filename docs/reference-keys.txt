@@ -1,4 +1,5 @@
 tab:unnamed-chunk-4
+tab:unnamed-chunk-5
 introduction
 what-is-statistics-and-what-does-it-do
 examples-of-statistical-problems

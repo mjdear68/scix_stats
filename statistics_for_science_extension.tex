@@ -546,14 +546,9 @@ $ Petal.Width  <dbl> 0.2, 0.2, 0.2, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.1, 0.2, 0.~
 $ Species      <fct> setosa, setosa, setosa, setosa, setosa, setosa, setosa, s~
 \end{verbatim}
 
-The output above shows that the Iris data set has five variables, four that are continuous \emph{(dbl)} and one that is qualitative \emph{(fct)}. There are 150 records (rows) in the data set.
+The output above shows that the Iris data set has five variables, four that are continuous (\emph{\textless dbl\textgreater{}}) and one that is qualitative (\emph{\textless fct\textgreater{}}). There are 150 records (rows) in the data set.
 
 The following is a summary of descriptive statistics for each variable in the Iris data set.
-
-\begin{verbatim}
-Warning in vtable::st(iris, summ = list(c("notNA(x)", "countNA(x)", "mean(x)", : Factor variables ignore custom summ options. Cols 1 and 2 are count and percentage.
-Beware combining factors with a custom summ unless factor.numeric = TRUE.
-\end{verbatim}
 
 \begin{table}
 
@@ -567,11 +562,6 @@ Sepal.Length & 150 & 0 & 5.8 & 0.83 & 4.3 & 5.1 & 5.8 & 6.4 & 7.9\\
 Sepal.Width & 150 & 0 & 3.1 & 0.44 & 2 & 2.8 & 3 & 3.3 & 4.4\\
 Petal.Length & 150 & 0 & 3.8 & 1.8 & 1 & 1.6 & 4.3 & 5.1 & 6.9\\
 Petal.Width & 150 & 0 & 1.2 & 0.76 & 0.1 & 0.3 & 1.3 & 1.8 & 2.5\\
-Species & 150 &  &  &  &  &  &  &  & \\
-\addlinespace
-... setosa & 50 & 33\% &  &  &  &  &  &  & \\
-... versicolor & 50 & 33\% &  &  &  &  &  &  & \\
-... virginica & 50 & 33\% &  &  &  &  &  &  & \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -582,7 +572,7 @@ What are some conclusions that you can draw about the data set from the above su
 \end{quote}
 
 \begin{quote}
-\textbf{Table Formatting For Reports}
+\textbf{Table Formatting For Reports}\\
 The previous table is an example of an appropriate way to format tables for scientific reports. See the \href{https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables}{APA tables webpage} for further details and examples.
 \end{quote}
 
