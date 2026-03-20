@@ -50,8 +50,6 @@ vtable::st(iris,
            group.long = TRUE
            )
 
-# gtsummary::tbl_summary(iris, by = Species)
-
 ```
 
 >**Question**   
