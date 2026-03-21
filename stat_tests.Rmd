@@ -14,6 +14,8 @@ To create and interpret confidence intervals
 
 ## Common Statistical Tests
 
+Adapted from [The Statistics Tutor's Quick Guide to Commonly Used Statistical Tests, pp.10-11](https://www.statstutor.ac.uk/resources/uploaded/tutorsquickguidetostatistics.pdf)
+
 Purpose|Dependent \n Variable|Independent \n Variable|Parametric \n Test \n (normal)|Non-parametric \n Test \n (skewed or ordinal)
 -------|------------------|--------------------|---------------|-------------------
 Comparing means of two independent groups|Discrete or continuous|Nominal (two groups)|Independent T-test|Mann-Whitney Test; Wilcoxon Rank Sum
