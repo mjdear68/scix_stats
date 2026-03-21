@@ -23,3 +23,9 @@ To create and interpret confidence intervals
 * How to report
 
 ## Confidence Intervals
+
+## Further Reading
+
+[**An Introduction to Statistics: Choosing the Correct Statistical Test**, Ranganathan, P](https://pmc.ncbi.nlm.nih.gov/articles/PMC8327789/)
+
+[**Statistics Kingdom**](https://www.statskingdom.com/index.html): Complete statistical tests online. The front page includes an extensive summary of statistical tests and there assumptions.
