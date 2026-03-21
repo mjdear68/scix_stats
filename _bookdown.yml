@@ -11,6 +11,6 @@ rmd_files: ["index.Rmd",
             "data_concepts.Rmd",
             "eda.Rmd",
             "stat_tests.Rmd",
-            "further_reading.Rmd",
-            "your_project.Rmd"
+            "your_project.Rmd",
+            "bibliography.Rmd"
             ]

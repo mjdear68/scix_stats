@@ -8,7 +8,7 @@ bibliography: [book.bib, packages.bib]
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
-  These are the notes for the statistics section of the NSW Extension Science (SCIX) course.
+  These are notes for the statistics section of the NSW Extension Science (SCIX) course.
 link-citations: yes
 # github-repo: rstudio/bookdown-demo
 ---
