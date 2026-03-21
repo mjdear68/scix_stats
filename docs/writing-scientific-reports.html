@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 5 Planning Your Project With Statistics In Mind | Statistics For Science Extension</title>
+  <title>B Writing Scientific Reports | Statistics For Science Extension</title>
   <meta name="description" content="These are notes for the statistics section of the NSW Extension Science (SCIX) course." />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 5 Planning Your Project With Statistics In Mind | Statistics For Science Extension" />
+  <meta property="og:title" content="B Writing Scientific Reports | Statistics For Science Extension" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="These are notes for the statistics section of the NSW Extension Science (SCIX) course." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 5 Planning Your Project With Statistics In Mind | Statistics For Science Extension" />
+  <meta name="twitter:title" content="B Writing Scientific Reports | Statistics For Science Extension" />
   
   <meta name="twitter:description" content="These are notes for the statistics section of the NSW Extension Science (SCIX) course." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="stat_tests.html"/>
-<link rel="next" href="bibliography.html"/>
+<link rel="prev" href="bibliography.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -180,125 +180,31 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="planning-your-project-with-statistics-in-mind" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Chapter 5</span> Planning Your Project With Statistics In Mind<a href="planning-your-project-with-statistics-in-mind.html#planning-your-project-with-statistics-in-mind" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="starting-at-the-end" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Starting At the End<a href="planning-your-project-with-statistics-in-mind.html#starting-at-the-end" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Imagine you are writing your final report. What will it contain in order to answers your research question and support you hypothesis? Think about the results, tables, and plots you will need. This does not need to be a definitive list. Rather, it is an exercise to help guide your planning.</p>
-<p>Now use a pencil and paper to create a simulated report including hand sketches of tables and plots. Show the variables and measurements you will need. Decide which statistical test(s) you will use. Include section headings such as “Introduction” and “Method”, but don’t attempt to write any detail.</p>
-</div>
-<div id="make-a-variables-summary-table" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Make a Variables Summary Table<a href="planning-your-project-with-statistics-in-mind.html#make-a-variables-summary-table" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Describe your variables using the following tables as examples. For quantitative variables, include units and the expected level of precision based on your equipment. For qualitative variables, include a description of the levels in your variable.</p>
-<p>The first table represents an observational study. For example, measurements were taken of all mammals caught (then released) at a number of study sites within a region.</p>
-<table>
-<colgroup>
-<col width="22%" />
-<col width="25%" />
-<col width="22%" />
-<col width="30%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Var Name</th>
-<th>Data Type</th>
-<th>Var Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>weight</td>
-<td>continuous</td>
-<td>dependent</td>
-<td>Animal weight in grams rounded to milligrams (3 decimal places)</td>
-</tr>
-<tr class="even">
-<td>length</td>
-<td>continuous</td>
-<td>independent</td>
-<td>Animal length in mm rounded to nearest mm.</td>
-</tr>
-<tr class="odd">
-<td>scientific_name</td>
-<td>nominal</td>
-<td>independent</td>
-<td>Scientific name of the species</td>
-</tr>
-<tr class="even">
-<td>site</td>
-<td>nominal</td>
-<td>independent</td>
-<td>Site name - S1, S2, S3 ….</td>
-</tr>
-</tbody>
-</table>
-<p>The second table represents an experimental study. Plants were grown in plots within a field. Each plot was divided into three equal sections. Each section was given one of three fertiliser treatments. The total weight of produce from each section was recorded.</p>
-<table>
-<colgroup>
-<col width="22%" />
-<col width="25%" />
-<col width="22%" />
-<col width="30%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Var Name</th>
-<th>Data Type</th>
-<th>Var Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>weight</td>
-<td>continuous</td>
-<td>dependent</td>
-<td>Total produce for a section in kg rounded to the nearest gram (3 decimal places)</td>
-</tr>
-<tr class="even">
-<td>trt</td>
-<td>nominal</td>
-<td>independent</td>
-<td>Treatment ID. trt1: control (no fertiliser); trt2: 50g/m^2 at 14 day intervals; trt3: 100g/m^2 at 14 day intervals</td>
-</tr>
-<tr class="odd">
-<td>plot</td>
-<td>nominal</td>
-<td>independent</td>
-<td>Plot ID - pl1 to pl10</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="create-a-spreadsheet-with-simulated-data" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Create a Spreadsheet With Simulated Data<a href="planning-your-project-with-statistics-in-mind.html#create-a-spreadsheet-with-simulated-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The first row of your spreadsheet will contain the names of the variables from your variables summary table. Add observations to your simulated data set that reflect what you expect to find during your research. Try to make them as realistic as possible. For example, measurements should have random errors and be recorded to the precision described in your data summary table. If you are completing an experiment, include the planned number of observations for each of your treatment groups e.g. 3 treatments with 10 repetitions each will give a total of 30 observations.</p>
-<p>You can simulate normally distributed random errors in a spreadsheet by using the following formula. Replace “your_mean” and “your_sd” with the mean and standard deviation you expect to find for a given variable. Copy the formula to the relevant number of cells in each column.</p>
-<pre><code>=NORMINV(RAND(), your_mean, your_sd)
-</code></pre>
-</div>
-<div id="create-summary-tables-and-plots-for-your-simulated-data" class="section level2 hasAnchor" number="5.4">
-<h2><span class="header-section-number">5.4</span> Create Summary Tables and Plots For Your Simulated Data<a href="planning-your-project-with-statistics-in-mind.html#create-summary-tables-and-plots-for-your-simulated-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The objective of this step is to see if your experiment can produce the expected results in theory. This is also an opportunity to produce examples of the plots and tables that you plan to include in your report.</p>
-<p>Refer to the <a href="eda.html#eda">Exploratory Data Analysis</a> section as a guide.</p>
-</div>
-<div id="apply-relevant-statistical-tests-to-your-simulated-data" class="section level2 hasAnchor" number="5.5">
-<h2><span class="header-section-number">5.5</span> Apply Relevant Statistical Tests To Your Simulated Data<a href="planning-your-project-with-statistics-in-mind.html#apply-relevant-statistical-tests-to-your-simulated-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Apply your chosen statistical test(s) to your simulated data. This is an opportunity to see if the tests will work as planned for your study.</p>
+<div id="writing-scientific-reports" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">B</span> Writing Scientific Reports<a href="writing-scientific-reports.html#writing-scientific-reports" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="reporting-statistical-results" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">B.1</span> Reporting Statistical Results<a href="writing-scientific-reports.html#reporting-statistical-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<pre><code>So now you know how the test works, and you know how to do the test using a wonderful magic computing box. The next thing you need to know is how to write up the results. After all, there’s no point in designing and running an experiment and then analysing the data if you don’t tell anyone about it! So let’s now talk about what you need to do when reporting your analysis. Let’s stick with our card-suits example. If I wanted to write this result up for a paper or something, the conventional way to report this would be to write something like this:
+
+Of the 200 participants in the experiment, 64 selected hearts for their first choice, 51 selected diamonds, 50 selected spades, and 35 selected clubs. A chi-square goodness of fit test was conducted to test whether the choice probabilities were identical for all four suits. The results were significant (χ2(3)=8.44,p&lt;.05), suggesting that people did not select suits purely at random.
+
+This is pretty straightforward, and hopefully it seems pretty unremarkable. That said, there’s a few things that you should note about this description:
+
+    The statistical test is preceded by the descriptive statistics. That is, I told the reader something about what the data look like before going on to do the test. In general, this is good practice: always remember that your reader doesn’t know your data anywhere near as well as you do. So unless you describe it to them properly, the statistical tests won’t make any sense to them, and they’ll get frustrated and cry.
+    The description tells you what the null hypothesis being tested is. To be honest, writers don’t always do this, but it’s often a good idea in those situations where some ambiguity exists; or when you can’t rely on your readership being intimately familiar with the statistical tools that you’re using. Quite often the reader might not know (or remember) all the details of the test that your using, so it’s a kind of politeness to “remind” them! As far as the goodness of fit test goes, you can usually rely on a scientific audience knowing how it works (since it’s covered in most intro stats classes). However, it’s still a good idea to be explicit about stating the null hypothesis (briefly!) because the null hypothesis can be different depending on what you’re using the test for. For instance, in the cards example my null hypothesis was that all the four suit probabilities were identical (i.e., P1=P2=P3=P4=0.25), but there’s nothing special about that hypothesis. I could just as easily have tested the null hypothesis that P1=0.7 and P2=P3=P4=0.1 using a goodness of fit test. So it’s helpful to the reader if you explain to them what your null hypothesis was. Also, notice that I described the null hypothesis in words, not in maths. That’s perfectly acceptable. You can describe it in maths if you like, but since most readers find words easier to read than symbols, most writers tend to describe the null using words if they can.
+    A “stat block” is included. When reporting the results of the test itself, I didn’t just say that the result was significant, I included a “stat block” (i.e., the dense mathematical-looking part in the parentheses), which reports all the “raw” statistical data. For the chi-square goodness of fit test, the information that gets reported is the test statistic (that the goodness of fit statistic was 8.44), the information about the distribution used in the test (χ2 with 3 degrees of freedom, which is usually shortened to χ2(3)), and then the information about whether the result was significant (in this case p&lt;.05). The particular information that needs to go into the stat block is different for every test, and so each time I introduce a new test I’ll show you what the stat block should look like.173 However the general principle is that you should always provide enough information so that the reader could check the test results themselves if they really wanted to.
+    The results are interpreted. In addition to indicating that the result was significant, I provided an interpretation of the result (i.e., that people didn’t choose randomly). This is also a kindness to the reader, because it tells them something about what they should believe about what’s going on in your data. If you don’t include something like this, it’s really hard for your reader to understand what’s going on.</code></pre>
+<p><a href="https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/12%3A_Categorical_Data_Analysis/12.01%3A_The_2_Goodness-of-fit_Test">12.1.9 report the results of the test</a></p>
 
 </div>
 </div>
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="stat_tests.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="bibliography.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bibliography.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -329,7 +235,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/your_project.Rmd",
+    "link": "https://github.com/USERNAME/REPO/edit/BRANCH/appendix.Rmd",
     "text": "Edit"
   },
   "history": {

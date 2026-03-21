@@ -19,6 +19,10 @@ Purpose|Dependent \n Variable|Independent \n Variable|Parametric \n Test \n (nor
 Comparing means of two independent groups|Discrete or continuous|Nominal (two groups)|Independent T-test|Mann-Whitney Test; Wilcoxon Rank Sum
 Comparing means of two paired (before / after) groups|Discrete or continuous|Ordinal (two groups)|Paired T-test|Wilcoxon Signed Rank Test
 Comparing Means of 3+ independent groups|Discrete or continuous|Nominal (three or more groups)|One-way ANOVA|Kruskal-Wallis Test
+Relationship between two continuous variables|Continuous|Continuous|Pearson's Correlation Coefficient|Spearman's Correlation Coefficient
+Expected counts for one qualitative variable|Qualitative|None|Not applicable|Chi-squared Test
+Relationship between two qualitative variables|Qualitative|Qualitative|Not applicable|Chi-squared Test
+
 
 ### Examples
 
