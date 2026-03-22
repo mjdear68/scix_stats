@@ -37,6 +37,9 @@ pairs-plot
 exploratory-data-analysis-eda
 activity-3
 solutions
+inferential_stats
+estimation
+hypothesis-testing
 stat_tests
 sampling
 common-statistical-tests

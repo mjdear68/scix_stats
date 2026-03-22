@@ -1,0 +1,9 @@
+# (PART\*) Inferential Statistics {-}
+
+# Introduction {#inferential_stats}
+
+We usually want to infer something about the population under study by applying statistical methods to the data collected. These inferences fall into one of two categories: estimation or hypothesis testing.
+
+## Estimation
+
+## Hypothesis Testing

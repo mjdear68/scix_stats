@@ -10,6 +10,7 @@ rmd_subdir: "chapters"
 rmd_files: ["index.Rmd",
             "data_concepts.Rmd",
             "descriptive_stats.Rmd",
+            "inferential_stats.Rmd",
             "stat_tests.Rmd",
             "your_project.Rmd",
             "appendix.Rmd"
