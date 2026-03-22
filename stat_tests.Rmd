@@ -1,10 +1,7 @@
 # Statistical Tests {#stat_tests}
 
 >**Learning Objectives**  
-To understand the process of sampling  
-To select, apply, and interpret common statistical tests  
-To understand p-values and statistical signifiance  
-To create and interpret confidence intervals
+To select, apply, and interpret common statistical test for hypothesis testing
 
 ## Sampling
 * Sampling should be done with replacement

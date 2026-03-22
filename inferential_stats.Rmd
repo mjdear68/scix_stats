@@ -2,8 +2,15 @@
 
 # Introduction {#inferential_stats}
 
+>**Learning Objectives** 
+To develop and apply population parameter point estimates  
+To create and interpret confidence intervals  
+To understand p-values and statistical significance  
+To test hypotheses using statistical techniques
+
 We usually want to infer something about the population under study by applying statistical methods to the data collected. These inferences fall into one of two categories: estimation or hypothesis testing.
 
 ## Estimation
 
 ## Hypothesis Testing
+
