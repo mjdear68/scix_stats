@@ -1,18 +1,15 @@
-# Exploratory Data Analysis {#eda}
+# (PART\*) Descriptive Statistics {-}
+
+# Introduction {#descriptive_stats}
 
 >**Learning Objectives**  
 To review common descriptive statistics  
 To review common statistical plots  
 To perform exploratory data analysis using a spreadsheet
 
-Once the study has been designed and data collected, it's time to begin analysing the results. The first step in analysis is getting to know the data set. The steps of exploratory data analysis (EDA) include
+The objective of descriptive statistics is to organise, summarise, and create visual displays of a data set. This process helps guide the inferential stage of statistical analysis.
 
-* summarising quantitative variables - n, min, max, quartiles, mean, standard deviation
-* using boxplots and histograms to investigate spread and skewness
-* using scatter plots to investigate associations between quantitative variables
-* using grouping variables to investigate the similarities and differences between groups
-
-The following descriptive statistics and plots use the well-known Iris data set. The data set contains measurements of flower parts for three species of Iris.
+>The descriptive statistics and plots below use the well-known Iris data set. The data set contains measurements of flower parts for three species of Iris.
 
 ## Common Descriptive Statistics
 
@@ -41,7 +38,7 @@ vtable::st(iris[,1:4],
 ```
 
 
-It is also worthwhile creating a summary for each group in data sets with grouping variables. 
+For data sets with grouping variables, it is also worthwhile creating a summary for each group. 
 ```{r warning=FALSE}
 vtable::st(iris,
            summ = list(c('notNA(x)', 'countNA(x)', 'mean(x)',   'sd(x)', 'min(x)', 'pctile(x)[25]', 'median(x)', 'pctile(x)[75]', 'max(x)')),
@@ -61,9 +58,12 @@ The previous two tables are examples of tables formatted appropriately for scien
 
 ## Common Statistical Plots
 
-In school we usually use the word "graph", but statisticians usually use the word "plot". Spreadsheets call them "charts".
+Visualising data is an important step in finding relationships and patterns. It is also useful for identifying potential problems such as missing data and outliers.
+
+>In school we use the word "graph" for visual displays, but statisticians mostly use the word "plot". Spreadsheets call them "charts".
 
 ### Statistical Plot Summary {#stat_plot_summary}
+
 Plot|Variables|Uses
 ----|---------|----
 Boxplot|One quantitative variable; one grouping variable|Compares spread within groups; identifies outliers
@@ -125,7 +125,7 @@ iris %>%
 ```
 
 
-Scatter plots can also include a grouping (qualitative) variable using colour or different marker types. This can be useful for exploring relationships between different groups in the data set.
+Scatter plots can also include a grouping (qualitative) variable using colour or different point symbols. This can be useful for exploring relationships between groups in the data set.
 
 ```{r}
 p1 <- iris %>% 
@@ -151,7 +151,7 @@ What extra insights are gained from the grouped plot when compared with the ungr
 
 ### Line Plot
 
-Line plots are often used for time series data e.g. daily temperatures in March.
+Line plots are used for time series data e.g. daily temperatures in March.
 
 The following plot shows the concentration of atmospheric CO2 at Mauna Loa Hawaii. 
 
@@ -165,19 +165,9 @@ plot(co2, main = "Atmospheric CO2 Concentrations at Mauna Loa Hawaii")
 
 -----
 
-### Extension: Further Plots
+## Extension: Further Plots
 
-#### Points Plot
-
-This plot is similar to a scatter plot, except that the x-variable is qualitative. This plot shows the spread of each variable within each group of the qualitative variable.
-
-```{r}
-iris %>% 
-  ggplot(aes(x = Species, y = Sepal.Width, group = Species)) +
-  geom_point() +
-  labs(title = "Points Plot of Sepal Length For Each Species", x = "Species", y = "Sepal Length (mm)") 
-```
-
+### Boxplot With Data Points
 
 Overlaying the data points onto boxplots can provide useful additional information about the spread of the data.
 
@@ -190,15 +180,14 @@ iris %>%
   labs(title = "Boxplot With Points of Sepal Length For Each Species", y = "Sepal Length (mm)")
 ```
 
-
-
 >**Questions**  
 1. Estimate the mean for each species using the points plot.  
 2. Do you think there is a constant variance (standard deviation) for the three species?  
 3. Is there enough evidence in this sample to suggest that the population mean for Sepal Width is different for the three species? Why or why not?
 
 
-#### Pairs
+### Pairs Plot
+
 A pairs plot shows the relationships between all pairs of variables in a data set. This gives an overall picture of patterns within the data and is a useful tool for guiding research. The following plot includes scatter plots and correlation coefficients for quantitative pairs, boxplots for qualitative-quantitative pairs, and distribution curves for quantitative variables. Each plot has been coloured on the basis of species. To produce this type of plot requires statistical computing software such as R.
 
 ```{r message=FALSE}
@@ -212,17 +201,38 @@ ggpairs(iris, aes(colour = Species)) +
 -----
 
 
+## Exploratory Data Analysis (EDA)
 
-## Activity
+Once the study has been designed and data collected, it's time to begin exploring the data. This process is known as Exploratory Data Analysis (EDA). The steps of EDA include
 
-Use the [PlantGrowth](resources/datasets/PlantGrowth.csv) data set and a spreadsheet to
+* summarising quantitative variables - n, min, max, quartiles, mean, standard deviation
+* using boxplots and histograms to investigate spread and skewness
+* using scatter plots to investigate associations between quantitative variables
+* using grouping variables to investigate the similarities and differences between groups
 
-1. Create a summary of the quantitative variable for each group including min, max, quantiles, mean, standard deviation 
-2. Create boxplots of the quantitative variable for each group in the data set. 
-3. Create histograms of the quantitative variable for each group in the data set.
-4. Write a summary of your observations. Can you suggest any hypotheses?
+### Activity
 
-Hint: To make these plots and summaries in a spreadsheet, you will need to reorganise the data so there is one group per column.
+1. Use the [PlantGrowth](resources/datasets/PlantGrowth.csv) data set and a spreadsheet to
+
+  a. Create a summary of the quantitative variable for each group including n, min, max, quantiles, mean, standard deviation 
+  b. Create boxplots of the quantitative variable for each group in the data set. 
+  c. Create histograms of the quantitative variable for each group in the data set.
+  d. Write a summary of your observations. Can you suggest any hypotheses?
+
+>Hint: You will need to reorganise the data so there is one group per column to make some of these plots and summaries in a spreadsheet, 
+
+2. Repeat the steps of Q.1 using the following two online resources
+  a. [**Statistics Kingdom Descriptive Statistics Calculator**](https://www.statskingdom.com/descriptive-statistics-calculator.html)
+  b. [**HHMI Data Explorer**](media.hhmi.org/biointeractive/tool/dataexplorer/v1/#/home)
+  
+3. Complete a table of pros and cons for each tool.
+
+Tool|Pros|Cons
+----|----|----
+Excel||
+Statistics Kingdom||
+HHMI||
+
 
 ### Solutions
 

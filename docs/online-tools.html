@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>C Writing Scientific Reports | Statistics For Science Extension</title>
+  <title>B Online Tools | Statistics For Science Extension</title>
   <meta name="description" content="These are notes for the statistics section of the NSW Extension Science (SCIX) course." />
   <meta name="generator" content="bookdown 0.46 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="C Writing Scientific Reports | Statistics For Science Extension" />
+  <meta property="og:title" content="B Online Tools | Statistics For Science Extension" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="These are notes for the statistics section of the NSW Extension Science (SCIX) course." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="C Writing Scientific Reports | Statistics For Science Extension" />
+  <meta name="twitter:title" content="B Online Tools | Statistics For Science Extension" />
   
   <meta name="twitter:description" content="These are notes for the statistics section of the NSW Extension Science (SCIX) course." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="online-tools.html"/>
-
+<link rel="prev" href="bibliography.html"/>
+<link rel="next" href="writing-scientific-reports.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -183,31 +183,18 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="writing-scientific-reports" class="section level1 hasAnchor" number="8">
-<h1><span class="header-section-number">C</span> Writing Scientific Reports<a href="writing-scientific-reports.html#writing-scientific-reports" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="reporting-statistical-results" class="section level2 hasAnchor" number="8.1">
-<h2><span class="header-section-number">C.1</span> Reporting Statistical Results<a href="writing-scientific-reports.html#reporting-statistical-results" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<pre><code>So now you know how the test works, and you know how to do the test using a wonderful magic computing box. The next thing you need to know is how to write up the results. After all, there’s no point in designing and running an experiment and then analysing the data if you don’t tell anyone about it! So let’s now talk about what you need to do when reporting your analysis. Let’s stick with our card-suits example. If I wanted to write this result up for a paper or something, the conventional way to report this would be to write something like this:
-
-Of the 200 participants in the experiment, 64 selected hearts for their first choice, 51 selected diamonds, 50 selected spades, and 35 selected clubs. A chi-square goodness of fit test was conducted to test whether the choice probabilities were identical for all four suits. The results were significant (χ2(3)=8.44,p&lt;.05), suggesting that people did not select suits purely at random.
-
-This is pretty straightforward, and hopefully it seems pretty unremarkable. That said, there’s a few things that you should note about this description:
-
-    The statistical test is preceded by the descriptive statistics. That is, I told the reader something about what the data look like before going on to do the test. In general, this is good practice: always remember that your reader doesn’t know your data anywhere near as well as you do. So unless you describe it to them properly, the statistical tests won’t make any sense to them, and they’ll get frustrated and cry.
-    The description tells you what the null hypothesis being tested is. To be honest, writers don’t always do this, but it’s often a good idea in those situations where some ambiguity exists; or when you can’t rely on your readership being intimately familiar with the statistical tools that you’re using. Quite often the reader might not know (or remember) all the details of the test that your using, so it’s a kind of politeness to “remind” them! As far as the goodness of fit test goes, you can usually rely on a scientific audience knowing how it works (since it’s covered in most intro stats classes). However, it’s still a good idea to be explicit about stating the null hypothesis (briefly!) because the null hypothesis can be different depending on what you’re using the test for. For instance, in the cards example my null hypothesis was that all the four suit probabilities were identical (i.e., P1=P2=P3=P4=0.25), but there’s nothing special about that hypothesis. I could just as easily have tested the null hypothesis that P1=0.7 and P2=P3=P4=0.1 using a goodness of fit test. So it’s helpful to the reader if you explain to them what your null hypothesis was. Also, notice that I described the null hypothesis in words, not in maths. That’s perfectly acceptable. You can describe it in maths if you like, but since most readers find words easier to read than symbols, most writers tend to describe the null using words if they can.
-    A “stat block” is included. When reporting the results of the test itself, I didn’t just say that the result was significant, I included a “stat block” (i.e., the dense mathematical-looking part in the parentheses), which reports all the “raw” statistical data. For the chi-square goodness of fit test, the information that gets reported is the test statistic (that the goodness of fit statistic was 8.44), the information about the distribution used in the test (χ2 with 3 degrees of freedom, which is usually shortened to χ2(3)), and then the information about whether the result was significant (in this case p&lt;.05). The particular information that needs to go into the stat block is different for every test, and so each time I introduce a new test I’ll show you what the stat block should look like.173 However the general principle is that you should always provide enough information so that the reader could check the test results themselves if they really wanted to.
-    The results are interpreted. In addition to indicating that the result was significant, I provided an interpretation of the result (i.e., that people didn’t choose randomly). This is also a kindness to the reader, because it tells them something about what they should believe about what’s going on in your data. If you don’t include something like this, it’s really hard for your reader to understand what’s going on.</code></pre>
-<p><a href="https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/12%3A_Categorical_Data_Analysis/12.01%3A_The_2_Goodness-of-fit_Test">12.1.9 report the results of the test</a></p>
-
-</div>
+<div id="online-tools" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">B</span> Online Tools<a href="online-tools.html#online-tools" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p><a href="https://www.statskingdom.com/index.html"><strong>Statistics Kingdom</strong></a></p>
+<p><a href="media.hhmi.org/biointeractive/tool/dataexplorer/v1/#/home"><strong>HHMI Data Explorer</strong></a></p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="online-tools.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="bibliography.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="writing-scientific-reports.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -9,7 +9,7 @@ new_session: no
 rmd_subdir: "chapters"
 rmd_files: ["index.Rmd",
             "data_concepts.Rmd",
-            "eda.Rmd",
+            "descriptive_stats.Rmd",
             "stat_tests.Rmd",
             "your_project.Rmd",
             "appendix.Rmd"

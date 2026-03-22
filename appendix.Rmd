@@ -17,6 +17,11 @@
 
 [**Australian Bureau of Statistics "Statistical Terms and Concepts"**](https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts): A comprehensive glossary of statistical terms. Click the terms for detailed explanations.
 
+# Online Tools
+
+[**Statistics Kingdom**](https://www.statskingdom.com/index.html)
+
+[**HHMI Data Explorer**](media.hhmi.org/biointeractive/tool/dataexplorer/v1/#/home)
 
 # Writing Scientific Reports
 

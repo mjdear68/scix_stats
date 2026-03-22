@@ -23,7 +23,7 @@ large-data-sets
 activity---online-data-repositories
 data-cleaning
 activity-2
-eda
+descriptive_stats
 common-descriptive-statistics
 common-statistical-plots
 stat_plot_summary
@@ -32,8 +32,9 @@ histogram
 scatter-plot
 line-plot
 extension-further-plots
-points-plot
-pairs
+boxplot-with-data-points
+pairs-plot
+exploratory-data-analysis-eda
 activity-3
 solutions
 stat_tests
@@ -53,5 +54,6 @@ bibliography
 books
 articles
 websites
+online-tools
 writing-scientific-reports
 reporting-statistical-results
