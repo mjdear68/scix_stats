@@ -1,4 +1,4 @@
-# (PART\*) Part 2: Your Project {-}
+# (PART\*) Your Project {-}
 
 # Planning Your Project With Statistics In Mind
 

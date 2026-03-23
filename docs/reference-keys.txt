@@ -40,13 +40,14 @@ solutions
 inferential_stats
 estimation
 hypothesis-testing
+further-reading
 stat_tests
 sampling
 common-statistical-tests
 examples
 p-values-and-statistical-significance
 confidence-intervals
-further-reading
+further-reading-1
 planning-your-project-with-statistics-in-mind
 starting-at-the-end
 make-a-variables-summary-table
