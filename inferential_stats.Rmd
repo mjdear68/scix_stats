@@ -18,18 +18,23 @@ As an example, imagine that a researcher records the mass in kilograms of 100 Ye
 
 >**Point Estimate** - A single-valued statistic given as an estimate for a population parameter e.g. the mean of a sample ($\bar{x}$) is given as the estimate for the population mean ($\mu$)
 
-The point estimate for the Bream example would be the sample mean (1.3kg).
+The point estimate for the Bream example would be the sample mean, 1.3kg.
 
 >**Confidence Interval (CI)** - There is an n% probability that the parameter of interest is contained within a given confidence interval. Hence, for a 95% CI, there is a probability of 95% that the interval contains the parameter. 
 
-A 95% CI for the mean of the Bream example would be $1.3\pm1.96\times\frac{0.4}{\sqrt{100}} = [1.22,1.38]$, assuming that the sample is from a normally distributed population. There is a 95% probability that this interval covers the true population mean.
+A confidence interval is calculated using the formula $\bar{x}\pm\text{MOE}$ where MOE is the *margin of error*.
 
->The formula for calculating confidence intervals depends on the parameter of interest. Statistical software can calculate automatically the most common confidence intervals for a given data set.
+For example, the MOE for the Bream example would be based on a t-distribution since the population standard deviation is unknown. This would give $\text{MOE}=1.9842\times\frac{0.4}{100}$, and the 95% CI for the mean would be $1.3\pm0.07937=[1.22, 1.38]$. There is a 95% probability that this interval covers the true population mean. 
+
+>The method for calculating confidence intervals depends on the parameter of interest. Statistical software can calculate automatically the most common confidence intervals for a given data set.
+
+>**Activity**  
+Replicate the above calculations using the [Statistics Kingdom Confidence Interval Calculator](https://www.statskingdom.com/confidence-interval-calculator.html).
 
 
 ## Hypothesis Testing
 
-The boxplot below suggests there is a difference in the mean between the trt1 and trt2 groups, but how can we test this hypotheses in a quantitative way? This is the purpose of statistical tests.
+The boxplot below suggests there is a difference in the mean between the trt1 and trt2 groups, but how can we test this hypotheses in a quantitative way? This is the purpose of statistical tests. 
 
 
 ```{r}
@@ -38,11 +43,13 @@ PlantGrowth %>%
   geom_boxplot()
 ```
 
+A statistical test returns a **test statistic** which is used to decide if the data provides enough evidence to reject the null hypothesis. If the test statistic is beyond the predetermined **significance level** ($\alpha$), then the test result is described as **statistically significant**.
+
 The process for applying a statistical test can be summarised as:
 
 1. Form a null hypothesis, $H_0$
 2. Form an alternative hypothesis, $H_a$
-3. Decide on an acceptable significance level (Type I error rate), $\alpha$, (usually 5%, or $\alpha = 0.05$)
+3. Decide on an acceptable significance level, $\alpha$, (usually 5%, or $\alpha = 0.05$)
 3. Apply an appropriate statistical test
 4. Use the p-value returned from the test to decide if the null hypothesis should be rejected
 5. Report your results
@@ -52,31 +59,43 @@ Continuing with the example above,
 $H_0:$ There is no difference in the means of trt1 and trt2.  
 $H_a:$ There is a statistically significant difference in the means of trt1 and trt2
 
-The appropriate test for the difference in means for two independent groups is the **independent t-test**. Applying this test with a **95% confidence level** to the two groups gives $p=0.009298$.
+The appropriate test for the difference in means for two independent groups is the **independent t-test**. Applying this test with a 5% significance level ($\alpha = 0.05$) to the two groups gives $p = 0.009298$.
 
 The results of the test could be reported as
 
-"Applying the independent samples t-test gave a p-value below the significance level ($\alpha = 0.05, p = 0.009298$). Hence, the null hypothesis was rejected."
+"Applying the independent samples t-test produced a significant p-value ($p = 0.009298$) at the 5% significance level ($\alpha = 0.05$). Hence, the null hypothesis was rejected, and it was concluded that there was a statistically significant difference in the means of trt1 and trt2."
 
 >Notice that the null hypothesis was rejected. It would be incorrect to state that the alternative hypothesis was accepted because at the stated significance level, there was still a 5% chance that the null hypothesis was correct.
 
+Returning to the boxplot for the PlantGrowth data set, is it likely that there is a true difference in mean between the ctrl and trt1 groups? Perhaps the lower relative position of the trt1 boxplot is simply due to the randomness of sampling in this case, since there is considerable overlap between the two groups. Performing the same test as that used to compare groups trt1 and trt2 gives a non-significant p-value (0.2504), so there is not enough evidence to reject the null hypothesis. 
+
+The results of the test could be reported as 
+
+"Applying the independent samples t-test did not produce a significant p-value ($p = 0.2504$) at the 5% significance level ($\alpha = 0.05$). Hence, the null hypothesis was not rejected, and it was concluded that there was no statistically significant difference in the means of ctrl and trt1."
+
+
 ```{r results='hide'}
-x = PlantGrowth %>% filter(group == "trt1") %>% select(weight)
-y = PlantGrowth %>% filter(group == "trt2") %>% select(weight)
+ctrl = PlantGrowth %>% filter(group == "ctrl") %>% select(weight)
+trt1 = PlantGrowth %>% filter(group == "trt1") %>% select(weight)
+trt2 = PlantGrowth %>% filter(group == "trt2") %>% select(weight)
 
-t.test(x, y, alternative = "two.sided", conf.level = 0.95)
+t.test(trt1, trt2, alternative = "two.sided", conf.level = 0.95)
+t.test(ctrl, trt1, alternative = "two.sided", conf.level = 0.95)
 ```
-
-
+>**p-value Pitfalls**  
 * Effects, powers (detecting effects), and sample size
-* Null and alternative hypotheses - aim to reject H0; example
+* borderline p-values
+
 * Review Type I/II errors
 
 
 ## Further Reading
 
-[**Confidence Intervals, Pennsylvania State University**](https://online.stat.psu.edu/stat200/lesson/4)
-
 [Estimation, Shafer and Zhang](https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_(Shafer_and_Zhang)/07%3A_Estimation)
 
+[**Confidence Intervals, Pennsylvania State University**](https://online.stat.psu.edu/stat200/lesson/4)
+
 [**Estimating a Confidence Interval, Navarro, D**](https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/10%3A_Estimating_Unknown_Quantities_from_a_Sample/10.05%3A_Estimating_a_Confidence_Interval)
+
+
+
