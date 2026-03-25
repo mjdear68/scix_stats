@@ -167,7 +167,9 @@
 <li class="chapter" data-level="B" data-path="online-tools.html"><a href="online-tools.html"><i class="fa fa-check"></i><b>B</b> Online Tools</a></li>
 <li class="chapter" data-level="C" data-path="writing-scientific-reports.html"><a href="writing-scientific-reports.html"><i class="fa fa-check"></i><b>C</b> Writing Scientific Reports</a>
 <ul>
-<li class="chapter" data-level="C.1" data-path="writing-scientific-reports.html"><a href="writing-scientific-reports.html#reporting-statistical-results"><i class="fa fa-check"></i><b>C.1</b> Reporting Statistical Results</a></li>
+<li class="chapter" data-level="C.1" data-path="writing-scientific-reports.html"><a href="writing-scientific-reports.html#formatting-tables"><i class="fa fa-check"></i><b>C.1</b> Formatting Tables</a></li>
+<li class="chapter" data-level="C.2" data-path="writing-scientific-reports.html"><a href="writing-scientific-reports.html#reporting-confidence-intervals"><i class="fa fa-check"></i><b>C.2</b> Reporting Confidence Intervals</a></li>
+<li class="chapter" data-level="C.3" data-path="writing-scientific-reports.html"><a href="writing-scientific-reports.html#reporting-statistical-test-results"><i class="fa fa-check"></i><b>C.3</b> Reporting Statistical Test Results</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
@@ -256,7 +258,7 @@ Borderline p-values are also problematic. For example, if a statistical test for
 <h2><span class="header-section-number">4.3</span> Power of a Statistical Test<a href="inferential_stats.html#power-of-a-statistical-test" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The power of a test is its ability to detect an <strong>effect</strong> if one exists. An effect in this context is anything that does not happen merely due to chance. This means an effect is a real feature of the population of interest. For example, if the means of two groups actually are different, the power of a test is its ability to detect that difference.</p>
 <blockquote>
-<p><strong>Mathematical Definition of Power</strong>
+<p><strong>Mathematical Definition of Power</strong><br />
 <span class="math inline">\(\text{Power = 1-\beta}\)</span> where <span class="math inline">\(\beta\)</span> is <span class="math inline">\(\text{P(Type II error)}\)</span>.<br />
 A <span class="math inline">\(\text{Type II}\)</span> occurs when a true effect is not found by a statistical test, so the power of a test is the probability of a statistical test finding an effect if the effect exist.</p>
 </blockquote>
@@ -278,7 +280,7 @@ Use the <a href="https://www.statskingdom.com/sample_size_all.html">Statistics K
 <h2><span class="header-section-number">4.4</span> Statistical Test Assumptions<a href="inferential_stats.html#statistical-test-assumptions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Certain assumptions about the sample and/or the population being studied need to be met so that a given test will produce valid results. These assumptions vary from test to test. Common assumptions include</p>
 <ul>
-<li>the sample is drawn from a <a href="https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts/measures-shape">normally distributed population</a></li>
+<li>the sample is drawn from a <a href="https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts/measures-shape">normally distributed</a> population</li>
 <li>the observations in the sample are independent i.e. the probability of including an element in the sample has no effect on the probability of including any of the other elements.</li>
 <li>the observations are pairwise dependent e.g. paired t-test</li>
 <li>the population standard deviation is known</li>
@@ -355,10 +357,10 @@ Use the <a href="https://www.statskingdom.com/sample_size_all.html">Statistics K
 </div>
 <div id="further-reading" class="section level2 hasAnchor" number="4.6">
 <h2><span class="header-section-number">4.6</span> Further Reading<a href="inferential_stats.html#further-reading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><a href="https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_(Shafer_and_Zhang)/07%3A_Estimation"><strong>7: Estimation</strong></a>, Shafer and Zhang</p>
+<p><a href="https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_(Shafer_and_Zhang)/07%3A_Estimation"><strong>Estimation</strong></a>, Shafer and Zhang</p>
 <p><a href="https://online.stat.psu.edu/stat200/lesson/4"><strong>Confidence Intervals</strong></a>, Pennsylvania State University</p>
 <p><a href="https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/10%3A_Estimating_Unknown_Quantities_from_a_Sample/10.05%3A_Estimating_a_Confidence_Interval"><strong>Estimating a Confidence Interval</strong></a>, Navarro D</p>
-<p><a href="https://www.statskingdom.com/index.html"><strong>Statistics Kingdom</strong></a>: Perform statistical tests online. The front page includes an extensive summary of statistical tests, their use, requirements, and assumptions. There is also a handy <a href="https://www.statskingdom.com/statistical-decision-tree.html">Statistical Test Finder</a> that will help you select an appropriate test for your purpose.</p>
+<p><a href="https://www.statskingdom.com/index.html"><strong>Statistics Kingdom</strong></a>: Perform statistical tasks including plotting and statistical tests online. The home page includes an extensive summary of statistical tests, their use, requirements, and assumptions. There is also a handy <a href="https://www.statskingdom.com/statistical-decision-tree.html">Statistical Test Finder</a> that will help you select an appropriate test for your purpose.</p>
 <p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8327789/"><strong>An Introduction to Statistics: Choosing the Correct Statistical Test</strong></a>, Ranganathan, P</p>
 
 </div>
