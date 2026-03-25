@@ -106,6 +106,17 @@ If you have a reasonable idea (e.g. based on previous research) about the sizes 
 >**Activity**  
 Use the [Statistics Kingdom Sample Size Calculators](https://www.statskingdom.com/sample_size_all.html) to investigate the recommended sample sizes for various statistical tests. What did you find difficult when using these calculators?
 
+## Statistical Test Assumptions
+
+Certain assumptions about the sample and/or the population being studied need to be met so that a given test will produce valid results. These assumptions vary from test to test. Common assumptions include
+
+* the sample is drawn from a [normally distributed population](https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts/measures-shape)
+* the observations in the sample are independent i.e. the probability of including an element in the sample has no effect on the probability of including any of the other elements.
+* the observations are pairwise dependent e.g. paired t-test
+* the population standard deviation is known
+* the two groups being compared have equal standard deviations
+
+It is vital that the assumptions of a test are checked and met before applying the test.
 
 ## Common Statistical Tests
 
@@ -122,22 +133,15 @@ Relationship between two continuous variables|Continuous|Continuous|Pearson's Co
 Expected counts for one qualitative variable|Qualitative|None|Not applicable|Chi-squared Test
 Relationship between two qualitative variables|Qualitative|Qualitative|Not applicable|Chi-squared Test
 
-## Statistical Test Assumptions
-
-### Independence
-
-### Normality
-
-### Equal Variances
 
 
 ## Further Reading
 
-[**Estimation, Shafer and Zhang**](https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_(Shafer_and_Zhang)/07%3A_Estimation)
+[**7: Estimation**](https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_(Shafer_and_Zhang)/07%3A_Estimation), Shafer and Zhang
 
-[**Confidence Intervals, Pennsylvania State University**](https://online.stat.psu.edu/stat200/lesson/4)
+[**Confidence Intervals**](https://online.stat.psu.edu/stat200/lesson/4), Pennsylvania State University
 
-[**Estimating a Confidence Interval, Navarro D**](https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/10%3A_Estimating_Unknown_Quantities_from_a_Sample/10.05%3A_Estimating_a_Confidence_Interval)
+[**Estimating a Confidence Interval**](https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/10%3A_Estimating_Unknown_Quantities_from_a_Sample/10.05%3A_Estimating_a_Confidence_Interval), Navarro D
 
 [**Statistics Kingdom**](https://www.statskingdom.com/index.html): Perform statistical tests online. The front page includes an extensive summary of statistical tests, their use, requirements, and assumptions. There is also a handy [Statistical Test Finder](https://www.statskingdom.com/statistical-decision-tree.html) that will help you select an appropriate test for your purpose.
 
