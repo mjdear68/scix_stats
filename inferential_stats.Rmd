@@ -90,7 +90,7 @@ Borderline p-values are also problematic. For example, if a statistical test for
 
 The power of a test is its ability to detect an **effect** if one exists. An effect in this context is anything that does not happen merely due to chance. This means an effect is a real feature of the population of interest. For example, if the means of two groups actually are different, the power of a test is its ability to detect that difference.   
 
->**Mathematical Definition of Power** 
+>**Mathematical Definition of Power**  
 $\text{Power = 1-\beta}$ where $\beta$ is $\text{P(Type II error)}$.  
 A $\text{Type II}$  occurs when a true effect is not found by a statistical test, so the power of a test is the probability of a statistical test finding an effect if the effect exist. 
 
@@ -110,7 +110,7 @@ Use the [Statistics Kingdom Sample Size Calculators](https://www.statskingdom.co
 
 Certain assumptions about the sample and/or the population being studied need to be met so that a given test will produce valid results. These assumptions vary from test to test. Common assumptions include
 
-* the sample is drawn from a [normally distributed population](https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts/measures-shape)
+* the sample is drawn from a [normally distributed ](https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts/measures-shape) population
 * the observations in the sample are independent i.e. the probability of including an element in the sample has no effect on the probability of including any of the other elements.
 * the observations are pairwise dependent e.g. paired t-test
 * the population standard deviation is known
@@ -137,7 +137,7 @@ Relationship between two qualitative variables|Qualitative|Qualitative|Not appli
 
 ## Further Reading
 
-[**7: Estimation**](https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_(Shafer_and_Zhang)/07%3A_Estimation), Shafer and Zhang
+[**Estimation**](https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_(Shafer_and_Zhang)/07%3A_Estimation), Shafer and Zhang
 
 [**Confidence Intervals**](https://online.stat.psu.edu/stat200/lesson/4), Pennsylvania State University
 
