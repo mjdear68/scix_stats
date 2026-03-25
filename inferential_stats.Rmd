@@ -82,20 +82,64 @@ trt2 = PlantGrowth %>% filter(group == "trt2") %>% select(weight)
 t.test(trt1, trt2, alternative = "two.sided", conf.level = 0.95)
 t.test(ctrl, trt1, alternative = "two.sided", conf.level = 0.95)
 ```
->**p-value Pitfalls**  
-* Effects, powers (detecting effects), and sample size
-* borderline p-values
+>**p-value Controversy**  
+There is considerable debate about the misuse of p-values in research. In particular, a significant result from a single statistical test does not necessarily indicate a reliable finding. Integration of information from other sources and replication are required to confirm a significant result. See, for example, ["The Debate about p-values", Lu Y, Belitskaya-Levy I](https://pmc.ncbi.nlm.nih.gov/articles/PMC4858512/)    
+Borderline p-values are also problematic. For example, if a statistical test for the difference in mean between two groups has $p=0.049$, should the null hypothesis be rejected at a 5% (0.05) significance level?
 
-* Review Type I/II errors
+## Power of a Statistical Test
+
+The power of a test is its ability to detect an **effect** if one exists. An effect in this context is anything that does not happen merely due to chance. This means an effect is a real feature of the population of interest. For example, if the means of two groups actually are different, the power of a test is its ability to detect that difference.   
+
+>**Mathematical Definition of Power** 
+$\text{Power = 1-\beta}$ where $\beta$ is $\text{P(Type II error)}$.  
+A $\text{Type II}$  occurs when a true effect is not found by a statistical test, so the power of a test is the probability of a statistical test finding an effect if the effect exist. 
+
+### Maximising Power
+
+Since most scientific research aims to reject the null hypothesis when there is a true effect (i.e. the null hypothesis is false), researchers need to maximise the power of their experiments. This can be done in several ways. By,
+
+* designing experiments to maximise the size of effects e.g. by controlling all variables that might affect the variable of interest
+* increasing sample size
+
+If you have a reasonable idea (e.g. based on previous research) about the sizes of the effects you are trying to detect in your experiment, you can complete a *power analysis* to determine the sample size required for a given experimental design. This might, however, be a problematic process (see, for example, ["11.8: Effect Size, Sample Size and Power", Navarro D, last paragraph](https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/11%3A_Hypothesis_Testing/11.08%3A_Effect_Size_Sample_Size_and_Power)). 
+
+>**Activity**  
+Use the [Statistics Kingdom Sample Size Calculators](https://www.statskingdom.com/sample_size_all.html) to investigate the recommended sample sizes for various statistical tests. What did you find difficult when using these calculators?
+
+
+## Common Statistical Tests
+
+The table below outlines some of the common statistical tests used in scientific research. *Parametric* tests require that the data in each group is normally distributed. If this is not the case, then use the *Non-parametric* test.
+
+Adapted from [The Statistics Tutor's Quick Guide to Commonly Used Statistical Tests, pp.10-11](https://www.statstutor.ac.uk/resources/uploaded/tutorsquickguidetostatistics.pdf)
+
+Purpose|Dependent \n Variable|Independent \n Variable|Parametric \n Test \n (normal)|Non-parametric \n Test \n (skewed or ordinal)
+-------|------------------|--------------------|---------------|-------------------
+Comparing means of two independent groups|Discrete or continuous|Nominal (two groups)|Independent T-test|Mann-Whitney Test; Wilcoxon Rank Sum
+Comparing means of two paired (before / after) groups|Discrete or continuous|Ordinal (two groups)|Paired T-test|Wilcoxon Signed Rank Test
+Comparing Means of 3+ independent groups|Discrete or continuous|Nominal (three or more groups)|One-way ANOVA|Kruskal-Wallis Test
+Relationship between two continuous variables|Continuous|Continuous|Pearson's Correlation Coefficient|Spearman's Correlation Coefficient
+Expected counts for one qualitative variable|Qualitative|None|Not applicable|Chi-squared Test
+Relationship between two qualitative variables|Qualitative|Qualitative|Not applicable|Chi-squared Test
+
+## Statistical Test Assumptions
+
+### Independence
+
+### Normality
+
+### Equal Variances
 
 
 ## Further Reading
 
-[Estimation, Shafer and Zhang](https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_(Shafer_and_Zhang)/07%3A_Estimation)
+[**Estimation, Shafer and Zhang**](https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_(Shafer_and_Zhang)/07%3A_Estimation)
 
 [**Confidence Intervals, Pennsylvania State University**](https://online.stat.psu.edu/stat200/lesson/4)
 
-[**Estimating a Confidence Interval, Navarro, D**](https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/10%3A_Estimating_Unknown_Quantities_from_a_Sample/10.05%3A_Estimating_a_Confidence_Interval)
+[**Estimating a Confidence Interval, Navarro D**](https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/10%3A_Estimating_Unknown_Quantities_from_a_Sample/10.05%3A_Estimating_a_Confidence_Interval)
 
+[**Statistics Kingdom**](https://www.statskingdom.com/index.html): Perform statistical tests online. The front page includes an extensive summary of statistical tests, their use, requirements, and assumptions. There is also a handy [Statistical Test Finder](https://www.statskingdom.com/statistical-decision-tree.html) that will help you select an appropriate test for your purpose.
 
+[**An Introduction to Statistics: Choosing the Correct Statistical Test**](https://pmc.ncbi.nlm.nih.gov/articles/PMC8327789/), Ranganathan, P
 

@@ -23,7 +23,7 @@
 <meta name="author" content="Michael Dear" />
 
 
-<meta name="date" content="2026-03-23" />
+<meta name="date" content="2026-03-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -211,47 +211,61 @@ To test hypotheses using statistical techniques</p>
 <blockquote>
 <p><strong>Point Estimate</strong> - A single-valued statistic given as an estimate for a population parameter e.g. the mean of a sample (<span class="math inline">\(\bar{x}\)</span>) is given as the estimate for the population mean (<span class="math inline">\(\mu\)</span>)</p>
 </blockquote>
-<p>The point estimate for the Bream example would be the sample mean (1.3kg).</p>
+<p>The point estimate for the Bream example would be the sample mean, 1.3kg.</p>
 <blockquote>
 <p><strong>Confidence Interval (CI)</strong> - There is an n% probability that the parameter of interest is contained within a given confidence interval. Hence, for a 95% CI, there is a probability of 95% that the interval contains the parameter.</p>
 </blockquote>
-<p>A 95% CI for the mean of the Bream example would be <span class="math inline">\(1.3\pm1.96\times\frac{0.4}{\sqrt{100}} = [1.22,1.38]\)</span>, assuming that the sample is from a normally distributed population. There is a 95% probability that this interval covers the true population mean.</p>
+<p>A confidence interval is calculated using the formula <span class="math inline">\(\bar{x}\pm\text{MOE}\)</span> where MOE is the <em>margin of error</em>.</p>
+<p>For example, the MOE for the Bream example would be based on a t-distribution since the population standard deviation is unknown. This would give <span class="math inline">\(\text{MOE}=1.9842\times\frac{0.4}{100}\)</span>, and the 95% CI for the mean would be <span class="math inline">\(1.3\pm0.07937=[1.22, 1.38]\)</span>. There is a 95% probability that this interval covers the true population mean.</p>
 <blockquote>
-<p>The formula for calculating confidence intervals depends on the parameter of interest. Statistical software can calculate automatically the most common confidence intervals for a given data set.</p>
+<p>The method for calculating confidence intervals depends on the parameter of interest. Statistical software can calculate automatically the most common confidence intervals for a given data set.</p>
+</blockquote>
+<blockquote>
+<p><strong>Activity</strong><br />
+Replicate the above calculations using the <a href="https://www.statskingdom.com/confidence-interval-calculator.html">Statistics Kingdom Confidence Interval Calculator</a>.</p>
 </blockquote>
 </div>
 <div id="hypothesis-testing" class="section level2 hasAnchor" number="4.2">
 <h2><span class="header-section-number">4.2</span> Hypothesis Testing<a href="inferential_stats.html#hypothesis-testing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The boxplot below suggests there is a difference in the mean between the trt1 and trt2 groups, but how can we test this hypotheses in a quantitative way? This is the purpose of statistical tests.</p>
 <p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-14-1.png" alt="" width="672" /></p>
+<p>A statistical test returns a <strong>test statistic</strong> which is used to decide if the data provides enough evidence to reject the null hypothesis. If the test statistic is beyond the predetermined <strong>significance level</strong> (<span class="math inline">\(\alpha\)</span>), then the test result is described as <strong>statistically significant</strong>.</p>
 <p>The process for applying a statistical test can be summarised as:</p>
 <ol style="list-style-type: decimal">
 <li>Form a null hypothesis, <span class="math inline">\(H_0\)</span></li>
 <li>Form an alternative hypothesis, <span class="math inline">\(H_a\)</span></li>
-<li>Decide on an acceptable significance level (Type I error rate), <span class="math inline">\(\alpha\)</span>, (usually 5%, or <span class="math inline">\(\alpha = 0.05\)</span>)</li>
+<li>Decide on an acceptable significance level, <span class="math inline">\(\alpha\)</span>, (usually 5%, or <span class="math inline">\(\alpha = 0.05\)</span>)</li>
 <li>Apply an appropriate statistical test</li>
 <li>Use the p-value returned from the test to decide if the null hypothesis should be rejected</li>
 <li>Report your results</li>
 </ol>
 <p>Continuing with the example above,</p>
-<p><span class="math inline">\(H_0:\)</span> There is no difference in the means of trt1 and trt2.
+<p><span class="math inline">\(H_0:\)</span> There is no difference in the means of trt1 and trt2.<br />
 <span class="math inline">\(H_a:\)</span> There is a statistically significant difference in the means of trt1 and trt2</p>
-<p>The appropriate test for the difference in means for two independent groups is the <strong>independent t-test</strong>. Applying this test with a <strong>95% confidence level</strong> to the two groups gives <span class="math inline">\(p=0.009298\)</span>.</p>
+<p>The appropriate test for the difference in means for two independent groups is the <strong>independent t-test</strong>. Applying this test with a 5% significance level (<span class="math inline">\(\alpha = 0.05\)</span>) to the two groups gives <span class="math inline">\(p = 0.009298\)</span>.</p>
 <p>The results of the test could be reported as</p>
-<p>“Applying the independent samples t-test gave a p-value below the significance level (<span class="math inline">\(\alpha = 0.05, p = 0.009298\)</span>). Hence, the null hypothesis was rejected.”</p>
+<p>“Applying the independent samples t-test produced a significant p-value (<span class="math inline">\(p = 0.009298\)</span>) at the 5% significance level (<span class="math inline">\(\alpha = 0.05\)</span>). Hence, the null hypothesis was rejected, and it was concluded that there was a statistically significant difference in the means of trt1 and trt2.”</p>
 <blockquote>
 <p>Notice that the null hypothesis was rejected. It would be incorrect to state that the alternative hypothesis was accepted because at the stated significance level, there was still a 5% chance that the null hypothesis was correct.</p>
 </blockquote>
+<p>Returning to the boxplot for the PlantGrowth data set, is it likely that there is a true difference in mean between the ctrl and trt1 groups? Perhaps the lower relative position of the trt1 boxplot is simply due to the randomness of sampling in this case, since there is considerable overlap between the two groups. Performing the same test as that used to compare groups trt1 and trt2 gives a non-significant p-value (0.2504), so there is not enough evidence to reject the null hypothesis.</p>
+<p>The results of the test could be reported as</p>
+<p>“Applying the independent samples t-test did not produce a significant p-value (<span class="math inline">\(p = 0.2504\)</span>) at the 5% significance level (<span class="math inline">\(\alpha = 0.05\)</span>). Hence, the null hypothesis was not rejected, and it was concluded that there was no statistically significant difference in the means of ctrl and trt1.”</p>
+<blockquote>
+<p><strong>p-value Controversy</strong><br />
+There is considerable debate about the misuse of p-values in research. In particular, a significant result from a single statistical test does not necessarily indicate a reliable finding. Integration of information from other sources and replication are required to confirm a significant result. See, for example, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4858512/">“The Debate about p-values”, Lu Y, Belitskaya-Levy I</a><br />
+Borderline p-values are also problematic. For example, if a statistical test for the difference in mean between two groups has <span class="math inline">\(p=0.049\)</span>, should the null hypothesis be rejected at a 5% (0.05) significance level?</p>
+</blockquote>
 <ul>
-<li>Effects, powers (detecting effects), and sample size</li>
-<li>Null and alternative hypotheses - aim to reject H0; example</li>
-<li>Review Type I/II errors</li>
+<li><p>Effects, powers (detecting effects), and sample size</p></li>
+<li><p>borderline p-values</p></li>
+<li><p>Review Type I/II errors</p></li>
 </ul>
 </div>
 <div id="further-reading" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Further Reading<a href="inferential_stats.html#further-reading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><a href="https://online.stat.psu.edu/stat200/lesson/4"><strong>Confidence Intervals, Pennsylvania State University</strong></a></p>
 <p><a href="https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_(Shafer_and_Zhang)/07%3A_Estimation">Estimation, Shafer and Zhang</a></p>
+<p><a href="https://online.stat.psu.edu/stat200/lesson/4"><strong>Confidence Intervals, Pennsylvania State University</strong></a></p>
 <p><a href="https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/10%3A_Estimating_Unknown_Quantities_from_a_Sample/10.05%3A_Estimating_a_Confidence_Interval"><strong>Estimating a Confidence Interval, Navarro, D</strong></a></p>
 
 </div>
