@@ -40,6 +40,7 @@ solutions
 inferential_stats
 estimation
 hypothesis-testing
+exercise-hypothesis-testing
 power-of-a-statistical-test
 maximising-power
 statistical-test-assumptions
