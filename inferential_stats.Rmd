@@ -2,7 +2,7 @@
 
 # Introduction {#inferential_stats}
 
->**Learning Objectives** 
+>**Learning Objectives**  
 To develop and apply population parameter point estimates  
 To create and interpret confidence intervals  
 To understand p-values and statistical significance  
@@ -91,7 +91,7 @@ Borderline p-values are also problematic. For example, if a statistical test for
 The power of a test is its ability to detect an **effect** if one exists. An effect in this context is anything that does not happen merely due to chance. This means an effect is a real feature of the population of interest. For example, if the means of two groups actually are different, the power of a test is its ability to detect that difference.   
 
 >**Mathematical Definition of Power**  
-$\text{Power = 1-\beta}$ where $\beta$ is $\text{P(Type II error)}$.  
+$\text{Power} = 1-\beta$ where $\beta$ is $\text{P(Type II error)}$.  
 A $\text{Type II}$  occurs when a true effect is not found by a statistical test, so the power of a test is the probability of a statistical test finding an effect if the effect exist. 
 
 ### Maximising Power
@@ -118,6 +118,46 @@ Certain assumptions about the sample and/or the population being studied need to
 
 It is vital that the assumptions of a test are checked and met before applying the test.
 
+### Checking Normality
+
+If your chosen test requires your data to be normally distributed, you should check this assumption before applying the test. If your data has groups, check that each group is normally distributed. 
+
+Some common methods to check for normality are
+
+* plot a histogram and look for a "humped" shape
+* create a quantile-quantile plot
+* perform a test for normality e.g. Shapiro-Wilk Test ($H_0$: Data normal)
+
+Running all three of these checks is recommended since they are not necessarily conclusive on their own. 
+
+Here are the three methods from above applied to the PlantGrowth data set.
+
+```{r}
+PlantGrowth %>% 
+  ggplot() +
+  geom_histogram(aes(x = weight), bins = 7) +
+  facet_wrap(.~group) +
+  labs(title = "Histogram of Weight For Each Group", y = "Frequency")
+
+PlantGrowth %>% 
+  ggplot(aes(sample = weight)) +
+  stat_qq() +
+  stat_qq_line() +
+  facet_wrap(.~group) +
+  labs(title = "Q-Q Plot For Each Group", y = "Weight")
+
+PlantGrowth %>% 
+  group_by(group) %>% 
+  summarise(p = shapiro.test(weight)$p.value) %>% 
+  gt() %>% 
+  tab_header(
+    title = md("PlantGrowth Shapiro-Wilk Test For Normality" ),
+    subtitle = md("p-values of `weight` For Each Group")
+   )
+
+```
+
+
 ## Common Statistical Tests
 
 The table below outlines some of the common statistical tests used in scientific research. *Parametric* tests require that the data in each group is normally distributed. If this is not the case, then use the *Non-parametric* test.
@@ -135,6 +175,13 @@ Relationship between two qualitative variables|Qualitative|Qualitative|Not appli
 
 
 
+## Online Tools
+
+[**Statistical Test Finder**](https://www.statskingdom.com/statistical-decision-tree.html), Statistics Kingdom
+
+[**Shapiro-Wilk Calculator**](https://www.statskingdom.com/shapiro-wilk-test-calculator.html), Statistics Kingdom
+
+
 ## Further Reading
 
 [**Estimation**](https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_(Shafer_and_Zhang)/07%3A_Estimation), Shafer and Zhang
@@ -142,8 +189,6 @@ Relationship between two qualitative variables|Qualitative|Qualitative|Not appli
 [**Confidence Intervals**](https://online.stat.psu.edu/stat200/lesson/4), Pennsylvania State University
 
 [**Estimating a Confidence Interval**](https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/10%3A_Estimating_Unknown_Quantities_from_a_Sample/10.05%3A_Estimating_a_Confidence_Interval), Navarro D
-
-[**Statistics Kingdom**](https://www.statskingdom.com/index.html): Perform statistical tasks including plotting and statistical tests online. The home page includes an extensive summary of statistical tests, their use, requirements, and assumptions. There is also a handy [Statistical Test Finder](https://www.statskingdom.com/statistical-decision-tree.html) that will help you select an appropriate test for your purpose.
 
 [**An Introduction to Statistics: Choosing the Correct Statistical Test**](https://pmc.ncbi.nlm.nih.gov/articles/PMC8327789/), Ranganathan, P
 

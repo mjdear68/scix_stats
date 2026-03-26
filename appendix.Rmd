@@ -19,7 +19,7 @@
 
 # Online Tools
 
-[**Statistics Kingdom**](https://www.statskingdom.com/index.html)
+[**Statistics Kingdom**](https://www.statskingdom.com/index.html): Perform statistical tasks including plotting and statistical tests online. The home page includes an extensive summary of statistical tests, their use, requirements, and assumptions. There is also a handy [Statistical Test Finder](https://www.statskingdom.com/statistical-decision-tree.html) that will help you select an appropriate test for your purpose.
 
 [**HHMI Data Explorer**](media.hhmi.org/biointeractive/tool/dataexplorer/v1/#/home)
 

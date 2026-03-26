@@ -23,7 +23,7 @@
 <meta name="author" content="Michael Dear" />
 
 
-<meta name="date" content="2026-03-25" />
+<meta name="date" content="2026-03-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -144,9 +144,13 @@
 <ul>
 <li class="chapter" data-level="4.3.1" data-path="inferential_stats.html"><a href="inferential_stats.html#maximising-power"><i class="fa fa-check"></i><b>4.3.1</b> Maximising Power</a></li>
 </ul></li>
-<li class="chapter" data-level="4.4" data-path="inferential_stats.html"><a href="inferential_stats.html#statistical-test-assumptions"><i class="fa fa-check"></i><b>4.4</b> Statistical Test Assumptions</a></li>
+<li class="chapter" data-level="4.4" data-path="inferential_stats.html"><a href="inferential_stats.html#statistical-test-assumptions"><i class="fa fa-check"></i><b>4.4</b> Statistical Test Assumptions</a>
+<ul>
+<li class="chapter" data-level="4.4.1" data-path="inferential_stats.html"><a href="inferential_stats.html#checking-for-normality"><i class="fa fa-check"></i><b>4.4.1</b> Checking For Normality</a></li>
+</ul></li>
 <li class="chapter" data-level="4.5" data-path="inferential_stats.html"><a href="inferential_stats.html#common-statistical-tests"><i class="fa fa-check"></i><b>4.5</b> Common Statistical Tests</a></li>
-<li class="chapter" data-level="4.6" data-path="inferential_stats.html"><a href="inferential_stats.html#further-reading"><i class="fa fa-check"></i><b>4.6</b> Further Reading</a></li>
+<li class="chapter" data-level="4.6" data-path="inferential_stats.html"><a href="inferential_stats.html#online-tools"><i class="fa fa-check"></i><b>4.6</b> Online Tools</a></li>
+<li class="chapter" data-level="4.7" data-path="inferential_stats.html"><a href="inferential_stats.html#further-reading"><i class="fa fa-check"></i><b>4.7</b> Further Reading</a></li>
 </ul></li>
 <li class="part"><span><b>Your Project</b></span></li>
 <li class="chapter" data-level="5" data-path="planning-your-project-with-statistics-in-mind.html"><a href="planning-your-project-with-statistics-in-mind.html"><i class="fa fa-check"></i><b>5</b> Planning Your Project With Statistics In Mind</a>
@@ -164,7 +168,7 @@
 <li class="chapter" data-level="A.2" data-path="bibliography.html"><a href="bibliography.html#articles"><i class="fa fa-check"></i><b>A.2</b> Articles</a></li>
 <li class="chapter" data-level="A.3" data-path="bibliography.html"><a href="bibliography.html#websites"><i class="fa fa-check"></i><b>A.3</b> Websites</a></li>
 </ul></li>
-<li class="chapter" data-level="B" data-path="online-tools.html"><a href="online-tools.html"><i class="fa fa-check"></i><b>B</b> Online Tools</a></li>
+<li class="chapter" data-level="B" data-path="online-tools-1.html"><a href="online-tools-1.html"><i class="fa fa-check"></i><b>B</b> Online Tools</a></li>
 <li class="chapter" data-level="C" data-path="writing-scientific-reports.html"><a href="writing-scientific-reports.html"><i class="fa fa-check"></i><b>C</b> Writing Scientific Reports</a>
 <ul>
 <li class="chapter" data-level="C.1" data-path="writing-scientific-reports.html"><a href="writing-scientific-reports.html#formatting-tables"><i class="fa fa-check"></i><b>C.1</b> Formatting Tables</a></li>
@@ -194,7 +198,7 @@
 <div id="inferential_stats" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Chapter 4</span> Introduction<a href="inferential_stats.html#inferential_stats" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <blockquote>
-<p><strong>Learning Objectives</strong>
+<p><strong>Learning Objectives</strong><br />
 To develop and apply population parameter point estimates<br />
 To create and interpret confidence intervals<br />
 To understand p-values and statistical significance<br />
@@ -259,7 +263,7 @@ Borderline p-values are also problematic. For example, if a statistical test for
 <p>The power of a test is its ability to detect an <strong>effect</strong> if one exists. An effect in this context is anything that does not happen merely due to chance. This means an effect is a real feature of the population of interest. For example, if the means of two groups actually are different, the power of a test is its ability to detect that difference.</p>
 <blockquote>
 <p><strong>Mathematical Definition of Power</strong><br />
-<span class="math inline">\(\text{Power = 1-\beta}\)</span> where <span class="math inline">\(\beta\)</span> is <span class="math inline">\(\text{P(Type II error)}\)</span>.<br />
+<span class="math inline">\(\text{Power} = 1-\beta\)</span> where <span class="math inline">\(\beta\)</span> is <span class="math inline">\(\text{P(Type II error)}\)</span>.<br />
 A <span class="math inline">\(\text{Type II}\)</span> occurs when a true effect is not found by a statistical test, so the power of a test is the probability of a statistical test finding an effect if the effect exist.</p>
 </blockquote>
 <div id="maximising-power" class="section level3 hasAnchor" number="4.3.1">
@@ -287,6 +291,486 @@ Use the <a href="https://www.statskingdom.com/sample_size_all.html">Statistics K
 <li>the two groups being compared have equal standard deviations</li>
 </ul>
 <p>It is vital that the assumptions of a test are checked and met before applying the test.</p>
+<div id="checking-for-normality" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Checking For Normality<a href="inferential_stats.html#checking-for-normality" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If your chosen test requires your data to be normally distributed, you should check this assumption before applying the test. If your data has groups, check that each group is normally distributed.</p>
+<p>Some common methods to check for normality are</p>
+<ul>
+<li>plot a histogram and look for a “humped” shape</li>
+<li>create a quantile-quantile plot</li>
+<li>perform a test for normality e.g. Shapiro-Wilk Test (<span class="math inline">\(H_0\)</span>: Data normal)</li>
+</ul>
+<p>Running all three of these checks is recommended since they are not necessarily conclusive on their own.</p>
+<p>Here are the three methods from above applied to the PlantGrowth data set.</p>
+<p><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-16-1.png" alt="" width="672" /><img src="statistics_for_science_extension_files/figure-html/unnamed-chunk-16-2.png" alt="" width="672" /></p>
+<div id="muqjtunfqj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#muqjtunfqj table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#muqjtunfqj thead, #muqjtunfqj tbody, #muqjtunfqj tfoot, #muqjtunfqj tr, #muqjtunfqj td, #muqjtunfqj th {
+  border-style: none;
+}
+
+#muqjtunfqj p {
+  margin: 0;
+  padding: 0;
+}
+
+#muqjtunfqj .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#muqjtunfqj .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#muqjtunfqj .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#muqjtunfqj .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#muqjtunfqj .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#muqjtunfqj .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#muqjtunfqj .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#muqjtunfqj .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#muqjtunfqj .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#muqjtunfqj .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#muqjtunfqj .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#muqjtunfqj .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#muqjtunfqj .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#muqjtunfqj .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#muqjtunfqj .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#muqjtunfqj .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#muqjtunfqj .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#muqjtunfqj .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#muqjtunfqj .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#muqjtunfqj .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#muqjtunfqj .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#muqjtunfqj .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#muqjtunfqj .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#muqjtunfqj .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#muqjtunfqj .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#muqjtunfqj .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#muqjtunfqj .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#muqjtunfqj .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#muqjtunfqj .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#muqjtunfqj .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#muqjtunfqj .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#muqjtunfqj .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#muqjtunfqj .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#muqjtunfqj .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#muqjtunfqj .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#muqjtunfqj .gt_left {
+  text-align: left;
+}
+
+#muqjtunfqj .gt_center {
+  text-align: center;
+}
+
+#muqjtunfqj .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#muqjtunfqj .gt_font_normal {
+  font-weight: normal;
+}
+
+#muqjtunfqj .gt_font_bold {
+  font-weight: bold;
+}
+
+#muqjtunfqj .gt_font_italic {
+  font-style: italic;
+}
+
+#muqjtunfqj .gt_super {
+  font-size: 65%;
+}
+
+#muqjtunfqj .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#muqjtunfqj .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#muqjtunfqj .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#muqjtunfqj .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#muqjtunfqj .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#muqjtunfqj .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#muqjtunfqj .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#muqjtunfqj .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#muqjtunfqj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="group">group</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="p">p</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="group" class="gt_row gt_center">ctrl</td>
+<td headers="p" class="gt_row gt_right">0.7474734</td></tr>
+    <tr><td headers="group" class="gt_row gt_center">trt1</td>
+<td headers="p" class="gt_row gt_right">0.4519440</td></tr>
+    <tr><td headers="group" class="gt_row gt_center">trt2</td>
+<td headers="p" class="gt_row gt_right">0.5642519</td></tr>
+  </tbody>
+  
+</table>
+</div>
+</div>
 </div>
 <div id="common-statistical-tests" class="section level2 hasAnchor" number="4.5">
 <h2><span class="header-section-number">4.5</span> Common Statistical Tests<a href="inferential_stats.html#common-statistical-tests" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -355,12 +839,16 @@ Use the <a href="https://www.statskingdom.com/sample_size_all.html">Statistics K
 </tbody>
 </table>
 </div>
-<div id="further-reading" class="section level2 hasAnchor" number="4.6">
-<h2><span class="header-section-number">4.6</span> Further Reading<a href="inferential_stats.html#further-reading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="online-tools" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> Online Tools<a href="inferential_stats.html#online-tools" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://www.statskingdom.com/statistical-decision-tree.html"><strong>Statistical Test Finder</strong></a>, Statistics Kingdom</p>
+<p><a href="https://www.statskingdom.com/shapiro-wilk-test-calculator.html"><strong>Shapiro-Wilk Calculator</strong></a>, Statistics Kingdom</p>
+</div>
+<div id="further-reading" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> Further Reading<a href="inferential_stats.html#further-reading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><a href="https://stats.libretexts.org/Bookshelves/Introductory_Statistics/Introductory_Statistics_(Shafer_and_Zhang)/07%3A_Estimation"><strong>Estimation</strong></a>, Shafer and Zhang</p>
 <p><a href="https://online.stat.psu.edu/stat200/lesson/4"><strong>Confidence Intervals</strong></a>, Pennsylvania State University</p>
 <p><a href="https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/10%3A_Estimating_Unknown_Quantities_from_a_Sample/10.05%3A_Estimating_a_Confidence_Interval"><strong>Estimating a Confidence Interval</strong></a>, Navarro D</p>
-<p><a href="https://www.statskingdom.com/index.html"><strong>Statistics Kingdom</strong></a>: Perform statistical tasks including plotting and statistical tests online. The home page includes an extensive summary of statistical tests, their use, requirements, and assumptions. There is also a handy <a href="https://www.statskingdom.com/statistical-decision-tree.html">Statistical Test Finder</a> that will help you select an appropriate test for your purpose.</p>
 <p><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8327789/"><strong>An Introduction to Statistics: Choosing the Correct Statistical Test</strong></a>, Ranganathan, P</p>
 
 </div>

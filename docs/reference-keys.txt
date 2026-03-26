@@ -43,7 +43,9 @@ hypothesis-testing
 power-of-a-statistical-test
 maximising-power
 statistical-test-assumptions
+checking-for-normality
 common-statistical-tests
+online-tools
 further-reading
 planning-your-project-with-statistics-in-mind
 starting-at-the-end
@@ -55,7 +57,7 @@ bibliography
 books
 articles
 websites
-online-tools
+online-tools-1
 writing-scientific-reports
 formatting-tables
 reporting-confidence-intervals
