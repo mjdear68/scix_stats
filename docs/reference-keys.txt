@@ -40,9 +40,10 @@ solutions
 inferential_stats
 estimation
 hypothesis-testing
-exercise-hypothesis-testing
+activity-hypothesis-testing
 power-of-a-statistical-test
 maximising-power
+activity-sample-size-calculation
 statistical-test-assumptions
 checking-normality
 common-statistical-tests

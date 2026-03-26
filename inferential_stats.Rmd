@@ -86,7 +86,7 @@ t.test(ctrl, trt1, alternative = "two.sided", conf.level = 0.95)
 There is considerable debate about the misuse of p-values in research. In particular, a significant result from a single statistical test does not necessarily indicate a reliable finding. Integration of information from other sources and replication are required to confirm a significant result. See, for example, ["The Debate about p-values", Lu Y, Belitskaya-Levy I](https://pmc.ncbi.nlm.nih.gov/articles/PMC4858512/)    
 Borderline p-values are also problematic. For example, if a statistical test for the difference in mean between two groups has $p=0.049$, should the null hypothesis be rejected at a 5% (0.05) significance level?
 
-## Exercise: Hypothesis Testing
+### Activity: Hypothesis Testing
 
 Reproduce the hypothesis tests for the [PlantGrowth data set](./resources/datasets/PlantGrowth.csv). Use both [Statistics Kingdom](https://www.statskingdom.com/index.html) and Excel. Compare the results.
 
@@ -109,7 +109,9 @@ Since most scientific research aims to reject the null hypothesis when there is 
 
 If you have a reasonable idea (e.g. based on previous research) about the sizes of the effects you are trying to detect in your experiment, you can complete a *power analysis* to determine the sample size required for a given experimental design. This might, however, be a problematic process (see, for example, ["11.8: Effect Size, Sample Size and Power", Navarro D, last paragraph](https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/11%3A_Hypothesis_Testing/11.08%3A_Effect_Size_Sample_Size_and_Power)). 
 
->**Activity**  
+
+### Activity: Sample Size Calculation
+
 Use the [Statistics Kingdom Sample Size Calculators](https://www.statskingdom.com/sample_size_all.html) to investigate the recommended sample sizes for various statistical tests. What did you find difficult when using these calculators?
 
 ## Statistical Test Assumptions
