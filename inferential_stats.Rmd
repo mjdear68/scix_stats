@@ -152,7 +152,7 @@ PlantGrowth %>%
   gt() %>% 
   tab_header(
     title = md("PlantGrowth Shapiro-Wilk Test For Normality" ),
-    subtitle = md("p-values of `weight` For Each Group")
+    subtitle = md("p-values of `weight` for each group")
    )
 
 ```

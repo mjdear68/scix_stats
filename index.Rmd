@@ -22,6 +22,7 @@ library(tidyverse)
 library(ggplot2)
 library(patchwork)
 library(GGally)
+library(gt)
 
 # Set the default ggplot theme to theme_bw() for better printing
 theme_set(theme_bw())
