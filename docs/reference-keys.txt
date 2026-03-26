@@ -55,10 +55,8 @@ create-summary-tables-and-plots-for-your-simulated-data
 apply-relevant-statistical-tests-to-your-simulated-data
 bibliography
 books
-articles
 websites
 online-tools-1
-writing-scientific-reports
-formatting-tables
-reporting-confidence-intervals
+statistical-information-in-scientific-reports
+apa-7th
 reporting-statistical-test-results

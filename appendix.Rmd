@@ -10,9 +10,6 @@
 
 [**Learning Statistics with R - A tutorial for Psychology Students and other Beginners**](https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)), Navarro, D: An example-based introduction to statistics using R. Includes data sets and a custom R package (lsr).
 
-## Articles
-
-
 ## Websites
 
 [**Statistical Terms and Concepts**](https://www.abs.gov.au/statistics/understanding-statistics/statistical-terms-and-concepts), Australian Bureau of Statistics: A comprehensive glossary of statistical terms. Click the terms for detailed explanations.
@@ -21,7 +18,7 @@
 
 [**Statistics Kingdom**](https://www.statskingdom.com/index.html): Perform statistical tasks including plotting and statistical tests online. The home page includes an extensive summary of statistical tests, their use, requirements, and assumptions. There is also a handy [Statistical Test Finder](https://www.statskingdom.com/statistical-decision-tree.html) that will help you select an appropriate test for your purpose.
 
-[**HHMI Data Explorer**](media.hhmi.org/biointeractive/tool/dataexplorer/v1/#/home)
+[**HHMI Data Explorer**](https://media.hhmi.org/biointeractive/tool/dataexplorer/v1/#/home): Create interactive plots and perform statistical tests online.
 
 
 # Statistical Information In Scientific Reports
