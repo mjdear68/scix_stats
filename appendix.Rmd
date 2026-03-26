@@ -23,15 +23,21 @@
 
 [**HHMI Data Explorer**](media.hhmi.org/biointeractive/tool/dataexplorer/v1/#/home)
 
-# Writing Scientific Reports
 
-## Formatting Tables
+# Statistical Information In Scientific Reports
 
-## Reporting Confidence Intervals
+## APA 7th
+
+[APA 7th](https://apastyle.apa.org/) referencing and styles are widely used for scientific reports. The APA 7th styles include guidelines about
+
+* [Numbers and Statistics](https://apastyle.apa.org/instructional-aids/numbers-statistics-guide.pdf)
+* [Tables](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/tables)
+* [Figures](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/figures)
+
 
 ## Reporting Statistical Test Results
 
-Here is an example from Navarro ([12.1.9 report the results of the test](https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/12%3A_Categorical_Data_Analysis/12.01%3A_The_2_Goodness-of-fit_Test))
+Here is an example from Navarro ([12.1.9 report the results of the test](https://stats.libretexts.org/Bookshelves/Applied_Statistics/Learning_Statistics_with_R_-_A_tutorial_for_Psychology_Students_and_other_Beginners_(Navarro)/12%3A_Categorical_Data_Analysis/12.01%3A_The_2_Goodness-of-fit_Test)) that demonstrates a comprehensive but concise way to report the results of a statistical test.
 
 "Of the 200 participants in the experiment, 64 selected hearts for their first choice, 51 selected diamonds, 50 selected spades, and 35 selected clubs. A chi-square goodness of fit test was conducted to test whether the choice probabilities were identical for all four suits. The results were significant (χ2(3)=8.44,p<.05), suggesting that people did not select suits purely at random."
 
