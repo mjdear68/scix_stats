@@ -201,7 +201,7 @@ ggpairs(iris, aes(colour = Species)) +
 -----
 
 
-## Exploratory Data Analysis (EDA)
+## Exploratory Data Analysis (EDA) {#eda}
 
 Once the study has been designed and data collected, it's time to begin exploring the data. This process is known as Exploratory Data Analysis (EDA). The steps of EDA include
 

@@ -164,7 +164,7 @@ PlantGrowth %>%
 ```
 
 
-## Common Statistical Tests
+## Common Statistical Tests {#common_stat_tests}
 
 The table below outlines some of the common statistical tests used in scientific research. *Parametric* tests require that the data in each group is normally distributed. If this is not the case, then use the *Non-parametric* test.
 

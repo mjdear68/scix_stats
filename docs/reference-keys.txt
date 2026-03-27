@@ -34,7 +34,7 @@ line-plot
 extension-further-plots
 boxplot-with-data-points
 pairs-plot
-exploratory-data-analysis-eda
+eda
 activity-3
 solutions
 inferential_stats
@@ -46,7 +46,7 @@ maximising-power
 activity-sample-size-calculation
 statistical-test-assumptions
 checking-normality
-common-statistical-tests
+common_stat_tests
 online-tools
 further-reading
 planning-your-project-with-statistics-in-mind
