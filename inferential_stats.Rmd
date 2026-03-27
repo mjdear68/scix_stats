@@ -1,6 +1,4 @@
-# (PART\*) Inferential Statistics {-}
-
-# Introduction {#inferential_stats}
+# Inferential Statistics {#inferential_stats}
 
 >**Learning Objectives**  
 To develop and apply population parameter point estimates  

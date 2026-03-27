@@ -1,6 +1,6 @@
-# (PART\*) Descriptive Statistics {-}
+# (PART\*) Statistic Analysis {-}
 
-# Introduction {#descriptive_stats}
+# Descriptive Statistics {#descriptive_stats}
 
 >**Learning Objectives**  
 To review common descriptive statistics  
