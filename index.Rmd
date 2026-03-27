@@ -1,6 +1,6 @@
 --- 
 title: "Statistics For Science Extension"
-author: "Michael Dear"
+author: "Michael Dear \nKatoomba High School \nMarch 2026"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
@@ -39,7 +39,10 @@ To review the process and design of scientific studies
 To understand the difference between populations and samples  
 To understand the difference between descriptive and inferential statistics
 
-These notes are a practical introduction to statistics for students of the NSW Science Extension course. The emphasis is on learning through examples and problem-solving.
+The intended audience for these notes is students of the NSW HSC Science Extension (SCIX) course, although they would be a suitable introduction to statistics in science  for anyone who is approaching these concepts for the first time. This is not a course in mathematical statistics, so concepts such as probability distributions are approached through examples rather than theory. Only minimal experience with spreadsheets is required, and all statistical analysis can be completed using the recommended online resources.
+
+I hope you find these notes a useful map for your statistical journey.
+
 
 ## What Is Statistics and What Does It Do?
 
